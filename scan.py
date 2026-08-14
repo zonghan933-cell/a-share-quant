@@ -663,7 +663,7 @@ def build_results(df):
     records = []
 
     for _, row in df.iterrows():
-        score, amplitude, intraday_position = score_stock(row)
+        score, amplitude, intraday_position, score_detail = score_stock(row)
 
         item = {
             "code": str(row["code"]),
@@ -690,6 +690,7 @@ def build_results(df):
             "amplitude": amplitude,
             "intraday_position": intraday_position,
             "score": score,
+            "score_detail": score_detail,
         }
 
         records.append(item)
@@ -745,7 +746,7 @@ def main():
             "raw_stock_count": raw_count,
             "main_board_count": filtered_count,
             "result_count": len(top20),
-            "strategy": "主板非ST・偏低位・避免追高 V1",
+            "strategy": "主板非ST・偏低位・避免追高 V2.2",
             "stocks": top20,
         }
 
