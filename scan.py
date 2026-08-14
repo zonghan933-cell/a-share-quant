@@ -123,7 +123,29 @@ def get_realtime_data():
             result["pb"] = pd.to_numeric(
                 df["pn"], errors="coerce"
             )
+            result["speed"] = pd.to_numeric(
+                df["speed"], errors="coerce"
+            )
 
+            result["zdf_d5"] = pd.to_numeric(
+                df["zdf_d5"], errors="coerce"
+            )
+
+            result["zdf_d10"] = pd.to_numeric(
+               df["zdf_d10"], errors="coerce"
+            )
+
+            result["zdf_d20"] = pd.to_numeric(
+               df["zdf_d20"], errors="coerce"
+            )
+
+            result["zdf_d60"] = pd.to_numeric(
+               df["zdf_d60"], errors="coerce"
+            )
+
+            result["amplitude_tx"] = pd.to_numeric(
+              df["zf"], errors="coerce"
+            )
             return (
                 result,
                 "腾讯A股实时行情",
@@ -224,143 +246,307 @@ def filter_main_board(df):
 
 def score_stock(row):
     """
-    V1 实时量化模型
-    核心原则：
-    - 不追涨停
-    - 不只选当天涨幅最大的
-    - 偏好温和走强、成交活跃、波动不过度
+    V2 量化评分
+    核心思路：
+    1. 偏好低位温和启动
+    2. 避免连续快速上涨后追高
+    3. 看 5/10/20/60 日趋势
+    4. 看量比、换手、流动性
+    5. 控制振幅和涨速风险
+
+    满分 100
     """
 
-    price = safe_float(row["price"], 0)
-    change = safe_float(row["change_pct"], 0)
-    pre_close = safe_float(row["pre_close"], 0)
-    open_price = safe_float(row["open"], pre_close)
-    high = safe_float(row["high"], price)
-    low = safe_float(row["low"], price)
-    amount = safe_float(row["amount"], 0)
+    def value(name, default=None):
+        return safe_float(row.get(name), default)
 
-    score = 0.0
+    def target_score(x, target, width, max_score, neutral=0.45):
+        """
+        越接近理想值，得分越高。
+        缺失数据给予中性分，不直接判0。
+        """
+        if x is None:
+            return max_score * neutral
 
-    # ------------------------------------------------
-    # 1. 当日趋势：25分
-    # ------------------------------------------------
-    if -1.0 <= change < 0:
-        trend_score = 10
-    elif 0 <= change < 1:
-        trend_score = 15
-    elif 1 <= change <= 3:
-        trend_score = 25
-    elif 3 < change <= 5:
-        trend_score = 21
-    elif 5 < change <= 7:
-        trend_score = 13
-    elif change > 7:
-        trend_score = 4
+        distance = abs(x - target)
+
+        score = max_score * (
+            1 - distance / width
+        )
+
+        return clamp(score, 0, max_score)
+
+    # =========================
+    # 数据读取
+    # =========================
+
+    change = value("change_pct", 0)
+
+    d5 = value("zdf_d5")
+    d10 = value("zdf_d10")
+    d20 = value("zdf_d20")
+    d60 = value("zdf_d60")
+
+    volume_ratio = value("volume_ratio")
+    turnover_rate = value("turnover_rate")
+    pe = value("pe")
+
+    speed = value("speed")
+
+    amount = value("amount", 0)
+
+    amplitude = value("amplitude_tx")
+
+    # 如果腾讯振幅不存在，则使用原有高低价计算
+    if amplitude is None:
+        pre_close = value("pre_close", 0)
+        high = value("high", 0)
+        low = value("low", 0)
+
+        if pre_close > 0:
+            amplitude = (
+                (high - low) / pre_close * 100
+            )
+        else:
+            amplitude = 0
+
+    # =========================
+    # 1. 今日强度：12分
+    # 理想涨幅约 +1.5%
+    # =========================
+
+    today_score = target_score(
+        change,
+        target=1.5,
+        width=4.5,
+        max_score=12
+    )
+
+    # =========================
+    # 2. 5日趋势：14分
+    # 理想：刚走强，但没连续暴涨
+    # =========================
+
+    d5_score = target_score(
+        d5,
+        target=4.0,
+        width=13.0,
+        max_score=14
+    )
+
+    # =========================
+    # 3. 10日趋势：10分
+    # =========================
+
+    d10_score = target_score(
+        d10,
+        target=7.0,
+        width=22.0,
+        max_score=10
+    )
+
+    # =========================
+    # 4. 20日位置：10分
+    # =========================
+
+    d20_score = target_score(
+        d20,
+        target=10.0,
+        width=35.0,
+        max_score=10
+    )
+
+    # =========================
+    # 5. 60日位置：8分
+    # 避免长期已经涨太多
+    # =========================
+
+    d60_score = target_score(
+        d60,
+        target=15.0,
+        width=65.0,
+        max_score=8
+    )
+
+    # =========================
+    # 6. 量比：12分
+    # 理想约 1.8
+    # =========================
+
+    volume_score = target_score(
+        volume_ratio,
+        target=1.8,
+        width=2.5,
+        max_score=12
+    )
+
+    # =========================
+    # 7. 换手率：10分
+    # 理想约 5%
+    # =========================
+
+    turnover_score = target_score(
+        turnover_rate,
+        target=5.0,
+        width=10.0,
+        max_score=10
+    )
+
+    # =========================
+    # 8. 流动性：8分
+    # 用成交额做连续评分
+    # =========================
+
+    if amount is None or amount <= 0:
+        liquidity_score = 0
+
     else:
-        trend_score = 3
+        liquidity_score = (
+            math.log10(max(amount, 1)) - 7
+        ) / 2.5 * 8
 
-    score += trend_score
+        liquidity_score = clamp(
+            liquidity_score,
+            0,
+            8
+        )
 
-    # ------------------------------------------------
-    # 2. 流动性：20分
-    # ------------------------------------------------
-    # 成交额单位：元
-    if amount >= 1_000_000_000:
-        liquidity_score = 20
-    elif amount >= 500_000_000:
-        liquidity_score = 18
-    elif amount >= 200_000_000:
-        liquidity_score = 15
-    elif amount >= 100_000_000:
-        liquidity_score = 12
-    elif amount >= 30_000_000:
-        liquidity_score = 8
+    # =========================
+    # 9. 估值：6分
+    # =========================
+
+    if pe is None:
+        pe_score = 3.0
+
+    elif pe <= 0:
+        pe_score = 1.0
+
+    elif 8 <= pe <= 45:
+        pe_score = (
+            6
+            - abs(pe - 25) / 20 * 1.5
+        )
+
+    elif 45 < pe <= 80:
+        pe_score = 3.0
+
+    elif 0 < pe < 8:
+        pe_score = 4.0
+
     else:
-        liquidity_score = 3
+        pe_score = 1.5
 
-    score += liquidity_score
+    pe_score = clamp(
+        pe_score,
+        0,
+        6
+    )
 
-    # ------------------------------------------------
-    # 3. 日内强度：15分
-    # ------------------------------------------------
-    if high > low:
-        position = (price - low) / (high - low)
-        position = clamp(position, 0, 1)
-    else:
-        position = 0.5
+    # =========================
+    # 10. 波动 + 涨速风险：10分
+    # =========================
 
-    if 0.60 <= position <= 0.85:
-        intraday_score = 15
-    elif 0.45 <= position < 0.60:
-        intraday_score = 11
-    elif 0.85 < position <= 0.95:
-        intraday_score = 10
-    elif position > 0.95:
-        intraday_score = 6
-    else:
-        intraday_score = 5
+    amplitude_score = target_score(
+        amplitude,
+        target=3.5,
+        width=6.5,
+        max_score=6
+    )
 
-    score += intraday_score
+    speed_score = target_score(
+        speed,
+        target=0.3,
+        width=2.8,
+        max_score=4
+    )
 
-    # ------------------------------------------------
-    # 4. 振幅风险：15分
-    # ------------------------------------------------
-    if pre_close > 0:
-        amplitude = (high - low) / pre_close * 100
-    else:
-        amplitude = 0
+    risk_score = (
+        amplitude_score
+        + speed_score
+    )
 
-    if 1 <= amplitude <= 4:
-        amplitude_score = 15
-    elif 4 < amplitude <= 6:
-        amplitude_score = 12
-    elif amplitude < 1:
-        amplitude_score = 8
-    elif 6 < amplitude <= 8:
-        amplitude_score = 7
-    else:
-        amplitude_score = 3
+    # =========================
+    # 基础总分
+    # =========================
 
-    score += amplitude_score
+    score = (
+        today_score
+        + d5_score
+        + d10_score
+        + d20_score
+        + d60_score
+        + volume_score
+        + turnover_score
+        + liquidity_score
+        + pe_score
+        + risk_score
+    )
 
-    # ------------------------------------------------
-    # 5. 开盘后承接：10分
-    # ------------------------------------------------
-    if open_price > 0:
-        vs_open = (price - open_price) / open_price * 100
-    else:
-        vs_open = 0
+    # =========================
+    # 防追高扣分
+    # =========================
 
-    if 0.2 <= vs_open <= 2.5:
-        open_score = 10
-    elif 0 <= vs_open < 0.2:
-        open_score = 8
-    elif -0.8 <= vs_open < 0:
-        open_score = 6
-    elif 2.5 < vs_open <= 4:
-        open_score = 6
-    else:
-        open_score = 3
+    penalty = 0
 
-    score += open_score
+    # 当天已经明显拉高
+    if change > 5:
+        penalty += 8
 
-    # ------------------------------------------------
-    # 6. 防追高：15分
-    # ------------------------------------------------
-    if change <= 2:
-        chase_score = 15
-    elif change <= 4:
-        chase_score = 12
-    elif change <= 5.5:
-        chase_score = 8
-    elif change <= 7:
-        chase_score = 4
-    else:
-        chase_score = 0
+    if change > 7:
+        penalty += 6
 
-    score += chase_score
+    # 5日涨太多
+    if d5 is not None and d5 > 12:
+        penalty += 6
 
-    return round(score, 2), round(amplitude, 2), round(position, 3)
+    if d5 is not None and d5 > 18:
+        penalty += 6
+
+    # 10日过热
+    if d10 is not None and d10 > 20:
+        penalty += 6
+
+    # 20日已经大幅上涨
+    if d20 is not None and d20 > 35:
+        penalty += 8
+
+    # 60日高位
+    if d60 is not None and d60 > 70:
+        penalty += 6
+
+    # 量比过度异常
+    if (
+        volume_ratio is not None
+        and volume_ratio > 4
+    ):
+        penalty += 4
+
+    # 换手过高
+    if (
+        turnover_rate is not None
+        and turnover_rate > 18
+    ):
+        penalty += 4
+
+    # 短时涨速过快
+    if speed is not None and speed > 3:
+        penalty += 5
+
+    score -= penalty
+
+    score = clamp(
+        score,
+        0,
+        100
+    )
+
+    # 保留原函数返回格式，
+    # 避免影响 build_results()
+    return (
+        round(score, 2),
+        round(amplitude, 2),
+        0.5
+    )
 
 
 def build_results(df):
