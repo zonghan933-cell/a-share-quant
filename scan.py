@@ -249,15 +249,14 @@ def filter_main_board(df):
 
 def score_stock(row):
     """
-    V2 量化评分
-    核心思路：
-    1. 偏好低位温和启动
-    2. 避免连续快速上涨后追高
-    3. 看 5/10/20/60 日趋势
-    4. 看量比、换手、流动性
-    5. 控制振幅和涨速风险
+    V2.2 量化评分
+    核心：
+    - 偏好温和启动
+    - 更严格限制20/60日高位
+    - 量价、换手、估值、波动共同评分
+    - 返回详细评分拆解
 
-    满分 100
+    满分100
     """
 
     def value(name, default=None):
@@ -265,8 +264,8 @@ def score_stock(row):
 
     def target_score(x, target, width, max_score, neutral=0.45):
         """
-        越接近理想值，得分越高。
-        缺失数据给予中性分，不直接判0。
+        越接近理想值越高分。
+        数据缺失给中性分，不直接记0。
         """
         if x is None:
             return max_score * neutral
@@ -280,7 +279,7 @@ def score_stock(row):
         return clamp(score, 0, max_score)
 
     # =========================
-    # 数据读取
+    # 数据
     # =========================
 
     change = value("change_pct", 0)
@@ -293,14 +292,12 @@ def score_stock(row):
     volume_ratio = value("volume_ratio")
     turnover_rate = value("turnover_rate")
     pe = value("pe")
-
     speed = value("speed")
 
     amount = value("amount", 0)
 
     amplitude = value("amplitude_tx")
 
-    # 如果腾讯振幅不存在，则使用原有高低价计算
     if amplitude is None:
         pre_close = value("pre_close", 0)
         high = value("high", 0)
@@ -308,14 +305,16 @@ def score_stock(row):
 
         if pre_close > 0:
             amplitude = (
-                (high - low) / pre_close * 100
+                (high - low)
+                / pre_close
+                * 100
             )
         else:
             amplitude = 0
 
     # =========================
-    # 1. 今日强度：12分
-    # 理想涨幅约 +1.5%
+    # 1. 今日强度 12分
+    # 理想约 +1.5%
     # =========================
 
     today_score = target_score(
@@ -326,54 +325,53 @@ def score_stock(row):
     )
 
     # =========================
-    # 2. 5日趋势：14分
-    # 理想：刚走强，但没连续暴涨
+    # 2. 5日趋势 14分
     # =========================
 
     d5_score = target_score(
         d5,
         target=4.0,
-        width=13.0,
+        width=12.0,
         max_score=14
     )
 
     # =========================
-    # 3. 10日趋势：10分
+    # 3. 10日趋势 10分
     # =========================
 
     d10_score = target_score(
         d10,
         target=7.0,
-        width=22.0,
+        width=20.0,
         max_score=10
     )
 
     # =========================
-    # 4. 20日位置：10分
+    # 4. 20日位置 10分
+    # V2.2更偏低位
     # =========================
 
     d20_score = target_score(
         d20,
-        target=10.0,
-        width=35.0,
+        target=8.0,
+        width=25.0,
         max_score=10
     )
 
     # =========================
-    # 5. 60日位置：8分
-    # 避免长期已经涨太多
+    # 5. 60日位置 8分
     # =========================
 
     d60_score = target_score(
         d60,
-        target=15.0,
-        width=65.0,
+        target=12.0,
+        width=45.0,
         max_score=8
     )
 
     # =========================
-    # 6. 量比：12分
-    # 理想约 1.8
+    # 6. 量比 12分
+    # 理想1.5~2附近
     # =========================
 
     volume_score = target_score(
@@ -384,20 +382,18 @@ def score_stock(row):
     )
 
     # =========================
-    # 7. 换手率：10分
-    # 理想约 5%
+    # 7. 换手率 10分
     # =========================
 
     turnover_score = target_score(
         turnover_rate,
         target=5.0,
-        width=10.0,
+        width=9.0,
         max_score=10
     )
 
     # =========================
-    # 8. 流动性：8分
-    # 用成交额做连续评分
+    # 8. 流动性 8分
     # =========================
 
     if amount is None or amount <= 0:
@@ -415,7 +411,7 @@ def score_stock(row):
         )
 
     # =========================
-    # 9. 估值：6分
+    # 9. 估值 6分
     # =========================
 
     if pe is None:
@@ -446,20 +442,20 @@ def score_stock(row):
     )
 
     # =========================
-    # 10. 波动 + 涨速风险：10分
+    # 10. 风险控制 10分
     # =========================
 
     amplitude_score = target_score(
         amplitude,
         target=3.5,
-        width=6.5,
+        width=6.0,
         max_score=6
     )
 
     speed_score = target_score(
         speed,
         target=0.3,
-        width=2.8,
+        width=2.5,
         max_score=4
     )
 
@@ -469,10 +465,10 @@ def score_stock(row):
     )
 
     # =========================
-    # 基础总分
+    # 基础分
     # =========================
 
-    score = (
+    base_score = (
         today_score
         + d5_score
         + d10_score
@@ -489,66 +485,177 @@ def score_stock(row):
     # 防追高扣分
     # =========================
 
-    penalty = 0
+    penalty_today = 0
+    penalty_d5 = 0
+    penalty_d10 = 0
+    penalty_d20 = 0
+    penalty_d60 = 0
+    penalty_volume = 0
+    penalty_turnover = 0
+    penalty_speed = 0
 
-    # 当天已经明显拉高
+    # 当天过热
     if change > 5:
-        penalty += 8
+        penalty_today += 5
 
     if change > 7:
-        penalty += 6
+        penalty_today += 5
 
-    # 5日涨太多
-    if d5 is not None and d5 > 12:
-        penalty += 6
+    # 5日涨幅过热
+    if d5 is not None and d5 > 10:
+        penalty_d5 += 3
 
-    if d5 is not None and d5 > 18:
-        penalty += 6
+    if d5 is not None and d5 > 15:
+        penalty_d5 += 5
+
+    if d5 is not None and d5 > 22:
+        penalty_d5 += 6
 
     # 10日过热
-    if d10 is not None and d10 > 20:
-        penalty += 6
+    if d10 is not None and d10 > 18:
+        penalty_d10 += 4
 
-    # 20日已经大幅上涨
+    if d10 is not None and d10 > 28:
+        penalty_d10 += 6
+
+    # =========================
+    # V2.2核心：
+    # 20日高位更严格
+    # =========================
+
+    if d20 is not None and d20 > 18:
+        penalty_d20 += 3
+
+    if d20 is not None and d20 > 25:
+        penalty_d20 += 4
+
     if d20 is not None and d20 > 35:
-        penalty += 8
+        penalty_d20 += 6
 
+    # =========================
     # 60日高位
-    if d60 is not None and d60 > 70:
-        penalty += 6
+    # =========================
 
-    # 量比过度异常
+    if d60 is not None and d60 > 35:
+        penalty_d60 += 3
+
+    if d60 is not None and d60 > 50:
+        penalty_d60 += 5
+
+    if d60 is not None and d60 > 75:
+        penalty_d60 += 7
+
+    # 量比异常
     if (
         volume_ratio is not None
         and volume_ratio > 4
     ):
-        penalty += 4
+        penalty_volume += 4
 
-    # 换手过高
+    if (
+        volume_ratio is not None
+        and volume_ratio > 7
+    ):
+        penalty_volume += 4
+
+    # 换手异常
     if (
         turnover_rate is not None
         and turnover_rate > 18
     ):
-        penalty += 4
+        penalty_turnover += 4
 
-    # 短时涨速过快
+    if (
+        turnover_rate is not None
+        and turnover_rate > 28
+    ):
+        penalty_turnover += 5
+
+    # 涨速异常
     if speed is not None and speed > 3:
-        penalty += 5
+        penalty_speed += 4
 
-    score -= penalty
+    if speed is not None and speed > 5:
+        penalty_speed += 5
 
-    score = clamp(
-        score,
+    total_penalty = (
+        penalty_today
+        + penalty_d5
+        + penalty_d10
+        + penalty_d20
+        + penalty_d60
+        + penalty_volume
+        + penalty_turnover
+        + penalty_speed
+    )
+
+    final_score = (
+        base_score
+        - total_penalty
+    )
+
+    final_score = clamp(
+        final_score,
         0,
         100
     )
 
-    # 保留原函数返回格式，
-    # 避免影响 build_results()
+    # =========================
+    # 评分拆解
+    # =========================
+
+    score_detail = {
+        "today": round(today_score, 2),
+        "d5": round(d5_score, 2),
+        "d10": round(d10_score, 2),
+        "d20": round(d20_score, 2),
+        "d60": round(d60_score, 2),
+
+        "volume_ratio": round(
+            volume_score, 2
+        ),
+
+        "turnover": round(
+            turnover_score, 2
+        ),
+
+        "liquidity": round(
+            liquidity_score, 2
+        ),
+
+        "valuation": round(
+            pe_score, 2
+        ),
+
+        "risk": round(
+            risk_score, 2
+        ),
+
+        "base_score": round(
+            base_score, 2
+        ),
+
+        "penalty_today": penalty_today,
+        "penalty_d5": penalty_d5,
+        "penalty_d10": penalty_d10,
+        "penalty_d20": penalty_d20,
+        "penalty_d60": penalty_d60,
+        "penalty_volume": penalty_volume,
+        "penalty_turnover": penalty_turnover,
+        "penalty_speed": penalty_speed,
+
+        "total_penalty": total_penalty,
+
+        "final_score": round(
+            final_score, 2
+        )
+    }
+
     return (
-        round(score, 2),
+        round(final_score, 2),
         round(amplitude, 2),
-        0.5
+        0.5,
+        score_detail
     )
 
 
