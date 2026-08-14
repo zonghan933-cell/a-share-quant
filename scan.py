@@ -1386,12 +1386,11 @@ def build_results(df):
     )
 
     
-        top_records = records[:20]
+    top_records = records[:20]
 
-        top_records = enrich_industry_info(
+    top_records = enrich_industry_info(
             top_records
-     )
-
+     )    
     return top_records
 
 def save_json(payload):
