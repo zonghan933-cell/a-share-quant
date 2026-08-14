@@ -63,103 +63,72 @@ def get_realtime_data():
                 f"腾讯成功：{len(df)} 条，耗时 {elapsed:.1f} 秒"
             )
 
-           # 腾讯返回的是英文缩写字段，不是东财/新浪的中文字段
+            price = pd.to_numeric(
+                df["zxj"], errors="coerce"
+            )
+            change_pct = pd.to_numeric(
+                df["zdf"], errors="coerce"
+            )
+            amplitude_tx = pd.to_numeric(
+                df["zf"], errors="coerce"
+            )
 
-price = pd.to_numeric(df["zxj"], errors="coerce")
-change_pct = pd.to_numeric(df["zdf"], errors="coerce")
-amplitude_tx = pd.to_numeric(df["zf"], errors="coerce")
+            # 根据最新价和涨跌幅反推昨收
+            pre_close = price / (1 + change_pct / 100.0)
 
-# 腾讯榜单没有直接给出“昨收”
-# 可由 最新价 / (1 + 涨跌幅) 反推
-pre_close = price / (1 + change_pct / 100.0)
+            # 腾讯全市场榜单没有直接提供今开/最高/最低
+            # 这里先用中性代理值兼容现有 V1 模型
+            half_range = pre_close * amplitude_tx / 200.0
 
-# 腾讯这个全市场榜单没有直接提供今开/最高/最低
-# V1 先用中性代理值，避免影响现有评分框架
-half_range = pre_close * amplitude_tx / 200.0
+            result = pd.DataFrame({
+                "code": df["code"].map(normalize_code),
+                "name": df["name"].astype(str),
+                "price": price,
+                "change_pct": change_pct,
+                "pre_close": pre_close,
+                "open": pre_close,
+                "high": price + half_range,
+                "low": (price - half_range).clip(lower=0),
 
-result = pd.DataFrame({
-    "code": df["code"].map(normalize_code),
-    "name": df["name"].astype(str),
+                # 腾讯 volume 单位为手，转换为股
+                "volume": pd.to_numeric(
+                    df["volume"], errors="coerce"
+                ) * 100,
 
-    "price": price,
-    "change_pct": change_pct,
+                # turnover 转换为元
+                "amount": pd.to_numeric(
+                    df["turnover"], errors="coerce"
+                ) * 10000,
+            })
 
-    "pre_close": pre_close,
+            if "hsl" in df.columns:
+                result["turnover_rate"] = pd.to_numeric(
+                    df["hsl"], errors="coerce"
+                )
+            elif "hs1" in df.columns:
+                result["turnover_rate"] = pd.to_numeric(
+                    df["hs1"], errors="coerce"
+                )
+            else:
+                result["turnover_rate"] = np.nan
 
-    # 暂时用昨收作为开盘价的中性代理
-    "open": pre_close,
+            result["volume_ratio"] = pd.to_numeric(
+                df["lb"], errors="coerce"
+            )
 
-    # 用腾讯直接提供的振幅构造中性高低区间
-    # 主要用于兼容当前 V1 评分函数
-    "high": price + half_range,
-    "low": (price - half_range).clip(lower=0),
+            result["pe"] = pd.to_numeric(
+                df["pe_ttm"], errors="coerce"
+            )
 
-    # 腾讯 volume 为手，转成股
-    "volume": pd.to_numeric(
-        df["volume"], errors="coerce"
-    ) * 100,
+            result["pb"] = pd.to_numeric(
+                df["pn"], errors="coerce"
+            )
 
-    # 腾讯 turnover 按万元计，转换成元
-    "amount": pd.to_numeric(
-        df["turnover"], errors="coerce"
-    ) * 10000,
-})
-
-# 有些版本字段显示 hsl，有些日志字体容易看成 hs1
-if "hsl" in df.columns:
-    result["turnover_rate"] = pd.to_numeric(
-        df["hsl"], errors="coerce"
-    )
-elif "hs1" in df.columns:
-    result["turnover_rate"] = pd.to_numeric(
-        df["hs1"], errors="coerce"
-    )
-else:
-    result["turnover_rate"] = np.nan
-
-# 量比
-result["volume_ratio"] = pd.to_numeric(
-    df["lb"], errors="coerce"
-)
-
-# TTM 市盈率
-result["pe"] = pd.to_numeric(
-    df["pe_ttm"], errors="coerce"
-)
-
-# pn 可作为当前腾讯榜单中的估值辅助字段
-result["pb"] = pd.to_numeric(
-    df["pn"], errors="coerce"
-)
-
-# 顺便保留腾讯特有指标，以后升级量化时直接使用
-result["speed"] = pd.to_numeric(
-    df["speed"], errors="coerce"
-)
-
-result["zdf_d5"] = pd.to_numeric(
-    df["zdf_d5"], errors="coerce"
-)
-
-result["zdf_d10"] = pd.to_numeric(
-    df["zdf_d10"], errors="coerce"
-)
-
-result["zdf_d20"] = pd.to_numeric(
-    df["zdf_d20"], errors="coerce"
-)
-
-result["zdf_d60"] = pd.to_numeric(
-    df["zdf_d60"], errors="coerce"
-)
-
-result["amplitude_tx"] = amplitude_tx
-
-return (
-    result,
-    "腾讯A股实时行情",
-    "partial"
-)
+            return (
+                result,
+                "腾讯A股实时行情",
+                "partial"
+            )
 
     except Exception as e:
         print("腾讯失败：", repr(e))
