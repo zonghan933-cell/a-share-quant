@@ -10,6 +10,8 @@ import pandas as pd
 
 
 OUTPUT_FILE = "latest.json"
+MIN_PRICE = 3
+MAX_PRICE = 100
 
 # 只保留你可以买的沪深主板
 MAIN_BOARD_PREFIXES = (
@@ -236,10 +238,11 @@ def filter_main_board(df):
 
     # 排除无价格/停牌/异常值
     df = df[
-        (df["price"] > 0)
-        & (df["pre_close"] > 0)
-        & (df["amount"].fillna(0) > 0)
-    ]
+    (df["price"] >= MIN_PRICE)
+    & (df["price"] <= MAX_PRICE)
+    & (df["pre_close"] > 0)
+    & (df["amount"].fillna(0) > 0)
+]
 
     return df
 
@@ -570,6 +573,13 @@ def build_results(df):
             "volume_ratio": safe_float(row["volume_ratio"]),
             "pe": safe_float(row["pe"]),
             "pb": safe_float(row["pb"]),
+            "speed": safe_float(row.get("speed")),
+            "zdf_d5": safe_float(row.get("zdf_d5")),
+            "zdf_d10": safe_float(row.get("zdf_d10")),
+            "zdf_d20": safe_float(row.get("zdf_d20")),
+            "zdf_d60": safe_float(row.get("zdf_d60")),
+            "amplitude_tx": safe_float(row.get("amplitude_tx")),
+            
             "amplitude": amplitude,
             "intraday_position": intraday_position,
             "score": score,
