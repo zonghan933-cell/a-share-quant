@@ -46,82 +46,126 @@ def normalize_code(code):
 
 def get_realtime_data():
     """
-    第一数据源：东方财富
-    如果失败则自动切换新浪。
+    第一数据源：腾讯
+    第二数据源：新浪
     """
 
-    # ---------- 东方财富 ----------
+    # ---------- 腾讯优先 ----------
     try:
-        print("正在尝试东方财富实时行情...")
-        df = ak.stock_zh_a_spot_em()
+        print("正在尝试腾讯A股实时行情...")
+
+        start = time.time()
+        df = ak.stock_zh_a_spot_tx()
+        elapsed = time.time() - start
 
         if df is not None and not df.empty:
-            print(f"东方财富成功：{len(df)} 条")
+            print(
+                f"腾讯成功：{len(df)} 条，耗时 {elapsed:.1f} 秒"
+            )
 
             result = pd.DataFrame({
-                "code": df["代码"].astype(str).str.zfill(6),
+                "code": df["代码"].map(normalize_code),
                 "name": df["名称"],
-                "price": pd.to_numeric(df["最新价"], errors="coerce"),
-                "change_pct": pd.to_numeric(df["涨跌幅"], errors="coerce"),
-                "pre_close": pd.to_numeric(df["昨收"], errors="coerce"),
-                "open": pd.to_numeric(df["今开"], errors="coerce"),
-                "high": pd.to_numeric(df["最高"], errors="coerce"),
-                "low": pd.to_numeric(df["最低"], errors="coerce"),
-                "volume": pd.to_numeric(df["成交量"], errors="coerce"),
-                "amount": pd.to_numeric(df["成交额"], errors="coerce"),
+                "price": pd.to_numeric(
+                    df["最新价"], errors="coerce"
+                ),
+                "change_pct": pd.to_numeric(
+                    df["涨跌幅"], errors="coerce"
+                ),
+                "pre_close": pd.to_numeric(
+                    df["昨收"], errors="coerce"
+                ),
+                "open": pd.to_numeric(
+                    df["今开"], errors="coerce"
+                ),
+                "high": pd.to_numeric(
+                    df["最高"], errors="coerce"
+                ),
+                "low": pd.to_numeric(
+                    df["最低"], errors="coerce"
+                ),
+                "volume": pd.to_numeric(
+                    df["成交量"], errors="coerce"
+                ),
+                "amount": pd.to_numeric(
+                    df["成交额"], errors="coerce"
+                ),
             })
 
-            # 东财额外字段
-            result["turnover_rate"] = pd.to_numeric(
-                df.get("换手率"), errors="coerce"
-            )
-            result["volume_ratio"] = pd.to_numeric(
-                df.get("量比"), errors="coerce"
-            )
-            result["pe"] = pd.to_numeric(
-                df.get("市盈率-动态"), errors="coerce"
-            )
-            result["pb"] = pd.to_numeric(
-                df.get("市净率"), errors="coerce"
-            )
+            # 腾讯当前全A接口不强制依赖这些字段
+            result["turnover_rate"] = np.nan
+            result["volume_ratio"] = np.nan
+            result["pe"] = np.nan
+            result["pb"] = np.nan
 
-            return result, "东方财富A股实时行情", "full"
+            return (
+                result,
+                "腾讯A股实时行情",
+                "partial"
+            )
 
     except Exception as e:
-        print("东方财富失败：", repr(e))
+        print("腾讯失败：", repr(e))
 
     # ---------- 新浪备用 ----------
-    print("切换新浪A股实时行情...")
+    try:
+        print("切换新浪A股实时行情...")
 
-    start = time.time()
-    df = ak.stock_zh_a_spot()
+        start = time.time()
+        df = ak.stock_zh_a_spot()
+        elapsed = time.time() - start
 
-    if df is None or df.empty:
-        raise RuntimeError("新浪行情返回空数据")
+        if df is None or df.empty:
+            raise RuntimeError("新浪行情返回空数据")
 
-    elapsed = time.time() - start
-    print(f"新浪成功：{len(df)} 条，耗时 {elapsed:.1f} 秒")
+        print(
+            f"新浪成功：{len(df)} 条，耗时 {elapsed:.1f} 秒"
+        )
 
-    result = pd.DataFrame({
-        "code": df["代码"].map(normalize_code),
-        "name": df["名称"],
-        "price": pd.to_numeric(df["最新价"], errors="coerce"),
-        "change_pct": pd.to_numeric(df["涨跌幅"], errors="coerce"),
-        "pre_close": pd.to_numeric(df["昨收"], errors="coerce"),
-        "open": pd.to_numeric(df["今开"], errors="coerce"),
-        "high": pd.to_numeric(df["最高"], errors="coerce"),
-        "low": pd.to_numeric(df["最低"], errors="coerce"),
-        "volume": pd.to_numeric(df["成交量"], errors="coerce"),
-        "amount": pd.to_numeric(df["成交额"], errors="coerce"),
-    })
+        result = pd.DataFrame({
+            "code": df["代码"].map(normalize_code),
+            "name": df["名称"],
+            "price": pd.to_numeric(
+                df["最新价"], errors="coerce"
+            ),
+            "change_pct": pd.to_numeric(
+                df["涨跌幅"], errors="coerce"
+            ),
+            "pre_close": pd.to_numeric(
+                df["昨收"], errors="coerce"
+            ),
+            "open": pd.to_numeric(
+                df["今开"], errors="coerce"
+            ),
+            "high": pd.to_numeric(
+                df["最高"], errors="coerce"
+            ),
+            "low": pd.to_numeric(
+                df["最低"], errors="coerce"
+            ),
+            "volume": pd.to_numeric(
+                df["成交量"], errors="coerce"
+            ),
+            "amount": pd.to_numeric(
+                df["成交额"], errors="coerce"
+            ),
+        })
 
-    # 新浪没有这些字段，保持为空，不当成0分
-    result["turnover_rate"] = np.nan
-    result["volume_ratio"] = np.nan
-    result["pe"] = np.nan
-    result["pb"] = np.nan
+        result["turnover_rate"] = np.nan
+        result["volume_ratio"] = np.nan
+        result["pe"] = np.nan
+        result["pb"] = np.nan
 
-    return result, "新浪A股实时行情", "partial"
+        return (
+            result,
+            "新浪A股实时行情",
+            "partial"
+        )
+
+    except Exception as e:
+        print("新浪失败：", repr(e))
+
+    raise RuntimeError("腾讯和新浪实时行情均获取失败")
 
 
 def filter_main_board(df):
