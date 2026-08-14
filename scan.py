@@ -10,6 +10,7 @@ import pandas as pd
 
 
 OUTPUT_FILE = "latest.json"
+INDUSTRY_CACHE_FILE = "industry_cache.json"
 MIN_PRICE = 3
 MAX_PRICE = 100
 
@@ -658,7 +659,687 @@ def score_stock(row):
         score_detail
     )
 
+# =========================================================
+# V2.3A 行业热度 / 行业缓存
+# 只用于解释和确认，暂时不改变个股原始 score
+# =========================================================
 
+
+def industry_to_number(value):
+    if value is None:
+        return None
+
+    text = str(value).strip()
+
+    if (
+        not text
+        or text.lower() == "nan"
+        or text == "--"
+    ):
+        return None
+
+    text = (
+        text
+        .replace("%", "")
+        .replace("亿", "")
+        .replace(",", "")
+    )
+
+    try:
+        return float(text)
+    except Exception:
+        return None
+
+
+def normalize_industry_text(value):
+    if value is None:
+        return ""
+
+    return (
+        str(value)
+        .strip()
+        .replace(" ", "")
+        .replace("、", "")
+        .replace("，", "")
+        .replace(",", "")
+        .replace("（", "(")
+        .replace("）", ")")
+    )
+
+
+def load_industry_cache():
+    try:
+        with open(
+            INDUSTRY_CACHE_FILE,
+            "r",
+            encoding="utf-8"
+        ) as f:
+
+            data = json.load(f)
+
+            if isinstance(data, dict):
+                return data
+
+    except Exception:
+        pass
+
+    return {}
+
+
+def save_industry_cache(cache):
+    try:
+        with open(
+            INDUSTRY_CACHE_FILE,
+            "w",
+            encoding="utf-8"
+        ) as f:
+
+            json.dump(
+                cache,
+                f,
+                ensure_ascii=False,
+                indent=2
+            )
+
+    except Exception as e:
+        print(
+            "行业缓存保存失败:",
+            repr(e)
+        )
+
+
+def get_industry_heat_table():
+    """
+    同花顺：
+    即时行业资金流 + 3日行业资金流
+
+    返回90个行业的板块热度。
+    """
+
+    print("")
+    print("正在获取行业资金热度...")
+
+    start = time.time()
+
+    now_df = ak.stock_fund_flow_industry(
+        symbol="即时"
+    )
+
+    three_df = ak.stock_fund_flow_industry(
+        symbol="3日排行"
+    )
+
+    now = now_df.copy()
+
+    now["industry"] = (
+        now["行业"]
+        .astype(str)
+        .str.strip()
+    )
+
+    now["change_now"] = (
+        now["行业-涨跌幅"]
+        .apply(industry_to_number)
+    )
+
+    now["net_now"] = (
+        now["净额"]
+        .apply(industry_to_number)
+    )
+
+    now = now[
+        [
+            "industry",
+            "change_now",
+            "net_now",
+            "公司家数",
+            "领涨股",
+            "领涨股-涨跌幅",
+        ]
+    ]
+
+    three = three_df.copy()
+
+    three["industry"] = (
+        three["行业"]
+        .astype(str)
+        .str.strip()
+    )
+
+    three["change_3d"] = (
+        three["阶段涨跌幅"]
+        .apply(industry_to_number)
+    )
+
+    three["net_3d"] = (
+        three["净额"]
+        .apply(industry_to_number)
+    )
+
+    three = three[
+        [
+            "industry",
+            "change_3d",
+            "net_3d",
+        ]
+    ]
+
+    table = pd.merge(
+        now,
+        three,
+        on="industry",
+        how="left"
+    )
+
+    # 用全市场90个行业做百分位排名
+    table["rank_change_now"] = (
+        table["change_now"]
+        .rank(pct=True)
+        .fillna(0.5)
+    )
+
+    table["rank_change_3d"] = (
+        table["change_3d"]
+        .rank(pct=True)
+        .fillna(0.5)
+    )
+
+    table["rank_net_now"] = (
+        table["net_now"]
+        .rank(pct=True)
+        .fillna(0.5)
+    )
+
+    table["rank_net_3d"] = (
+        table["net_3d"]
+        .rank(pct=True)
+        .fillna(0.5)
+    )
+
+    # 热度满分10
+    table["heat_score"] = (
+        table["rank_change_now"] * 0.35
+        + table["rank_change_3d"] * 0.30
+        + table["rank_net_now"] * 0.20
+        + table["rank_net_3d"] * 0.15
+    ) * 10
+
+    elapsed = time.time() - start
+
+    print(
+        f"行业资金热度获取成功，"
+        f"耗时 {elapsed:.2f} 秒"
+    )
+
+    return table
+
+
+def industry_classification_priority(text):
+    text = str(text)
+
+    if "中证行业分类标准" in text:
+        return 100
+
+    if "巨潮行业分类标准" in text:
+        return 90
+
+    if "申银万国行业分类标准" in text:
+        return 80
+
+    if "新财富行业分类标准" in text:
+        return 70
+
+    if "证监会行业分类标准" in text:
+        return 50
+
+    if "上市公司协会" in text:
+        return 20
+
+    return 10
+
+
+def industry_keyword_match(
+    candidate,
+    industries
+):
+    candidate = normalize_industry_text(
+        candidate
+    )
+
+    # 中药
+    if (
+        "中药" in candidate
+        or "中成药" in candidate
+    ):
+        for industry in industries:
+            if "中药" in industry:
+                return industry
+
+    # 旅游 / 景区 / 酒店
+    if any(
+        x in candidate
+        for x in [
+            "旅游",
+            "景区",
+            "景点",
+            "自然景区",
+            "酒店",
+            "餐饮",
+            "餐馆",
+        ]
+    ):
+        for industry in industries:
+            if (
+                "旅游" in industry
+                or "酒店" in industry
+                or "景区" in industry
+            ):
+                return industry
+
+    # 医药商业
+    if (
+        "医药商业" in candidate
+        or "医药流通" in candidate
+    ):
+        for industry in industries:
+            if "医药商业" in industry:
+                return industry
+
+    # 生物制品
+    if (
+        "生物制品" in candidate
+        or "生物药" in candidate
+    ):
+        for industry in industries:
+            if "生物制品" in industry:
+                return industry
+
+    # 通信设备
+    if "通信设备" in candidate:
+        for industry in industries:
+            if "通信设备" in industry:
+                return industry
+
+    # 通信服务
+    if "通信服务" in candidate:
+        for industry in industries:
+            if "通信服务" in industry:
+                return industry
+
+    # 半导体
+    if "半导体" in candidate:
+        for industry in industries:
+            if "半导体" in industry:
+                return industry
+
+    return None
+
+
+def match_stock_industry(
+    code,
+    industry_table,
+    cache
+):
+    """
+    给股票匹配同花顺90行业。
+
+    优先缓存；
+    缓存没有时才访问巨潮。
+    """
+
+    code = str(code).zfill(6)
+
+    industries = (
+        industry_table["industry"]
+        .dropna()
+        .astype(str)
+        .tolist()
+    )
+
+    # -------------------------
+    # 1. 先查缓存
+    # -------------------------
+
+    cached = cache.get(code)
+
+    if (
+        cached
+        and cached in industries
+    ):
+        return (
+            cached,
+            "cache",
+            cached
+        )
+
+    # -------------------------
+    # 2. 巨潮查询
+    # -------------------------
+
+    today_str = datetime.now(
+        ZoneInfo("Asia/Shanghai")
+    ).strftime("%Y%m%d")
+
+    df = ak.stock_industry_change_cninfo(
+        symbol=code,
+        start_date="20000101",
+        end_date=today_str
+    )
+
+    if df is None or df.empty:
+        return None, None, None
+
+    df = df.copy()
+
+    df["priority"] = (
+        df["分类标准"]
+        .apply(
+            industry_classification_priority
+        )
+    )
+
+    df["变更日期"] = pd.to_datetime(
+        df["变更日期"],
+        errors="coerce"
+    )
+
+    df = df.sort_values(
+        [
+            "priority",
+            "变更日期",
+        ],
+        ascending=[
+            False,
+            False,
+        ]
+    )
+
+    normalized_industries = {
+        normalize_industry_text(x): x
+        for x in industries
+    }
+
+    fields = [
+        "行业中类",
+        "行业大类",
+        "行业次类",
+        "行业门类",
+    ]
+
+    # -------------------------
+    # 3. 完全匹配
+    # -------------------------
+
+    for _, row in df.iterrows():
+
+        for field in fields:
+
+            value = row.get(field)
+
+            if pd.isna(value):
+                continue
+
+            key = normalize_industry_text(
+                value
+            )
+
+            if key in normalized_industries:
+
+                industry = (
+                    normalized_industries[key]
+                )
+
+                cache[code] = industry
+
+                return (
+                    industry,
+                    field,
+                    value
+                )
+
+    # -------------------------
+    # 4. 包含匹配
+    # -------------------------
+
+    for _, row in df.iterrows():
+
+        for field in fields:
+
+            value = row.get(field)
+
+            if pd.isna(value):
+                continue
+
+            candidate = (
+                normalize_industry_text(
+                    value
+                )
+            )
+
+            if len(candidate) < 2:
+                continue
+
+            for industry in industries:
+
+                target = (
+                    normalize_industry_text(
+                        industry
+                    )
+                )
+
+                if (
+                    candidate == target
+                    or candidate in target
+                    or target in candidate
+                ):
+
+                    cache[code] = industry
+
+                    return (
+                        industry,
+                        field,
+                        value
+                    )
+
+    # -------------------------
+    # 5. 关键词兼容
+    # -------------------------
+
+    for _, row in df.iterrows():
+
+        for field in fields:
+
+            value = row.get(field)
+
+            if pd.isna(value):
+                continue
+
+            matched = (
+                industry_keyword_match(
+                    value,
+                    industries
+                )
+            )
+
+            if matched:
+
+                cache[code] = matched
+
+                return (
+                    matched,
+                    field,
+                    value
+                )
+
+    return None, None, None
+
+
+def industry_confirmation(heat):
+    if heat is None:
+        return "未知"
+
+    if heat >= 8:
+        return "强"
+
+    if heat >= 6:
+        return "偏强"
+
+    if heat >= 4:
+        return "中性"
+
+    return "弱"
+
+
+def enrich_industry_info(records):
+    """
+    只处理最终Top20。
+    V2.3A不修改 score、不重新排序。
+    """
+
+    if not records:
+        return records
+
+    print("")
+    print("=" * 60)
+    print("开始进行行业板块确认")
+    print("=" * 60)
+
+    try:
+        industry_table = (
+            get_industry_heat_table()
+        )
+
+    except Exception as e:
+
+        print(
+            "行业资金数据获取失败:",
+            repr(e)
+        )
+
+        # 行业数据失败也不能影响正常扫描
+        return records
+
+    cache = load_industry_cache()
+
+    for item in records:
+
+        code = str(
+            item.get("code", "")
+        ).zfill(6)
+
+        name = item.get(
+            "name",
+            ""
+        )
+
+        try:
+
+            industry, source_field, raw_class = (
+                match_stock_industry(
+                    code,
+                    industry_table,
+                    cache
+                )
+            )
+
+        except Exception as e:
+
+            print(
+                f"{code} {name} "
+                f"行业查询失败:",
+                repr(e)
+            )
+
+            industry = None
+            source_field = None
+            raw_class = None
+
+        item["industry"] = industry
+        item["industry_match_field"] = (
+            source_field
+        )
+        item["industry_raw_class"] = (
+            raw_class
+        )
+
+        if industry is None:
+
+            item["industry_heat"] = None
+            item["industry_change_now"] = None
+            item["industry_change_3d"] = None
+            item["industry_net_now"] = None
+            item["industry_net_3d"] = None
+            item["sector_confirmation"] = (
+                "未知"
+            )
+
+            print(
+                f"{code} {name} "
+                f"=> 未匹配行业"
+            )
+
+            continue
+
+        matched_row = industry_table[
+            industry_table["industry"]
+            == industry
+        ]
+
+        if matched_row.empty:
+            continue
+
+        row = matched_row.iloc[0]
+
+        heat = safe_float(
+            row["heat_score"]
+        )
+
+        item["industry_heat"] = (
+            round(heat, 2)
+            if heat is not None
+            else None
+        )
+
+        item["industry_change_now"] = (
+            safe_float(
+                row["change_now"]
+            )
+        )
+
+        item["industry_change_3d"] = (
+            safe_float(
+                row["change_3d"]
+            )
+        )
+
+        item["industry_net_now"] = (
+            safe_float(
+                row["net_now"]
+            )
+        )
+
+        item["industry_net_3d"] = (
+            safe_float(
+                row["net_3d"]
+            )
+        )
+
+        item["sector_confirmation"] = (
+            industry_confirmation(
+                heat
+            )
+        )
+
+        print(
+            f"{code} {name} "
+            f"=> {industry} | "
+            f"热度={item['industry_heat']} | "
+            f"确认={item['sector_confirmation']}"
+        )
+
+    save_industry_cache(cache)
+
+    return records
 def build_results(df):
     records = []
 
