@@ -1385,8 +1385,14 @@ def build_results(df):
         reverse=True
     )
 
-    return records[:20]
+    
+        top_records = records[:20]
 
+        top_records = enrich_industry_info(
+            top_records
+     )
+
+    return top_records
 
 def save_json(payload):
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
@@ -1427,7 +1433,7 @@ def main():
             "raw_stock_count": raw_count,
             "main_board_count": filtered_count,
             "result_count": len(top20),
-            "strategy": "主板非ST・偏低位・避免追高 V2.2",
+            "strategy": "主板非ST・偏低位・行业确认 V2.3A",
             "stocks": top20,
         }
 
