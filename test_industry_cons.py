@@ -2,53 +2,151 @@ import time
 import akshare as ak
 
 
-TEST_INDUSTRIES = [
-    "电子化学品",
-    "通信设备",
-    "元件",
-]
+def show_result(title, df, elapsed):
+    print("")
+    print("=" * 70)
+    print(title)
+    print("=" * 70)
+
+    print(f"耗时: {elapsed:.2f} 秒")
+    print(f"rows: {len(df)}")
+
+    print("")
+    print("columns:")
+    print(list(df.columns))
+
+    print("")
+    print("sample:")
+    print(df.head(8).to_dict("records"))
 
 
 def main():
-    print("测试同花顺行业成分股接口")
-    print("=" * 60)
+    print("A股行业映射 + 行业资金流测试")
+    print("=" * 70)
 
-    for industry in TEST_INDUSTRIES:
+    # ==========================================
+    # 1. 申万全市场股票行业分类
+    # ==========================================
+
+    print("")
+    print("开始测试: stock_industry_clf_hist_sw")
+
+    start = time.time()
+
+    try:
+        clf = ak.stock_industry_clf_hist_sw()
+
+        elapsed = time.time() - start
+
+        show_result(
+            "申万个股行业分类",
+            clf,
+            elapsed
+        )
+
+        # 看看哪些字段与“行业”有关
+        industry_cols = [
+            col
+            for col in clf.columns
+            if "行业" in str(col)
+            or "industry" in str(col).lower()
+        ]
+
         print("")
-        print("开始测试:", industry)
+        print("可能的行业字段:")
+        print(industry_cols)
 
-        start = time.time()
+        # 如果有股票代码字段，取最新行业记录
+        if "symbol" in clf.columns:
+            current_clf = clf.copy()
 
-        try:
-            df = ak.stock_board_industry_cons_ths(
-                symbol=industry
+            if "start_date" in current_clf.columns:
+                current_clf = current_clf.sort_values(
+                    "start_date"
+                )
+
+            current_clf = current_clf.drop_duplicates(
+                subset=["symbol"],
+                keep="last"
             )
 
-            elapsed = time.time() - start
-
+            print("")
             print(
-                f"{industry} => success | "
-                f"{elapsed:.2f} 秒 | "
-                f"rows: {len(df)}"
+                "去重后当前股票数量:",
+                len(current_clf)
             )
 
-            print("columns:")
-            print(list(df.columns))
-
-            print("sample:")
+            print("当前分类 sample:")
             print(
-                df.head(3).to_dict("records")
+                current_clf.head(10).to_dict(
+                    "records"
+                )
             )
 
-        except Exception as e:
-            elapsed = time.time() - start
+    except Exception as e:
+        print("")
+        print(
+            "stock_industry_clf_hist_sw => error"
+        )
+        print(repr(e))
 
-            print(
-                f"{industry} => error | "
-                f"{elapsed:.2f} 秒"
-            )
+    # ==========================================
+    # 2. 同花顺即时行业资金流
+    # ==========================================
 
-            print(repr(e))
+    print("")
+    print("开始测试: stock_fund_flow_industry 即时")
+
+    start = time.time()
+
+    try:
+        fund_now = ak.stock_fund_flow_industry(
+            symbol="即时"
+        )
+
+        elapsed = time.time() - start
+
+        show_result(
+            "同花顺即时行业资金流",
+            fund_now,
+            elapsed
+        )
+
+    except Exception as e:
+        print("")
+        print(
+            "stock_fund_flow_industry 即时 => error"
+        )
+        print(repr(e))
+
+    # ==========================================
+    # 3. 同花顺3日行业资金流
+    # ==========================================
+
+    print("")
+    print("开始测试: stock_fund_flow_industry 3日排行")
+
+    start = time.time()
+
+    try:
+        fund_3d = ak.stock_fund_flow_industry(
+            symbol="3日排行"
+        )
+
+        elapsed = time.time() - start
+
+        show_result(
+            "同花顺3日行业资金流",
+            fund_3d,
+            elapsed
+        )
+
+    except Exception as e:
+        print("")
+        print(
+            "stock_fund_flow_industry 3日 => error"
+        )
+        print(repr(e))
 
 
 if __name__ == "__main__":
