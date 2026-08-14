@@ -1,13 +1,13 @@
 {
   "status": "ok",
-  "data_time": "2026-08-14T16:46:19.169098+08:00",
-  "calculated_at": "2026-08-14T16:46:45.128419+08:00",
+  "data_time": "2026-08-15T00:18:13.444253+08:00",
+  "calculated_at": "2026-08-15T00:19:56.130535+08:00",
   "data_source": "腾讯A股实时行情",
   "data_quality": "partial",
   "raw_stock_count": 5543,
   "main_board_count": 2856,
   "result_count": 20,
-  "strategy": "主板非ST・偏低位・避免追高 V2.2",
+  "strategy": "主板非ST・偏低位・行业确认 V2.3A",
   "stocks": [
     {
       "code": "002033",
@@ -55,7 +55,16 @@
         "penalty_speed": 0,
         "total_penalty": 0,
         "final_score": 86.39
-      }
+      },
+      "industry": "旅游及酒店",
+      "industry_match_field": "行业中类",
+      "industry_raw_class": "旅游",
+      "industry_heat": 3.88,
+      "industry_change_now": -0.87,
+      "industry_change_3d": -1.62,
+      "industry_net_now": -1.6,
+      "industry_net_3d": -1.45,
+      "sector_confirmation": "弱"
     },
     {
       "code": "002349",
@@ -103,7 +112,16 @@
         "penalty_speed": 0,
         "total_penalty": 0,
         "final_score": 85.57
-      }
+      },
+      "industry": "中药",
+      "industry_match_field": "行业大类",
+      "industry_raw_class": "中药",
+      "industry_heat": 4.86,
+      "industry_change_now": -0.81,
+      "industry_change_3d": 1.25,
+      "industry_net_now": -10.7,
+      "industry_net_3d": -0.27,
+      "sector_confirmation": "中性"
     },
     {
       "code": "002550",
@@ -151,7 +169,16 @@
         "penalty_speed": 0,
         "total_penalty": 0,
         "final_score": 85.39
-      }
+      },
+      "industry": null,
+      "industry_match_field": null,
+      "industry_raw_class": null,
+      "industry_heat": null,
+      "industry_change_now": null,
+      "industry_change_3d": null,
+      "industry_net_now": null,
+      "industry_net_3d": null,
+      "sector_confirmation": "未知"
     },
     {
       "code": "000919",
@@ -199,7 +226,16 @@
         "penalty_speed": 0,
         "total_penalty": 0,
         "final_score": 85.27
-      }
+      },
+      "industry": "中药",
+      "industry_match_field": "行业中类",
+      "industry_raw_class": "中药",
+      "industry_heat": 4.86,
+      "industry_change_now": -0.81,
+      "industry_change_3d": 1.25,
+      "industry_net_now": -10.7,
+      "industry_net_3d": -0.27,
+      "sector_confirmation": "中性"
     },
     {
       "code": "600713",
@@ -247,7 +283,16 @@
         "penalty_speed": 0,
         "total_penalty": 0,
         "final_score": 85.26
-      }
+      },
+      "industry": "医药商业",
+      "industry_match_field": "行业中类",
+      "industry_raw_class": "医药商业",
+      "industry_heat": 7.52,
+      "industry_change_now": 0.99,
+      "industry_change_3d": 3.71,
+      "industry_net_now": -2.78,
+      "industry_net_3d": -3.29,
+      "sector_confirmation": "偏强"
     },
     {
       "code": "600763",
@@ -262,8 +307,8 @@
       "amount": 561440000.0,
       "turnover_rate": 3.39,
       "volume_ratio": 1.36,
-      "pe": 33.21,
-      "pb": 3.79,
+      "pe": 27.28,
+      "pb": 4.05,
       "speed": 0.29,
       "zdf_d5": 2.4,
       "zdf_d10": 1.68,
@@ -272,7 +317,7 @@
       "amplitude_tx": 4.81,
       "amplitude": 4.81,
       "intraday_position": 0.5,
-      "score": 83.78,
+      "score": 84.22,
       "score_detail": {
         "today": 11.01,
         "d5": 12.13,
@@ -282,9 +327,9 @@
         "volume_ratio": 9.89,
         "turnover": 8.21,
         "liquidity": 5.6,
-        "valuation": 5.38,
+        "valuation": 5.83,
         "risk": 8.67,
-        "base_score": 83.78,
+        "base_score": 84.22,
         "penalty_today": 0,
         "penalty_d5": 0,
         "penalty_d10": 0,
@@ -294,8 +339,17 @@
         "penalty_turnover": 0,
         "penalty_speed": 0,
         "total_penalty": 0,
-        "final_score": 83.78
-      }
+        "final_score": 84.22
+      },
+      "industry": "医疗服务",
+      "industry_match_field": "行业中类",
+      "industry_raw_class": "医疗服务",
+      "industry_heat": 5.42,
+      "industry_change_now": -0.33,
+      "industry_change_3d": 5.2,
+      "industry_net_now": -25.86,
+      "industry_net_3d": -1.93,
+      "sector_confirmation": "中性"
     },
     {
       "code": "600941",
@@ -343,7 +397,16 @@
         "penalty_speed": 0,
         "total_penalty": 0,
         "final_score": 83.02
-      }
+      },
+      "industry": null,
+      "industry_match_field": null,
+      "industry_raw_class": null,
+      "industry_heat": null,
+      "industry_change_now": null,
+      "industry_change_3d": null,
+      "industry_net_now": null,
+      "industry_net_3d": null,
+      "sector_confirmation": "未知"
     },
     {
       "code": "600969",
@@ -391,7 +454,16 @@
         "penalty_speed": 0,
         "total_penalty": 0,
         "final_score": 82.29
-      }
+      },
+      "industry": "电力",
+      "industry_match_field": "行业次类",
+      "industry_raw_class": "电力",
+      "industry_heat": 0.71,
+      "industry_change_now": -2.65,
+      "industry_change_3d": -2.52,
+      "industry_net_now": -60.65,
+      "industry_net_3d": -17.25,
+      "sector_confirmation": "弱"
     },
     {
       "code": "603883",
@@ -439,7 +511,16 @@
         "penalty_speed": 0,
         "total_penalty": 0,
         "final_score": 82.16
-      }
+      },
+      "industry": "医药商业",
+      "industry_match_field": "行业中类",
+      "industry_raw_class": "医药商业",
+      "industry_heat": 7.52,
+      "industry_change_now": 0.99,
+      "industry_change_3d": 3.71,
+      "industry_net_now": -2.78,
+      "industry_net_3d": -3.29,
+      "sector_confirmation": "偏强"
     },
     {
       "code": "000597",
@@ -487,7 +568,16 @@
         "penalty_speed": 0,
         "total_penalty": 0,
         "final_score": 82.08
-      }
+      },
+      "industry": "化学制药",
+      "industry_match_field": "行业次类",
+      "industry_raw_class": "化学制药",
+      "industry_heat": 5.13,
+      "industry_change_now": -0.46,
+      "industry_change_3d": 1.74,
+      "industry_net_now": -40.9,
+      "industry_net_3d": 0.29,
+      "sector_confirmation": "中性"
     },
     {
       "code": "000756",
@@ -535,7 +625,16 @@
         "penalty_speed": 0,
         "total_penalty": 0,
         "final_score": 81.82
-      }
+      },
+      "industry": "医药商业",
+      "industry_match_field": "行业次类",
+      "industry_raw_class": "医药",
+      "industry_heat": 7.52,
+      "industry_change_now": 0.99,
+      "industry_change_3d": 3.71,
+      "industry_net_now": -2.78,
+      "industry_net_3d": -3.29,
+      "sector_confirmation": "偏强"
     },
     {
       "code": "601108",
@@ -583,7 +682,16 @@
         "penalty_speed": 0,
         "total_penalty": 0,
         "final_score": 81.68
-      }
+      },
+      "industry": "证券",
+      "industry_match_field": "行业中类",
+      "industry_raw_class": "证券",
+      "industry_heat": 2.07,
+      "industry_change_now": -1.31,
+      "industry_change_3d": -0.91,
+      "industry_net_now": -46.1,
+      "industry_net_3d": -25.75,
+      "sector_confirmation": "弱"
     },
     {
       "code": "002390",
@@ -631,7 +739,16 @@
         "penalty_speed": 0,
         "total_penalty": 0,
         "final_score": 81.17
-      }
+      },
+      "industry": "医药商业",
+      "industry_match_field": "行业中类",
+      "industry_raw_class": "医药商业",
+      "industry_heat": 7.52,
+      "industry_change_now": 0.99,
+      "industry_change_3d": 3.71,
+      "industry_net_now": -2.78,
+      "industry_net_3d": -3.29,
+      "sector_confirmation": "偏强"
     },
     {
       "code": "601728",
@@ -679,7 +796,16 @@
         "penalty_speed": 0,
         "total_penalty": 0,
         "final_score": 80.96
-      }
+      },
+      "industry": "通信服务",
+      "industry_match_field": "行业门类",
+      "industry_raw_class": "通信服务",
+      "industry_heat": 9.11,
+      "industry_change_now": 1.38,
+      "industry_change_3d": 2.92,
+      "industry_net_now": 21.96,
+      "industry_net_3d": -0.35,
+      "sector_confirmation": "强"
     },
     {
       "code": "002004",
@@ -727,7 +853,16 @@
         "penalty_speed": 0,
         "total_penalty": 0,
         "final_score": 80.93
-      }
+      },
+      "industry": "化学制品",
+      "industry_match_field": "行业大类",
+      "industry_raw_class": "化学制品",
+      "industry_heat": 3.7,
+      "industry_change_now": 0.09,
+      "industry_change_3d": -1.16,
+      "industry_net_now": -11.21,
+      "industry_net_3d": -29.09,
+      "sector_confirmation": "弱"
     },
     {
       "code": "603296",
@@ -775,7 +910,16 @@
         "penalty_speed": 0,
         "total_penalty": 3,
         "final_score": 80.92
-      }
+      },
+      "industry": null,
+      "industry_match_field": null,
+      "industry_raw_class": null,
+      "industry_heat": null,
+      "industry_change_now": null,
+      "industry_change_3d": null,
+      "industry_net_now": null,
+      "industry_net_3d": null,
+      "sector_confirmation": "未知"
     },
     {
       "code": "000989",
@@ -823,7 +967,16 @@
         "penalty_speed": 0,
         "total_penalty": 0,
         "final_score": 80.89
-      }
+      },
+      "industry": "中药",
+      "industry_match_field": "行业大类",
+      "industry_raw_class": "中药",
+      "industry_heat": 4.86,
+      "industry_change_now": -0.81,
+      "industry_change_3d": 1.25,
+      "industry_net_now": -10.7,
+      "industry_net_3d": -0.27,
+      "sector_confirmation": "中性"
     },
     {
       "code": "603739",
@@ -871,7 +1024,16 @@
         "penalty_speed": 0,
         "total_penalty": 0,
         "final_score": 80.87
-      }
+      },
+      "industry": null,
+      "industry_match_field": null,
+      "industry_raw_class": null,
+      "industry_heat": null,
+      "industry_change_now": null,
+      "industry_change_3d": null,
+      "industry_net_now": null,
+      "industry_net_3d": null,
+      "sector_confirmation": "未知"
     },
     {
       "code": "002497",
@@ -919,7 +1081,16 @@
         "penalty_speed": 0,
         "total_penalty": 0,
         "final_score": 80.81
-      }
+      },
+      "industry": "化学制品",
+      "industry_match_field": "行业大类",
+      "industry_raw_class": "化学制品",
+      "industry_heat": 3.7,
+      "industry_change_now": 0.09,
+      "industry_change_3d": -1.16,
+      "industry_net_now": -11.21,
+      "industry_net_3d": -29.09,
+      "sector_confirmation": "弱"
     },
     {
       "code": "002098",
@@ -967,7 +1138,16 @@
         "penalty_speed": 0,
         "total_penalty": 0,
         "final_score": 80.79
-      }
+      },
+      "industry": "纺织制造",
+      "industry_match_field": "行业次类",
+      "industry_raw_class": "纺织制造",
+      "industry_heat": 5.33,
+      "industry_change_now": -0.11,
+      "industry_change_3d": -0.89,
+      "industry_net_now": -1.78,
+      "industry_net_3d": -1.93,
+      "sector_confirmation": "中性"
     }
   ]
 }
