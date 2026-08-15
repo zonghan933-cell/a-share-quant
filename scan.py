@@ -1365,7 +1365,7 @@ def enrich_industry_info(records):
             float(base_score) + industry_adjustment,
             2
         )
-                print(
+        print(
             f"{code} {name} "
             f"=> {industry} | "
             f"热度={item['industry_heat']} | "
