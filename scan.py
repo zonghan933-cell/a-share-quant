@@ -1189,7 +1189,33 @@ def industry_confirmation(heat):
 
     return "弱"
 
+def calculate_industry_adjustment(heat):
+    """
+    V2.3B Shadow
 
+    行业只作为确认因子，不允许主导个股评分。
+
+    中性热度 = 5
+    强行业最多 +2.0
+    弱行业最多 -2.5
+    """
+
+    if heat is None:
+        return 0.0
+
+    adjustment = (
+        (heat - 5.0) * 0.55
+    )
+
+    adjustment = max(
+        -2.5,
+        min(2.0, adjustment)
+    )
+
+    return round(
+        adjustment,
+        2
+    )
 def enrich_industry_info(records):
     """
     只处理最终Top20。
@@ -1329,12 +1355,24 @@ def enrich_industry_info(records):
                 heat
             )
         )
+        industry_adjustment = calculate_industry_adjustment(heat)
 
-        print(
+        item["industry_adjustment"] = industry_adjustment
+
+        base_score = item.get("score", 0.0)
+
+        item["combined_score"] = round(
+            float(base_score) + industry_adjustment,
+            2
+        )
+                print(
             f"{code} {name} "
             f"=> {industry} | "
             f"热度={item['industry_heat']} | "
-            f"确认={item['sector_confirmation']}"
+            f"确认={item['sector_confirmation']} | "
+            f"原始分={base_score} | "
+            f"行业调整={item['industry_adjustment']:+.2f} | "
+            f"模拟综合分={item['combined_score']}"
         )
 
     save_industry_cache(cache)
