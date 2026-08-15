@@ -1424,11 +1424,28 @@ def build_results(df):
     )
 
     
-    top_records = records[:20]
+        # V2.3B：
+    # 先用个股原始评分筛出 Top50 候选，
+    # 再加入行业确认因子，最后按综合分选出 Top20。
+    top_candidates = records[:50]
 
-    top_records = enrich_industry_info(
-            top_records
-     )    
+    top_candidates = enrich_industry_info(
+        top_candidates
+    )
+
+    top_candidates.sort(
+        key=lambda x: (
+            x.get(
+                "combined_score",
+                x.get("score", 0.0)
+            ),
+            x["amount"] if x["amount"] is not None else 0
+        ),
+        reverse=True
+    )
+
+    top_records = top_candidates[:20]
+
     return top_records
 
 def save_json(payload):
@@ -1470,7 +1487,7 @@ def main():
             "raw_stock_count": raw_count,
             "main_board_count": filtered_count,
             "result_count": len(top20),
-            "strategy": "主板非ST・偏低位・行业确认 V2.3A",
+            "strategy": "主板非ST·偏低位·行业确认 V2.3B",
             "stocks": top20,
         }
 
@@ -1492,8 +1509,12 @@ def main():
                 f"{stock['code']} "
                 f"{stock['name']} "
                 f"价格={stock['price']} "
-                f"涨幅={stock['change_pct']}% "
-                f"评分={stock['score']}"
+                f"涨幅={stock['change_pct']}% | "
+                f"原始分={stock['score']} | "
+                f"行业调整={stock.get('industry_adjustment', 0.0):+.2f} | "
+                f"综合分={stock.get('combined_score', stock['score'])} | "
+                f"行业={stock.get('industry', '未知')} | "
+                f"确认={stock.get('sector_confirmation', '未知')}"
             )
 
     except Exception as e:
