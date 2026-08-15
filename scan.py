@@ -1204,12 +1204,12 @@ def calculate_industry_adjustment(heat):
         return 0.0
 
     adjustment = (
-        (heat - 5.0) * 0.55
+        (heat - 5.0) * 0.35
     )
 
     adjustment = max(
-        -2.5,
-        min(2.0, adjustment)
+        -1.8,
+        min(1.2, adjustment)
     )
 
     return round(
