@@ -3,6 +3,10 @@ name: A股量化扫描
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: "30 15 * * 1-5"
+      timezone: "Asia/Shanghai"
+
 permissions:
   contents: write
 
