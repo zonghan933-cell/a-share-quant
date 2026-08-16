@@ -1,7 +1,7 @@
 {
   "status": "ok",
-  "data_time": "2026-08-16T21:09:23.364947+08:00",
-  "calculated_at": "2026-08-16T21:10:14.172518+08:00",
+  "data_time": "2026-08-16T21:15:40.742001+08:00",
+  "calculated_at": "2026-08-16T21:16:07.237514+08:00",
   "data_source": "腾讯A股实时行情",
   "data_quality": "partial",
   "raw_stock_count": 5543,
@@ -824,7 +824,7 @@
         "final_score": 80.35
       },
       "industry": "其他电子",
-      "industry_match_field": "行业中类",
+      "industry_match_field": "cache",
       "industry_raw_class": "其他电子",
       "industry_heat": 8.19,
       "industry_change_now": 1.7,
