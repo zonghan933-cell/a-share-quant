@@ -1,0 +1,46 @@
+name: A股竞价 Shadow 采集
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  auction:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: 获取仓库代码
+        uses: actions/checkout@v6
+
+      - name: 配置 Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 采集竞价 Shadow 数据
+        run: python auction.py
+
+      - name: 保存竞价快照到仓库
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if [ -d "auction_history" ]; then
+            git add auction_history
+          fi
+
+          if git diff --cached --quiet; then
+            echo "没有新的竞价快照需要提交"
+          else
+            git commit -m "Add A-share auction shadow snapshot"
+            git push
+          fi
