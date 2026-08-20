@@ -1,0 +1,57 @@
+name: A股盘前量化 V1.1
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "35 8 * * 1-5"
+      timezone: "Asia/Shanghai"
+
+permissions:
+  contents: write
+
+jobs:
+  premarket:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: 获取仓库代码
+        uses: actions/checkout@v6
+
+      - name: 配置 Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 执行盘前量化 V1.1
+        run: python premarket_v11.py
+
+      - name: 检查盘前结果
+        run: |
+          echo "===== premarket_latest.json ====="
+          cat premarket_latest.json
+
+      - name: 保存盘前结果
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add premarket_latest.json
+
+          if [ -d "premarket_history" ]; then
+            git add premarket_history
+          fi
+
+          if git diff --cached --quiet; then
+            echo "盘前数据没有变化，无需提交"
+          else
+            git commit -m "Update premarket quant scan V1.1"
+            git push
+          fi
