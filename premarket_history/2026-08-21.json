@@ -1,0 +1,1257 @@
+{
+  "status": "ok",
+  "strategy": "盘前量化 V1.1·日K40+业绩25+新闻25+行业10",
+  "run_time": "2026-08-20T22:29:15.341287+08:00",
+  "target_trade_date": "2026-08-21",
+  "reference_trade_date": "2026-08-20",
+  "data_source": "腾讯A股实时行情",
+  "data_quality": "partial",
+  "universe_count": 2856,
+  "kline_pool_count": 30,
+  "valid_kline_count": 30,
+  "news_pool_count": 12,
+  "fundamental_periods": [
+    "20260630",
+    "20260331"
+  ],
+  "top5": [
+    {
+      "code": "002648",
+      "name": "卫星化学",
+      "reference_price": 27.1,
+      "pe": 10.38,
+      "pb": 2.4,
+      "amount": 1686620000.0,
+      "coarse_score": 26.35,
+      "kline": {
+        "score": 35.81,
+        "close": 27.1,
+        "ma5": 26.362,
+        "ma10": 26.162,
+        "ma20": 25.596,
+        "ma60": 24.284,
+        "ret5": 6.44,
+        "ret10": 6.82,
+        "ret20": 8.27,
+        "ret60": 16.56,
+        "distance_20d_high": -1.45,
+        "distance_60d_high": -1.45,
+        "volume_ratio_20d": 1.27,
+        "risk_flags": [],
+        "source": "腾讯历史日K"
+      },
+      "fundamental": {
+        "score": 25,
+        "report_period": "20260630",
+        "revenue_yoy": 30.92,
+        "profit_yoy": 126.94,
+        "roe": 17.28,
+        "forecast_type": "预增",
+        "forecast_change": 136.91
+      },
+      "pre_industry_score": 73.31,
+      "industry": "化学原料",
+      "industry_match_field": "cache",
+      "industry_raw_class": "化学原料",
+      "industry_score": 6.55,
+      "sector_confirmation": "偏强",
+      "industry_change_now": 1.08,
+      "industry_change_3d": 1.91,
+      "industry_net_now": -0.73,
+      "industry_net_3d": 6.3,
+      "pre_news_score": 79.86,
+      "news": {
+        "score": 14.0,
+        "headlines": [
+          {
+            "title": "卫星化学002648.SZ)2026年中报净利润为62.27亿元、较去年同期上涨126.94%",
+            "published_at": "2026-08-17T10:35:43+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202608173842909355.html"
+          },
+          {
+            "title": "卫星化学半年狂赚62亿，超级“牛散”罗章华减仓，盖茨基金会成十大流通股东",
+            "published_at": "2026-08-19T18:41:52+08:00",
+            "source": "红星资本局",
+            "url": "http://finance.eastmoney.com/a/202608193846425164.html"
+          },
+          {
+            "title": "33股今日获机构买入评级",
+            "published_at": "2026-08-17T17:53:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202608173843305991.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 7
+      },
+      "total_score": 81.36,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+126.9%"
+      ],
+      "recommendation": "重点候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 1
+    },
+    {
+      "code": "002262",
+      "name": "恩华药业",
+      "reference_price": 22.79,
+      "pe": 21.09,
+      "pb": 2.76,
+      "amount": 360240000.0,
+      "coarse_score": 26.66,
+      "kline": {
+        "score": 37.33,
+        "close": 22.79,
+        "ma5": 22.464,
+        "ma10": 22.332,
+        "ma20": 22.017,
+        "ma60": 20.547,
+        "ret5": 2.94,
+        "ret10": 6.35,
+        "ret20": 4.64,
+        "ret60": 10.95,
+        "distance_20d_high": -2.52,
+        "distance_60d_high": -2.52,
+        "volume_ratio_20d": 1.18,
+        "risk_flags": [],
+        "source": "腾讯历史日K"
+      },
+      "fundamental": {
+        "score": 14.0,
+        "report_period": "20260630",
+        "revenue_yoy": 6.91,
+        "profit_yoy": 5.74,
+        "roe": 8.86,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 63.83,
+      "industry": "化学制药",
+      "industry_match_field": "cache",
+      "industry_raw_class": "化学制药",
+      "industry_score": 8.44,
+      "sector_confirmation": "强",
+      "industry_change_now": 3.82,
+      "industry_change_3d": 1.76,
+      "industry_net_now": 6.27,
+      "industry_net_3d": 1.36,
+      "pre_news_score": 72.27,
+      "news": {
+        "score": 16.07,
+        "headlines": [
+          {
+            "title": "恩华药业002262.SZ)：2026年中报净利润为7.41亿元",
+            "published_at": "2026-08-18T09:07:53+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202608183844095395.html"
+          },
+          {
+            "title": "机构风向标 | 恩华药业0022622026年二季度已披露前十大机构累计持仓占比40.76%",
+            "published_at": "2026-08-18T08:59:34+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202608183844027169.html"
+          },
+          {
+            "title": "恩华药业002262.SZ)2026年中报净利润为7.41亿元、较去年同期上涨5.74%",
+            "published_at": "2026-08-18T10:35:20+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202608183844325259.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 10
+      },
+      "total_score": 75.84,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "化学制药强确认"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 2
+    },
+    {
+      "code": "002479",
+      "name": "富春环保",
+      "reference_price": 5.79,
+      "pe": 14.83,
+      "pb": 1.14,
+      "amount": 213030000.0,
+      "coarse_score": 26.84,
+      "kline": {
+        "score": 33.79,
+        "close": 5.79,
+        "ma5": 5.706,
+        "ma10": 5.717,
+        "ma20": 5.566,
+        "ma60": 5.078,
+        "ret5": 1.94,
+        "ret10": 3.58,
+        "ret20": 9.45,
+        "ret60": 11.78,
+        "distance_20d_high": -3.18,
+        "distance_60d_high": -3.18,
+        "volume_ratio_20d": 2.01,
+        "risk_flags": [],
+        "source": "腾讯历史日K"
+      },
+      "fundamental": {
+        "score": 23.0,
+        "report_period": "20260630",
+        "revenue_yoy": 29.25,
+        "profit_yoy": 72.11,
+        "roe": 7.43,
+        "forecast_type": "预增",
+        "forecast_change": 100.0
+      },
+      "pre_industry_score": 69.29,
+      "industry": "电力",
+      "industry_match_field": "cache",
+      "industry_raw_class": "电力",
+      "industry_score": 1.64,
+      "sector_confirmation": "弱",
+      "industry_change_now": 0.36,
+      "industry_change_3d": -2.86,
+      "industry_net_now": -10.3,
+      "industry_net_3d": -10.05,
+      "pre_news_score": 70.93,
+      "news": {
+        "score": 13.2,
+        "headlines": [
+          {
+            "title": "富春环保002479.SZ)2026年中报净利润为3.21亿元、较去年同期上涨72.11%",
+            "published_at": "2026-08-20T10:46:08+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202608203847525447.html"
+          },
+          {
+            "title": "富春环保002479.SZ)：2026年中报净利润为3.21亿元、同比较去年同期上涨72.11%",
+            "published_at": "2026-08-20T09:25:09+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202608203847253262.html"
+          },
+          {
+            "title": "富春环保：2026年上半年净利润同比增长72.11%，循环经济双引擎驱动高质量增长",
+            "published_at": "2026-08-19T21:32:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202608193846597851.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 3
+      },
+      "total_score": 71.63,
+      "risk_flags": [
+        "行业确认偏弱"
+      ],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+72.1%"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 3
+    },
+    {
+      "code": "601398",
+      "name": "工商银行",
+      "reference_price": 7.78,
+      "pe": 7.47,
+      "pb": 0.71,
+      "amount": 3012590000.0,
+      "coarse_score": 26.3,
+      "kline": {
+        "score": 37.78,
+        "close": 7.78,
+        "ma5": 7.674,
+        "ma10": 7.615,
+        "ma20": 7.72,
+        "ma60": 7.481,
+        "ret5": 2.37,
+        "ret10": 2.77,
+        "ret20": 1.3,
+        "ret60": 9.27,
+        "distance_20d_high": -4.66,
+        "distance_60d_high": -4.66,
+        "volume_ratio_20d": 0.93,
+        "risk_flags": [],
+        "source": "腾讯历史日K"
+      },
+      "fundamental": {
+        "score": 13.0,
+        "report_period": "20260331",
+        "revenue_yoy": 8.27,
+        "profit_yoy": 3.31,
+        "roe": 2.21,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 63.28,
+      "industry": "银行",
+      "industry_match_field": "cache",
+      "industry_raw_class": "银行",
+      "industry_score": 6.09,
+      "sector_confirmation": "偏强",
+      "industry_change_now": 0.81,
+      "industry_change_3d": 2.61,
+      "industry_net_now": 23.29,
+      "industry_net_3d": -6.41,
+      "pre_news_score": 69.37,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "工商银行完成发行600亿元二级资本债券",
+            "published_at": "2026-08-20T17:54:00+08:00",
+            "source": "财中社",
+            "url": "http://finance.eastmoney.com/a/202608203847897442.html"
+          },
+          {
+            "title": "5只个股大宗交易超5000万元",
+            "published_at": "2026-08-20T21:20:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202608203848080529.html"
+          },
+          {
+            "title": "银行行业资金流出榜：招商银行、兴业银行等净流出资金居前",
+            "published_at": "2026-08-19T16:39:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202608193846305712.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 4
+      },
+      "total_score": 69.37,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "银行偏强确认"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 4
+    },
+    {
+      "code": "601288",
+      "name": "农业银行",
+      "reference_price": 6.81,
+      "pe": 8.1,
+      "pb": 0.86,
+      "amount": 3454500000.0,
+      "coarse_score": 27.09,
+      "kline": {
+        "score": 37.57,
+        "close": 6.81,
+        "ma5": 6.622,
+        "ma10": 6.552,
+        "ma20": 6.664,
+        "ma60": 6.463,
+        "ret5": 3.81,
+        "ret10": 4.77,
+        "ret20": 3.34,
+        "ret60": 7.92,
+        "distance_20d_high": -4.22,
+        "distance_60d_high": -4.22,
+        "volume_ratio_20d": 1.07,
+        "risk_flags": [],
+        "source": "腾讯历史日K"
+      },
+      "fundamental": {
+        "score": 13.0,
+        "report_period": "20260331",
+        "revenue_yoy": 10.49,
+        "profit_yoy": 4.52,
+        "roe": 2.65,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 63.07,
+      "industry": "银行",
+      "industry_match_field": "cache",
+      "industry_raw_class": "银行",
+      "industry_score": 6.09,
+      "sector_confirmation": "偏强",
+      "industry_change_now": 0.81,
+      "industry_change_3d": 2.61,
+      "industry_net_now": 23.29,
+      "industry_net_3d": -6.41,
+      "pre_news_score": 69.16,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "8月19日11只股盘后交易额超千万元",
+            "published_at": "2026-08-19T16:43:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202608193846305556.html"
+          },
+          {
+            "title": "中粮糖业大幅上涨9.99%带动上红低波指数上涨，平安上证红利低波动指数A净值连续2天累计上涨0.44%",
+            "published_at": "2026-08-19T09:30:34+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202608193846337261.html"
+          },
+          {
+            "title": "银行行业资金流出榜：招商银行、兴业银行等净流出资金居前",
+            "published_at": "2026-08-19T16:39:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202608193846305712.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 9
+      },
+      "total_score": 69.16,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "银行偏强确认"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 5
+    }
+  ],
+  "top10": [
+    {
+      "code": "002648",
+      "name": "卫星化学",
+      "reference_price": 27.1,
+      "pe": 10.38,
+      "pb": 2.4,
+      "amount": 1686620000.0,
+      "coarse_score": 26.35,
+      "kline": {
+        "score": 35.81,
+        "close": 27.1,
+        "ma5": 26.362,
+        "ma10": 26.162,
+        "ma20": 25.596,
+        "ma60": 24.284,
+        "ret5": 6.44,
+        "ret10": 6.82,
+        "ret20": 8.27,
+        "ret60": 16.56,
+        "distance_20d_high": -1.45,
+        "distance_60d_high": -1.45,
+        "volume_ratio_20d": 1.27,
+        "risk_flags": [],
+        "source": "腾讯历史日K"
+      },
+      "fundamental": {
+        "score": 25,
+        "report_period": "20260630",
+        "revenue_yoy": 30.92,
+        "profit_yoy": 126.94,
+        "roe": 17.28,
+        "forecast_type": "预增",
+        "forecast_change": 136.91
+      },
+      "pre_industry_score": 73.31,
+      "industry": "化学原料",
+      "industry_match_field": "cache",
+      "industry_raw_class": "化学原料",
+      "industry_score": 6.55,
+      "sector_confirmation": "偏强",
+      "industry_change_now": 1.08,
+      "industry_change_3d": 1.91,
+      "industry_net_now": -0.73,
+      "industry_net_3d": 6.3,
+      "pre_news_score": 79.86,
+      "news": {
+        "score": 14.0,
+        "headlines": [
+          {
+            "title": "卫星化学002648.SZ)2026年中报净利润为62.27亿元、较去年同期上涨126.94%",
+            "published_at": "2026-08-17T10:35:43+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202608173842909355.html"
+          },
+          {
+            "title": "卫星化学半年狂赚62亿，超级“牛散”罗章华减仓，盖茨基金会成十大流通股东",
+            "published_at": "2026-08-19T18:41:52+08:00",
+            "source": "红星资本局",
+            "url": "http://finance.eastmoney.com/a/202608193846425164.html"
+          },
+          {
+            "title": "33股今日获机构买入评级",
+            "published_at": "2026-08-17T17:53:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202608173843305991.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 7
+      },
+      "total_score": 81.36,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+126.9%"
+      ],
+      "recommendation": "重点候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 1
+    },
+    {
+      "code": "002262",
+      "name": "恩华药业",
+      "reference_price": 22.79,
+      "pe": 21.09,
+      "pb": 2.76,
+      "amount": 360240000.0,
+      "coarse_score": 26.66,
+      "kline": {
+        "score": 37.33,
+        "close": 22.79,
+        "ma5": 22.464,
+        "ma10": 22.332,
+        "ma20": 22.017,
+        "ma60": 20.547,
+        "ret5": 2.94,
+        "ret10": 6.35,
+        "ret20": 4.64,
+        "ret60": 10.95,
+        "distance_20d_high": -2.52,
+        "distance_60d_high": -2.52,
+        "volume_ratio_20d": 1.18,
+        "risk_flags": [],
+        "source": "腾讯历史日K"
+      },
+      "fundamental": {
+        "score": 14.0,
+        "report_period": "20260630",
+        "revenue_yoy": 6.91,
+        "profit_yoy": 5.74,
+        "roe": 8.86,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 63.83,
+      "industry": "化学制药",
+      "industry_match_field": "cache",
+      "industry_raw_class": "化学制药",
+      "industry_score": 8.44,
+      "sector_confirmation": "强",
+      "industry_change_now": 3.82,
+      "industry_change_3d": 1.76,
+      "industry_net_now": 6.27,
+      "industry_net_3d": 1.36,
+      "pre_news_score": 72.27,
+      "news": {
+        "score": 16.07,
+        "headlines": [
+          {
+            "title": "恩华药业002262.SZ)：2026年中报净利润为7.41亿元",
+            "published_at": "2026-08-18T09:07:53+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202608183844095395.html"
+          },
+          {
+            "title": "机构风向标 | 恩华药业0022622026年二季度已披露前十大机构累计持仓占比40.76%",
+            "published_at": "2026-08-18T08:59:34+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202608183844027169.html"
+          },
+          {
+            "title": "恩华药业002262.SZ)2026年中报净利润为7.41亿元、较去年同期上涨5.74%",
+            "published_at": "2026-08-18T10:35:20+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202608183844325259.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 10
+      },
+      "total_score": 75.84,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "化学制药强确认"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 2
+    },
+    {
+      "code": "002479",
+      "name": "富春环保",
+      "reference_price": 5.79,
+      "pe": 14.83,
+      "pb": 1.14,
+      "amount": 213030000.0,
+      "coarse_score": 26.84,
+      "kline": {
+        "score": 33.79,
+        "close": 5.79,
+        "ma5": 5.706,
+        "ma10": 5.717,
+        "ma20": 5.566,
+        "ma60": 5.078,
+        "ret5": 1.94,
+        "ret10": 3.58,
+        "ret20": 9.45,
+        "ret60": 11.78,
+        "distance_20d_high": -3.18,
+        "distance_60d_high": -3.18,
+        "volume_ratio_20d": 2.01,
+        "risk_flags": [],
+        "source": "腾讯历史日K"
+      },
+      "fundamental": {
+        "score": 23.0,
+        "report_period": "20260630",
+        "revenue_yoy": 29.25,
+        "profit_yoy": 72.11,
+        "roe": 7.43,
+        "forecast_type": "预增",
+        "forecast_change": 100.0
+      },
+      "pre_industry_score": 69.29,
+      "industry": "电力",
+      "industry_match_field": "cache",
+      "industry_raw_class": "电力",
+      "industry_score": 1.64,
+      "sector_confirmation": "弱",
+      "industry_change_now": 0.36,
+      "industry_change_3d": -2.86,
+      "industry_net_now": -10.3,
+      "industry_net_3d": -10.05,
+      "pre_news_score": 70.93,
+      "news": {
+        "score": 13.2,
+        "headlines": [
+          {
+            "title": "富春环保002479.SZ)2026年中报净利润为3.21亿元、较去年同期上涨72.11%",
+            "published_at": "2026-08-20T10:46:08+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202608203847525447.html"
+          },
+          {
+            "title": "富春环保002479.SZ)：2026年中报净利润为3.21亿元、同比较去年同期上涨72.11%",
+            "published_at": "2026-08-20T09:25:09+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202608203847253262.html"
+          },
+          {
+            "title": "富春环保：2026年上半年净利润同比增长72.11%，循环经济双引擎驱动高质量增长",
+            "published_at": "2026-08-19T21:32:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202608193846597851.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 3
+      },
+      "total_score": 71.63,
+      "risk_flags": [
+        "行业确认偏弱"
+      ],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+72.1%"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 3
+    },
+    {
+      "code": "601398",
+      "name": "工商银行",
+      "reference_price": 7.78,
+      "pe": 7.47,
+      "pb": 0.71,
+      "amount": 3012590000.0,
+      "coarse_score": 26.3,
+      "kline": {
+        "score": 37.78,
+        "close": 7.78,
+        "ma5": 7.674,
+        "ma10": 7.615,
+        "ma20": 7.72,
+        "ma60": 7.481,
+        "ret5": 2.37,
+        "ret10": 2.77,
+        "ret20": 1.3,
+        "ret60": 9.27,
+        "distance_20d_high": -4.66,
+        "distance_60d_high": -4.66,
+        "volume_ratio_20d": 0.93,
+        "risk_flags": [],
+        "source": "腾讯历史日K"
+      },
+      "fundamental": {
+        "score": 13.0,
+        "report_period": "20260331",
+        "revenue_yoy": 8.27,
+        "profit_yoy": 3.31,
+        "roe": 2.21,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 63.28,
+      "industry": "银行",
+      "industry_match_field": "cache",
+      "industry_raw_class": "银行",
+      "industry_score": 6.09,
+      "sector_confirmation": "偏强",
+      "industry_change_now": 0.81,
+      "industry_change_3d": 2.61,
+      "industry_net_now": 23.29,
+      "industry_net_3d": -6.41,
+      "pre_news_score": 69.37,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "工商银行完成发行600亿元二级资本债券",
+            "published_at": "2026-08-20T17:54:00+08:00",
+            "source": "财中社",
+            "url": "http://finance.eastmoney.com/a/202608203847897442.html"
+          },
+          {
+            "title": "5只个股大宗交易超5000万元",
+            "published_at": "2026-08-20T21:20:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202608203848080529.html"
+          },
+          {
+            "title": "银行行业资金流出榜：招商银行、兴业银行等净流出资金居前",
+            "published_at": "2026-08-19T16:39:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202608193846305712.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 4
+      },
+      "total_score": 69.37,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "银行偏强确认"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 4
+    },
+    {
+      "code": "601288",
+      "name": "农业银行",
+      "reference_price": 6.81,
+      "pe": 8.1,
+      "pb": 0.86,
+      "amount": 3454500000.0,
+      "coarse_score": 27.09,
+      "kline": {
+        "score": 37.57,
+        "close": 6.81,
+        "ma5": 6.622,
+        "ma10": 6.552,
+        "ma20": 6.664,
+        "ma60": 6.463,
+        "ret5": 3.81,
+        "ret10": 4.77,
+        "ret20": 3.34,
+        "ret60": 7.92,
+        "distance_20d_high": -4.22,
+        "distance_60d_high": -4.22,
+        "volume_ratio_20d": 1.07,
+        "risk_flags": [],
+        "source": "腾讯历史日K"
+      },
+      "fundamental": {
+        "score": 13.0,
+        "report_period": "20260331",
+        "revenue_yoy": 10.49,
+        "profit_yoy": 4.52,
+        "roe": 2.65,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 63.07,
+      "industry": "银行",
+      "industry_match_field": "cache",
+      "industry_raw_class": "银行",
+      "industry_score": 6.09,
+      "sector_confirmation": "偏强",
+      "industry_change_now": 0.81,
+      "industry_change_3d": 2.61,
+      "industry_net_now": 23.29,
+      "industry_net_3d": -6.41,
+      "pre_news_score": 69.16,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "8月19日11只股盘后交易额超千万元",
+            "published_at": "2026-08-19T16:43:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202608193846305556.html"
+          },
+          {
+            "title": "中粮糖业大幅上涨9.99%带动上红低波指数上涨，平安上证红利低波动指数A净值连续2天累计上涨0.44%",
+            "published_at": "2026-08-19T09:30:34+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202608193846337261.html"
+          },
+          {
+            "title": "银行行业资金流出榜：招商银行、兴业银行等净流出资金居前",
+            "published_at": "2026-08-19T16:39:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202608193846305712.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 9
+      },
+      "total_score": 69.16,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "银行偏强确认"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 5
+    },
+    {
+      "code": "603387",
+      "name": "基蛋生物",
+      "reference_price": 9.65,
+      "pe": 21.04,
+      "pb": 1.78,
+      "amount": 188540000.0,
+      "coarse_score": 26.52,
+      "kline": {
+        "score": 33.34,
+        "close": 9.65,
+        "ma5": 9.42,
+        "ma10": 9.375,
+        "ma20": 9.074,
+        "ma60": 8.549,
+        "ret5": 2.33,
+        "ret10": 7.58,
+        "ret20": 9.91,
+        "ret60": 10.79,
+        "distance_20d_high": -0.72,
+        "distance_60d_high": -0.72,
+        "volume_ratio_20d": 1.72,
+        "risk_flags": [],
+        "source": "腾讯历史日K"
+      },
+      "fundamental": {
+        "score": 15.0,
+        "report_period": "20260331",
+        "revenue_yoy": 9.57,
+        "profit_yoy": 18.65,
+        "roe": 2.73,
+        "forecast_type": "略增",
+        "forecast_change": 28.71
+      },
+      "pre_industry_score": 60.84,
+      "industry": "医疗器械",
+      "industry_match_field": "cache",
+      "industry_raw_class": "医疗器械",
+      "industry_score": 7.79,
+      "sector_confirmation": "偏强",
+      "industry_change_now": 4.14,
+      "industry_change_3d": 0.37,
+      "industry_net_now": 17.35,
+      "industry_net_3d": -3.34,
+      "pre_news_score": 68.63,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "25.40亿主力资金净流入，猴痘概念涨5.73%",
+            "published_at": "2026-08-20T16:22:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202608203847766585.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 1
+      },
+      "total_score": 68.63,
+      "risk_flags": [],
+      "reasons": [
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "业绩预告略增",
+        "医疗器械偏强确认"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 6
+    },
+    {
+      "code": "601766",
+      "name": "中国中车",
+      "reference_price": 6.19,
+      "pe": 12.76,
+      "pb": 1.01,
+      "amount": 1417010000.0,
+      "coarse_score": 26.42,
+      "kline": {
+        "score": 35.5,
+        "close": 6.19,
+        "ma5": 6.034,
+        "ma10": 5.945,
+        "ma20": 5.945,
+        "ma60": 5.625,
+        "ret5": 4.92,
+        "ret10": 6.54,
+        "ret20": 5.27,
+        "ret60": 9.56,
+        "distance_20d_high": -1.28,
+        "distance_60d_high": -1.28,
+        "volume_ratio_20d": 1.39,
+        "risk_flags": [],
+        "source": "腾讯历史日K"
+      },
+      "fundamental": {
+        "score": 13.0,
+        "report_period": "20260630",
+        "revenue_yoy": 9.96,
+        "profit_yoy": 10.28,
+        "roe": 4.54,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 61.0,
+      "industry": "专用设备",
+      "industry_match_field": "cache",
+      "industry_raw_class": "专用设备",
+      "industry_score": 4.8,
+      "sector_confirmation": "中性",
+      "industry_change_now": 1.22,
+      "industry_change_3d": -1.66,
+      "industry_net_now": -9.79,
+      "industry_net_3d": 13.59,
+      "pre_news_score": 65.8,
+      "news": {
+        "score": 15.3,
+        "headlines": [
+          {
+            "title": "中国中车601766.SH)2026年中报净利润为79.91亿元、较去年同期上涨10.28%",
+            "published_at": "2026-08-20T11:22:58+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202608203847553842.html"
+          },
+          {
+            "title": "中国中车601766.SH)：2026年中报净利润为79.91亿元、同比较去年同期上涨10.28%",
+            "published_at": "2026-08-20T09:29:47+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202608203847284045.html"
+          },
+          {
+            "title": "中国中车拟每10股派发现金红利1.1元",
+            "published_at": "2026-08-19T18:01:00+08:00",
+            "source": "财中社",
+            "url": "http://finance.eastmoney.com/a/202608193846404952.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 10
+      },
+      "total_score": 68.6,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 7
+    },
+    {
+      "code": "600176",
+      "name": "中国巨石",
+      "reference_price": 41.42,
+      "pe": 36.59,
+      "pb": 5.0,
+      "amount": 7715500000.0,
+      "coarse_score": 26.32,
+      "kline": {
+        "score": 26.38,
+        "close": 41.42,
+        "ma5": 43.52,
+        "ma10": 43.316,
+        "ma20": 40.617,
+        "ma60": 47.858,
+        "ret5": -1.15,
+        "ret10": 1.57,
+        "ret20": 7.98,
+        "ret60": 4.78,
+        "distance_20d_high": -12.08,
+        "distance_60d_high": -46.35,
+        "volume_ratio_20d": 0.69,
+        "risk_flags": [],
+        "source": "腾讯历史日K"
+      },
+      "fundamental": {
+        "score": 23.0,
+        "report_period": "20260630",
+        "revenue_yoy": 22.5,
+        "profit_yoy": 73.87,
+        "roe": 9.06,
+        "forecast_type": "预增",
+        "forecast_change": 75.0
+      },
+      "pre_industry_score": 61.88,
+      "industry": "非金属材料",
+      "industry_match_field": "cache",
+      "industry_raw_class": "非金属材料",
+      "industry_score": 4.68,
+      "sector_confirmation": "中性",
+      "industry_change_now": 1.14,
+      "industry_change_3d": -1.72,
+      "industry_net_now": -2.72,
+      "industry_net_3d": 3.78,
+      "pre_news_score": 66.56,
+      "news": {
+        "score": 14.5,
+        "headlines": [
+          {
+            "title": "电子布爆单，600176大赚！上半年净利超29亿元，拟现金分红13亿元",
+            "published_at": "2026-08-20T18:53:44+08:00",
+            "source": "每日经济新闻",
+            "url": "http://finance.eastmoney.com/a/202608203847948560.html"
+          },
+          {
+            "title": "中国巨石：拟投资9.6亿元实施年产20万吨玻璃纤维生产线冷修技改项目",
+            "published_at": "2026-08-20T15:52:02+08:00",
+            "source": "财联社",
+            "url": "http://finance.eastmoney.com/a/202608203847736622.html"
+          },
+          {
+            "title": "中国巨石：上半年净利润同比增长73.87% 拟每10股派3.30元",
+            "published_at": "2026-08-20T15:51:45+08:00",
+            "source": "财联社",
+            "url": "http://finance.eastmoney.com/a/202608203847735617.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 9
+      },
+      "total_score": 68.56,
+      "risk_flags": [],
+      "reasons": [
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+73.9%",
+        "业绩预告预增"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 8
+    },
+    {
+      "code": "000651",
+      "name": "格力电器",
+      "reference_price": 41.42,
+      "pe": 7.95,
+      "pb": 1.53,
+      "amount": 1595940000.0,
+      "coarse_score": 26.37,
+      "kline": {
+        "score": 35.71,
+        "close": 41.42,
+        "ma5": 40.518,
+        "ma10": 40.437,
+        "ma20": 40.722,
+        "ma60": 39.241,
+        "ret5": 2.93,
+        "ret10": 2.91,
+        "ret20": 2.1,
+        "ret60": 7.28,
+        "distance_20d_high": -2.5,
+        "distance_60d_high": -2.5,
+        "volume_ratio_20d": 0.82,
+        "risk_flags": [],
+        "source": "腾讯历史日K"
+      },
+      "fundamental": {
+        "score": 13.0,
+        "report_period": "20260331",
+        "revenue_yoy": 3.46,
+        "profit_yoy": 3.01,
+        "roe": 4.07,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 61.21,
+      "industry": "白色家电",
+      "industry_match_field": "行业中类",
+      "industry_raw_class": "白色家电",
+      "industry_score": 4.93,
+      "sector_confirmation": "中性",
+      "industry_change_now": 1.26,
+      "industry_change_3d": -0.83,
+      "industry_net_now": -3.71,
+      "industry_net_3d": 0.66,
+      "pre_news_score": 66.14,
+      "news": {
+        "score": 13.18,
+        "headlines": [
+          {
+            "title": "格力电器累计回购50万股，耗资1974万元",
+            "published_at": "2026-08-18T19:25:00+08:00",
+            "source": "财中社",
+            "url": "http://finance.eastmoney.com/a/202608183844715918.html"
+          },
+          {
+            "title": "强势股追踪 主力资金连续5日净流入87股",
+            "published_at": "2026-08-19T16:39:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202608193846306847.html"
+          },
+          {
+            "title": "强势股追踪 主力资金连续5日净流入135股",
+            "published_at": "2026-08-18T16:36:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202608183844584390.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 5
+      },
+      "total_score": 66.82,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 9
+    },
+    {
+      "code": "600196",
+      "name": "复星医药",
+      "reference_price": 24.84,
+      "pe": 19.08,
+      "pb": 1.38,
+      "amount": 2242830000.0,
+      "coarse_score": 27.4,
+      "kline": {
+        "score": 32.38,
+        "close": 24.84,
+        "ma5": 24.144,
+        "ma10": 24.16,
+        "ma20": 23.535,
+        "ma60": 22.795,
+        "ret5": 1.68,
+        "ret10": 9.14,
+        "ret20": 6.52,
+        "ret60": 8.33,
+        "distance_20d_high": -2.82,
+        "distance_60d_high": -2.82,
+        "volume_ratio_20d": 3.33,
+        "risk_flags": [],
+        "source": "腾讯历史日K"
+      },
+      "fundamental": {
+        "score": 13.0,
+        "report_period": "20260331",
+        "revenue_yoy": 6.93,
+        "profit_yoy": 13.87,
+        "roe": 1.78,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 57.88,
+      "industry": "化学制药",
+      "industry_match_field": "行业次类",
+      "industry_raw_class": "化学制药",
+      "industry_score": 8.44,
+      "sector_confirmation": "强",
+      "industry_change_now": 3.82,
+      "industry_change_3d": 1.76,
+      "industry_net_now": 6.27,
+      "industry_net_3d": 1.36,
+      "pre_news_score": 66.32,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "生物疫苗概念涨8.06%，主力资金净流入48股",
+            "published_at": "2026-08-20T16:23:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202608203847772188.html"
+          },
+          {
+            "title": "25.53亿主力资金净流入，减肥药概念涨4.70%",
+            "published_at": "2026-08-20T16:22:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202608203847765038.html"
+          },
+          {
+            "title": "细胞免疫治疗概念涨6.93%，主力资金净流入50股",
+            "published_at": "2026-08-20T16:23:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202608203847771897.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 5
+      },
+      "total_score": 66.32,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "化学制药强确认"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 10
+    }
+  ],
+  "execution_note": "盘前榜单解决买什么，不等于开盘立即买；09:25竞价和09:35~09:40 Shadow必须二次确认，避免追高。"
+}
