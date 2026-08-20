@@ -1,7 +1,7 @@
 {
   "status": "ok",
-  "data_time": "2026-08-20T17:18:12.588688+08:00",
-  "calculated_at": "2026-08-20T17:19:17.779769+08:00",
+  "data_time": "2026-08-20T21:06:00.180038+08:00",
+  "calculated_at": "2026-08-20T21:06:29.396155+08:00",
   "data_source": "腾讯A股实时行情",
   "data_quality": "partial",
   "raw_stock_count": 5548,
@@ -647,7 +647,7 @@
         "final_score": 83.7
       },
       "industry": "医药商业",
-      "industry_match_field": "行业中类",
+      "industry_match_field": "cache",
       "industry_raw_class": "医药商业",
       "industry_heat": 5.43,
       "industry_change_now": 2.17,
@@ -706,7 +706,7 @@
         "final_score": 82.2
       },
       "industry": "化学制药",
-      "industry_match_field": "行业次类",
+      "industry_match_field": "cache",
       "industry_raw_class": "化学制药",
       "industry_heat": 8.44,
       "industry_change_now": 3.82,
@@ -765,7 +765,7 @@
         "final_score": 83.64
       },
       "industry": "工业金属",
-      "industry_match_field": "行业大类",
+      "industry_match_field": "cache",
       "industry_raw_class": "工业金属",
       "industry_heat": 3.89,
       "industry_change_now": 0.29,
@@ -824,7 +824,7 @@
         "final_score": 82.28
       },
       "industry": "中药",
-      "industry_match_field": "行业大类",
+      "industry_match_field": "cache",
       "industry_raw_class": "中药",
       "industry_heat": 7.5,
       "industry_change_now": 2.42,
@@ -942,7 +942,7 @@
         "final_score": 82.11
       },
       "industry": "医疗器械",
-      "industry_match_field": "行业大类",
+      "industry_match_field": "cache",
       "industry_raw_class": "医疗器械",
       "industry_heat": 7.79,
       "industry_change_now": 4.14,
@@ -1119,7 +1119,7 @@
         "final_score": 82.28
       },
       "industry": "化学制品",
-      "industry_match_field": "行业大类",
+      "industry_match_field": "cache",
       "industry_raw_class": "化学制品",
       "industry_heat": 5.01,
       "industry_change_now": 1.07,
@@ -1178,7 +1178,7 @@
         "final_score": 81.23
       },
       "industry": "医疗器械",
-      "industry_match_field": "行业大类",
+      "industry_match_field": "cache",
       "industry_raw_class": "医疗器械",
       "industry_heat": 7.79,
       "industry_change_now": 4.14,
