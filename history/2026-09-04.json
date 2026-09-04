@@ -1,13 +1,13 @@
 {
-  "status": "ok",
-  "data_time": "2026-09-04T15:44:03.165223+08:00",
-  "calculated_at": "2026-09-04T15:45:12.274443+08:00",
+  "schema_version": "1.0",
+  "signal_date": "2026-09-04",
+  "recorded_at": "2026-09-04T15:45:13.574495+08:00",
+  "strategy": "主板非ST·偏低位·行业确认 V2.3B",
   "data_source": "腾讯A股实时行情",
   "data_quality": "partial",
-  "raw_stock_count": 5556,
-  "main_board_count": 2875,
-  "result_count": 20,
-  "strategy": "主板非ST·偏低位·行业确认 V2.3B",
+  "source_data_time": "2026-09-04T15:44:03.165223+08:00",
+  "source_calculated_at": "2026-09-04T15:45:12.274443+08:00",
+  "stock_count": 20,
   "stocks": [
     {
       "code": "601890",
@@ -66,7 +66,8 @@
       "industry_net_3d": -18.28,
       "sector_confirmation": "弱",
       "industry_adjustment": -1.0,
-      "combined_score": 90.79
+      "combined_score": 90.79,
+      "rank": 1
     },
     {
       "code": "600814",
@@ -125,7 +126,8 @@
       "industry_net_3d": 18.09,
       "sector_confirmation": "强",
       "industry_adjustment": 1.2,
-      "combined_score": 87.81
+      "combined_score": 87.81,
+      "rank": 2
     },
     {
       "code": "601116",
@@ -184,7 +186,8 @@
       "industry_net_3d": 18.09,
       "sector_confirmation": "强",
       "industry_adjustment": 1.2,
-      "combined_score": 87.8
+      "combined_score": 87.8,
+      "rank": 3
     },
     {
       "code": "002987",
@@ -243,7 +246,8 @@
       "industry_net_3d": 4.34,
       "sector_confirmation": "强",
       "industry_adjustment": 1.2,
-      "combined_score": 87.37
+      "combined_score": 87.37,
+      "rank": 4
     },
     {
       "code": "003006",
@@ -302,7 +306,8 @@
       "industry_net_3d": 1.44,
       "sector_confirmation": "强",
       "industry_adjustment": 1.07,
-      "combined_score": 87.0
+      "combined_score": 87.0,
+      "rank": 5
     },
     {
       "code": "002517",
@@ -361,7 +366,8 @@
       "industry_net_3d": -5.24,
       "sector_confirmation": "强",
       "industry_adjustment": 1.18,
-      "combined_score": 86.72
+      "combined_score": 86.72,
+      "rank": 6
     },
     {
       "code": "600621",
@@ -420,7 +426,8 @@
       "industry_net_3d": 23.72,
       "sector_confirmation": "强",
       "industry_adjustment": 1.09,
-      "combined_score": 85.85
+      "combined_score": 85.85,
+      "rank": 7
     },
     {
       "code": "600036",
@@ -479,7 +486,8 @@
       "industry_net_3d": 72.02,
       "sector_confirmation": "强",
       "industry_adjustment": 1.2,
-      "combined_score": 85.51
+      "combined_score": 85.51,
+      "rank": 8
     },
     {
       "code": "002159",
@@ -538,7 +546,8 @@
       "industry_net_3d": 1.44,
       "sector_confirmation": "强",
       "industry_adjustment": 1.2,
-      "combined_score": 84.6
+      "combined_score": 84.6,
+      "rank": 9
     },
     {
       "code": "601696",
@@ -597,7 +606,8 @@
       "industry_net_3d": 23.72,
       "sector_confirmation": "强",
       "industry_adjustment": 1.09,
-      "combined_score": 84.55
+      "combined_score": 84.55,
+      "rank": 10
     },
     {
       "code": "002761",
@@ -656,7 +666,8 @@
       "industry_net_3d": -4.01,
       "sector_confirmation": "中性",
       "industry_adjustment": 0.28,
-      "combined_score": 84.5
+      "combined_score": 84.5,
+      "rank": 11
     },
     {
       "code": "600482",
@@ -715,7 +726,8 @@
       "industry_net_3d": 0.8,
       "sector_confirmation": "弱",
       "industry_adjustment": -0.41,
-      "combined_score": 84.43
+      "combined_score": 84.43,
+      "rank": 12
     },
     {
       "code": "601888",
@@ -774,7 +786,8 @@
       "industry_net_3d": 18.09,
       "sector_confirmation": "强",
       "industry_adjustment": 1.2,
-      "combined_score": 84.39
+      "combined_score": 84.39,
+      "rank": 13
     },
     {
       "code": "000672",
@@ -833,7 +846,8 @@
       "industry_net_3d": -24.49,
       "sector_confirmation": "弱",
       "industry_adjustment": -0.38,
-      "combined_score": 84.27
+      "combined_score": 84.27,
+      "rank": 14
     },
     {
       "code": "600415",
@@ -892,7 +906,8 @@
       "industry_net_3d": -6.86,
       "sector_confirmation": "中性",
       "industry_adjustment": 0.34,
-      "combined_score": 84.19
+      "combined_score": 84.19,
+      "rank": 15
     },
     {
       "code": "000501",
@@ -951,7 +966,8 @@
       "industry_net_3d": 18.09,
       "sector_confirmation": "强",
       "industry_adjustment": 1.2,
-      "combined_score": 84.03
+      "combined_score": 84.03,
+      "rank": 16
     },
     {
       "code": "605136",
@@ -1010,7 +1026,8 @@
       "industry_net_3d": -0.81,
       "sector_confirmation": "偏强",
       "industry_adjustment": 0.79,
-      "combined_score": 84.02
+      "combined_score": 84.02,
+      "rank": 17
     },
     {
       "code": "002264",
@@ -1069,7 +1086,8 @@
       "industry_net_3d": -3.13,
       "sector_confirmation": "中性",
       "industry_adjustment": -0.35,
-      "combined_score": 83.9
+      "combined_score": 83.9,
+      "rank": 18
     },
     {
       "code": "601328",
@@ -1128,7 +1146,8 @@
       "industry_net_3d": 72.02,
       "sector_confirmation": "强",
       "industry_adjustment": 1.2,
-      "combined_score": 83.76
+      "combined_score": 83.76,
+      "rank": 19
     },
     {
       "code": "000812",
@@ -1187,7 +1206,8 @@
       "industry_net_3d": -3.21,
       "sector_confirmation": "偏强",
       "industry_adjustment": 0.56,
-      "combined_score": 83.73
+      "combined_score": 83.73,
+      "rank": 20
     }
   ]
 }
