@@ -1,13 +1,13 @@
 {
-  "status": "ok",
-  "data_time": "2026-09-10T15:44:59.663785+08:00",
-  "calculated_at": "2026-09-10T15:45:23.566350+08:00",
+  "schema_version": "1.0",
+  "signal_date": "2026-09-10",
+  "recorded_at": "2026-09-10T15:45:25.220217+08:00",
+  "strategy": "主板非ST·偏低位·行业确认 V2.3B",
   "data_source": "腾讯A股实时行情",
   "data_quality": "partial",
-  "raw_stock_count": 5561,
-  "main_board_count": 2880,
-  "result_count": 20,
-  "strategy": "主板非ST·偏低位·行业确认 V2.3B",
+  "source_data_time": "2026-09-10T15:44:59.663785+08:00",
+  "source_calculated_at": "2026-09-10T15:45:23.566350+08:00",
+  "stock_count": 20,
   "stocks": [
     {
       "code": "002155",
@@ -66,7 +66,8 @@
       "industry_net_3d": null,
       "sector_confirmation": "未知",
       "industry_adjustment": 0.0,
-      "combined_score": 86.59
+      "combined_score": 86.59,
+      "rank": 1
     },
     {
       "code": "603393",
@@ -125,7 +126,8 @@
       "industry_net_3d": null,
       "sector_confirmation": "未知",
       "industry_adjustment": 0.0,
-      "combined_score": 85.56
+      "combined_score": 85.56,
+      "rank": 2
     },
     {
       "code": "002958",
@@ -184,7 +186,8 @@
       "industry_net_3d": null,
       "sector_confirmation": "未知",
       "industry_adjustment": 0.0,
-      "combined_score": 85.08
+      "combined_score": 85.08,
+      "rank": 3
     },
     {
       "code": "600919",
@@ -243,7 +246,8 @@
       "industry_net_3d": null,
       "sector_confirmation": "未知",
       "industry_adjustment": 0.0,
-      "combined_score": 84.94
+      "combined_score": 84.94,
+      "rank": 4
     },
     {
       "code": "000407",
@@ -302,7 +306,8 @@
       "industry_net_3d": null,
       "sector_confirmation": "未知",
       "industry_adjustment": 0.0,
-      "combined_score": 84.49
+      "combined_score": 84.49,
+      "rank": 5
     },
     {
       "code": "000921",
@@ -361,7 +366,8 @@
       "industry_net_3d": null,
       "sector_confirmation": "未知",
       "industry_adjustment": 0.0,
-      "combined_score": 84.26
+      "combined_score": 84.26,
+      "rank": 6
     },
     {
       "code": "601528",
@@ -420,7 +426,8 @@
       "industry_net_3d": null,
       "sector_confirmation": "未知",
       "industry_adjustment": 0.0,
-      "combined_score": 84.26
+      "combined_score": 84.26,
+      "rank": 7
     },
     {
       "code": "603585",
@@ -479,7 +486,8 @@
       "industry_net_3d": null,
       "sector_confirmation": "未知",
       "industry_adjustment": 0.0,
-      "combined_score": 83.99
+      "combined_score": 83.99,
+      "rank": 8
     },
     {
       "code": "601969",
@@ -538,7 +546,8 @@
       "industry_net_3d": null,
       "sector_confirmation": "未知",
       "industry_adjustment": 0.0,
-      "combined_score": 83.94
+      "combined_score": 83.94,
+      "rank": 9
     },
     {
       "code": "600497",
@@ -597,7 +606,8 @@
       "industry_net_3d": null,
       "sector_confirmation": "未知",
       "industry_adjustment": 0.0,
-      "combined_score": 83.59
+      "combined_score": 83.59,
+      "rank": 10
     },
     {
       "code": "600320",
@@ -656,7 +666,8 @@
       "industry_net_3d": null,
       "sector_confirmation": "未知",
       "industry_adjustment": 0.0,
-      "combined_score": 83.52
+      "combined_score": 83.52,
+      "rank": 11
     },
     {
       "code": "000088",
@@ -715,7 +726,8 @@
       "industry_net_3d": null,
       "sector_confirmation": "未知",
       "industry_adjustment": 0.0,
-      "combined_score": 83.26
+      "combined_score": 83.26,
+      "rank": 12
     },
     {
       "code": "600908",
@@ -774,7 +786,8 @@
       "industry_net_3d": null,
       "sector_confirmation": "未知",
       "industry_adjustment": 0.0,
-      "combined_score": 82.98
+      "combined_score": 82.98,
+      "rank": 13
     },
     {
       "code": "002142",
@@ -833,7 +846,8 @@
       "industry_net_3d": null,
       "sector_confirmation": "未知",
       "industry_adjustment": 0.0,
-      "combined_score": 82.97
+      "combined_score": 82.97,
+      "rank": 14
     },
     {
       "code": "000968",
@@ -892,7 +906,8 @@
       "industry_net_3d": null,
       "sector_confirmation": "未知",
       "industry_adjustment": 0.0,
-      "combined_score": 82.51
+      "combined_score": 82.51,
+      "rank": 15
     },
     {
       "code": "600104",
@@ -951,7 +966,8 @@
       "industry_net_3d": null,
       "sector_confirmation": "未知",
       "industry_adjustment": 0.0,
-      "combined_score": 82.45
+      "combined_score": 82.45,
+      "rank": 16
     },
     {
       "code": "600938",
@@ -1010,7 +1026,8 @@
       "industry_net_3d": null,
       "sector_confirmation": "未知",
       "industry_adjustment": 0.0,
-      "combined_score": 82.36
+      "combined_score": 82.36,
+      "rank": 17
     },
     {
       "code": "600362",
@@ -1069,7 +1086,8 @@
       "industry_net_3d": null,
       "sector_confirmation": "未知",
       "industry_adjustment": 0.0,
-      "combined_score": 82.34
+      "combined_score": 82.34,
+      "rank": 18
     },
     {
       "code": "600036",
@@ -1128,7 +1146,8 @@
       "industry_net_3d": null,
       "sector_confirmation": "未知",
       "industry_adjustment": 0.0,
-      "combined_score": 82.13
+      "combined_score": 82.13,
+      "rank": 19
     },
     {
       "code": "600926",
@@ -1187,7 +1206,8 @@
       "industry_net_3d": null,
       "sector_confirmation": "未知",
       "industry_adjustment": 0.0,
-      "combined_score": 82.11
+      "combined_score": 82.11,
+      "rank": 20
     }
   ]
 }
