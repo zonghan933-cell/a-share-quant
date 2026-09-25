@@ -1,7 +1,7 @@
 {
   "status": "ok",
-  "data_time": "2026-09-24T20:51:13.711806+08:00",
-  "calculated_at": "2026-09-24T20:52:15.368963+08:00",
+  "data_time": "2026-09-25T20:55:09.161694+08:00",
+  "calculated_at": "2026-09-25T20:55:38.361379+08:00",
   "data_source": "腾讯A股实时行情",
   "data_quality": "partial",
   "raw_stock_count": 5569,
@@ -234,7 +234,7 @@
         "final_score": 81.9
       },
       "industry": "纺织制造",
-      "industry_match_field": "行业次类",
+      "industry_match_field": "cache",
       "industry_raw_class": "纺织制造",
       "industry_heat": 8.2,
       "industry_change_now": 1.56,
@@ -706,7 +706,7 @@
         "final_score": 79.39
       },
       "industry": "美容护理",
-      "industry_match_field": "行业门类",
+      "industry_match_field": "cache",
       "industry_raw_class": "美容护理",
       "industry_heat": 8.04,
       "industry_change_now": -0.12,
@@ -765,7 +765,7 @@
         "final_score": 79.4
       },
       "industry": "医药商业",
-      "industry_match_field": "行业中类",
+      "industry_match_field": "cache",
       "industry_raw_class": "医药商业",
       "industry_heat": 7.86,
       "industry_change_now": -0.06,
@@ -824,7 +824,7 @@
         "final_score": 80.22
       },
       "industry": "生物制品",
-      "industry_match_field": "行业中类",
+      "industry_match_field": "cache",
       "industry_raw_class": "生物制品",
       "industry_heat": 5.12,
       "industry_change_now": -2.83,
@@ -942,7 +942,7 @@
         "final_score": 79.38
       },
       "industry": "服装家纺",
-      "industry_match_field": "行业次类",
+      "industry_match_field": "cache",
       "industry_raw_class": "服装家纺",
       "industry_heat": 7.33,
       "industry_change_now": 0.14,
@@ -1001,7 +1001,7 @@
         "final_score": 80.02
       },
       "industry": "化学制品",
-      "industry_match_field": "行业大类",
+      "industry_match_field": "cache",
       "industry_raw_class": "化学制品",
       "industry_heat": 4.5,
       "industry_change_now": -1.3,
