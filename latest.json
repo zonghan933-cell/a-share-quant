@@ -1,7 +1,7 @@
 {
   "status": "ok",
-  "data_time": "2026-09-30T22:09:13.244722+08:00",
-  "calculated_at": "2026-09-30T22:10:11.176617+08:00",
+  "data_time": "2026-10-01T22:43:09.261228+08:00",
+  "calculated_at": "2026-10-01T22:43:38.665975+08:00",
   "data_source": "腾讯A股实时行情",
   "data_quality": "partial",
   "raw_stock_count": 5572,
@@ -411,7 +411,7 @@
         "final_score": 82.14
       },
       "industry": "房地产",
-      "industry_match_field": "行业次类",
+      "industry_match_field": "cache",
       "industry_raw_class": "房地产",
       "industry_heat": 7.75,
       "industry_change_now": 0.79,
@@ -470,7 +470,7 @@
         "final_score": 82.05
       },
       "industry": "化学制药",
-      "industry_match_field": "行业次类",
+      "industry_match_field": "cache",
       "industry_raw_class": "化学制药",
       "industry_heat": 7.84,
       "industry_change_now": 2.11,
