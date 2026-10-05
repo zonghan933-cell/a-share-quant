@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "strategy": "盘前量化 V1.1·日K40+业绩25+新闻25+行业10",
-  "run_time": "2026-10-02T14:04:10.085259+08:00",
+  "run_time": "2026-10-05T14:06:24.590144+08:00",
   "target_trade_date": "2026-10-08",
   "reference_trade_date": "2026-09-30",
   "data_source": "腾讯A股实时行情",
@@ -61,16 +61,9 @@
       "pre_news_score": 75.6,
       "news": {
         "score": 12.5,
-        "headlines": [
-          {
-            "title": "近日海外机构调研股名单",
-            "published_at": "2026-09-29T17:02:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202609293886524593.html"
-          }
-        ],
+        "headlines": [],
         "risk_flags": [],
-        "news_count": 1
+        "news_count": 0
       },
       "total_score": 75.6,
       "risk_flags": [],
@@ -132,22 +125,9 @@
       "pre_news_score": 75.48,
       "news": {
         "score": 12.5,
-        "headlines": [
-          {
-            "title": "煤炭行业资金流入榜：郑州煤电等5股净流入资金超千万元",
-            "published_at": "2026-09-29T17:03:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202609293886524092.html"
-          },
-          {
-            "title": "筹码新动向：347股筹码趋向集中",
-            "published_at": "2026-09-30T17:24:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202609303887790638.html"
-          }
-        ],
+        "headlines": [],
         "risk_flags": [],
-        "news_count": 2
+        "news_count": 0
       },
       "total_score": 75.48,
       "risk_flags": [],
@@ -209,22 +189,9 @@
       "pre_news_score": 71.94,
       "news": {
         "score": 12.5,
-        "headlines": [
-          {
-            "title": "近日海外机构调研股名单",
-            "published_at": "2026-09-29T17:02:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202609293886524593.html"
-          },
-          {
-            "title": "170家公司获机构调研（附名单）",
-            "published_at": "2026-09-30T09:20:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202609303887471223.html"
-          }
-        ],
+        "headlines": [],
         "risk_flags": [],
-        "news_count": 2
+        "news_count": 0
       },
       "total_score": 71.94,
       "risk_flags": [],
@@ -350,28 +317,9 @@
       "pre_news_score": 69.31,
       "news": {
         "score": 12.5,
-        "headlines": [
-          {
-            "title": "招商证券副总裁刘波升任总裁",
-            "published_at": "2026-09-30T20:32:03+08:00",
-            "source": "中国经营报",
-            "url": "http://finance.eastmoney.com/a/202609303887870378.html"
-          },
-          {
-            "title": "13只个股大宗交易超千万元",
-            "published_at": "2026-09-30T23:21:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202609303887945834.html"
-          },
-          {
-            "title": "顶流基金经理半年内三度“减负”：增聘共管后，再卸任一只基金",
-            "published_at": "2026-09-30T09:16:00+08:00",
-            "source": "澎湃新闻",
-            "url": "http://finance.eastmoney.com/a/202609303887312363.html"
-          }
-        ],
+        "headlines": [],
         "risk_flags": [],
-        "news_count": 3
+        "news_count": 0
       },
       "total_score": 69.31,
       "risk_flags": [],
@@ -435,16 +383,9 @@
       "pre_news_score": 75.6,
       "news": {
         "score": 12.5,
-        "headlines": [
-          {
-            "title": "近日海外机构调研股名单",
-            "published_at": "2026-09-29T17:02:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202609293886524593.html"
-          }
-        ],
+        "headlines": [],
         "risk_flags": [],
-        "news_count": 1
+        "news_count": 0
       },
       "total_score": 75.6,
       "risk_flags": [],
@@ -506,22 +447,9 @@
       "pre_news_score": 75.48,
       "news": {
         "score": 12.5,
-        "headlines": [
-          {
-            "title": "煤炭行业资金流入榜：郑州煤电等5股净流入资金超千万元",
-            "published_at": "2026-09-29T17:03:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202609293886524092.html"
-          },
-          {
-            "title": "筹码新动向：347股筹码趋向集中",
-            "published_at": "2026-09-30T17:24:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202609303887790638.html"
-          }
-        ],
+        "headlines": [],
         "risk_flags": [],
-        "news_count": 2
+        "news_count": 0
       },
       "total_score": 75.48,
       "risk_flags": [],
@@ -583,22 +511,9 @@
       "pre_news_score": 71.94,
       "news": {
         "score": 12.5,
-        "headlines": [
-          {
-            "title": "近日海外机构调研股名单",
-            "published_at": "2026-09-29T17:02:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202609293886524593.html"
-          },
-          {
-            "title": "170家公司获机构调研（附名单）",
-            "published_at": "2026-09-30T09:20:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202609303887471223.html"
-          }
-        ],
+        "headlines": [],
         "risk_flags": [],
-        "news_count": 2
+        "news_count": 0
       },
       "total_score": 71.94,
       "risk_flags": [],
@@ -724,28 +639,9 @@
       "pre_news_score": 69.31,
       "news": {
         "score": 12.5,
-        "headlines": [
-          {
-            "title": "招商证券副总裁刘波升任总裁",
-            "published_at": "2026-09-30T20:32:03+08:00",
-            "source": "中国经营报",
-            "url": "http://finance.eastmoney.com/a/202609303887870378.html"
-          },
-          {
-            "title": "13只个股大宗交易超千万元",
-            "published_at": "2026-09-30T23:21:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202609303887945834.html"
-          },
-          {
-            "title": "顶流基金经理半年内三度“减负”：增聘共管后，再卸任一只基金",
-            "published_at": "2026-09-30T09:16:00+08:00",
-            "source": "澎湃新闻",
-            "url": "http://finance.eastmoney.com/a/202609303887312363.html"
-          }
-        ],
+        "headlines": [],
         "risk_flags": [],
-        "news_count": 3
+        "news_count": 0
       },
       "total_score": 69.31,
       "risk_flags": [],
@@ -807,16 +703,9 @@
       "pre_news_score": 68.41,
       "news": {
         "score": 12.5,
-        "headlines": [
-          {
-            "title": "13只个股大宗交易超千万元",
-            "published_at": "2026-09-30T23:21:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202609303887945834.html"
-          }
-        ],
+        "headlines": [],
         "risk_flags": [],
-        "news_count": 1
+        "news_count": 0
       },
       "total_score": 68.41,
       "risk_flags": [],
@@ -877,28 +766,9 @@
       "pre_news_score": 67.92,
       "news": {
         "score": 12.5,
-        "headlines": [
-          {
-            "title": "收盘价创历史新高股一览",
-            "published_at": "2026-09-29T17:41:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202609293886563232.html"
-          },
-          {
-            "title": "170家公司获机构调研（附名单）",
-            "published_at": "2026-09-30T09:20:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202609303887471223.html"
-          },
-          {
-            "title": "184家公司获机构调研（附名单）",
-            "published_at": "2026-09-29T09:22:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202609293886118278.html"
-          }
-        ],
+        "headlines": [],
         "risk_flags": [],
-        "news_count": 3
+        "news_count": 0
       },
       "total_score": 67.92,
       "risk_flags": [],
@@ -960,28 +830,9 @@
       "pre_news_score": 67.77,
       "news": {
         "score": 12.5,
-        "headlines": [
-          {
-            "title": "9月A股收官盘点：双创指数创单季度最大跌幅 科创50三季度累跌30.7%",
-            "published_at": "2026-09-30T15:49:42+08:00",
-            "source": "央广财经",
-            "url": "http://finance.eastmoney.com/a/202609303887707686.html"
-          },
-          {
-            "title": "本月股价创历史新高股一览",
-            "published_at": "2026-09-30T23:21:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202609303887946263.html"
-          },
-          {
-            "title": "主力动向：9月29日特大单净流入108.25亿元",
-            "published_at": "2026-09-29T17:03:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202609293886523766.html"
-          }
-        ],
+        "headlines": [],
         "risk_flags": [],
-        "news_count": 3
+        "news_count": 0
       },
       "total_score": 67.77,
       "risk_flags": [],
@@ -1042,22 +893,9 @@
       "pre_news_score": 67.43,
       "news": {
         "score": 12.5,
-        "headlines": [
-          {
-            "title": "收盘价创历史新高股一览",
-            "published_at": "2026-09-29T17:41:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202609293886563232.html"
-          },
-          {
-            "title": "本月股价创历史新高股一览",
-            "published_at": "2026-09-30T23:21:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202609303887946263.html"
-          }
-        ],
+        "headlines": [],
         "risk_flags": [],
-        "news_count": 2
+        "news_count": 0
       },
       "total_score": 67.43,
       "risk_flags": [],
