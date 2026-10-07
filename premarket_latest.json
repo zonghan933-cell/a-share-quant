@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "strategy": "盘前量化 V1.1·日K40+业绩25+新闻25+行业10",
-  "run_time": "2026-10-06T14:46:52.153277+08:00",
+  "run_time": "2026-10-07T14:21:18.520389+08:00",
   "target_trade_date": "2026-10-08",
   "reference_trade_date": "2026-09-30",
   "data_source": "腾讯A股实时行情",
