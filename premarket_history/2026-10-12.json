@@ -1,0 +1,1144 @@
+{
+  "status": "ok",
+  "strategy": "盘前量化 V1.0·日K40+业绩25+新闻25+行业10",
+  "run_time": "2026-10-12T14:21:54.214843+08:00",
+  "target_trade_date": "2026-10-12",
+  "reference_trade_date": "2026-10-09",
+  "data_source": "腾讯A股实时行情",
+  "data_quality": "partial",
+  "universe_count": 2873,
+  "kline_pool_count": 50,
+  "valid_kline_count": 24,
+  "news_pool_count": 15,
+  "fundamental_periods": [
+    "20260930",
+    "20260630"
+  ],
+  "top5": [
+    {
+      "code": "002039",
+      "name": "黔源电力",
+      "reference_price": 20.24,
+      "pe": 12.26,
+      "pb": 1.93,
+      "amount": 142740000.0,
+      "coarse_score": 25.37,
+      "kline": {
+        "score": 35.57,
+        "close": 20.25,
+        "ma5": 19.78,
+        "ma10": 19.438,
+        "ma20": 19.387,
+        "ma60": 19.416,
+        "ret5": 4.49,
+        "ret10": 5.41,
+        "ret20": 4.92,
+        "ret60": 8.12,
+        "distance_20d_high": -1.12,
+        "distance_60d_high": -1.22,
+        "volume_ratio_20d": 1.25,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 19.0,
+        "report_period": "20260630",
+        "revenue_yoy": 25.92,
+        "profit_yoy": 83.14,
+        "roe": 5.14,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 67.07,
+      "industry": "电力",
+      "industry_match_field": "cache",
+      "industry_raw_class": "电力",
+      "industry_score": 6.73,
+      "sector_confirmation": "偏强",
+      "industry_change_now": -1.03,
+      "industry_change_3d": 1.01,
+      "industry_net_now": -17.02,
+      "industry_net_3d": 6.64,
+      "pre_news_score": 73.8,
+      "news": {
+        "score": 12.5,
+        "headlines": [],
+        "risk_flags": [],
+        "news_count": 0
+      },
+      "total_score": 73.8,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+83.1%"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 1
+    },
+    {
+      "code": "600919",
+      "name": "江苏银行",
+      "reference_price": 12.55,
+      "pe": 6.37,
+      "pb": 0.85,
+      "amount": 1196140000.0,
+      "coarse_score": 26.33,
+      "kline": {
+        "score": 35.98,
+        "close": 12.55,
+        "ma5": 12.406,
+        "ma10": 12.28,
+        "ma20": 12.3,
+        "ma60": 11.928,
+        "ret5": 2.7,
+        "ret10": 3.12,
+        "ret20": 2.2,
+        "ret60": 13.27,
+        "distance_20d_high": -1.95,
+        "distance_60d_high": -1.95,
+        "volume_ratio_20d": 1.05,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 14.0,
+        "report_period": "20260630",
+        "revenue_yoy": 9.11,
+        "profit_yoy": 8.09,
+        "roe": 7.86,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 62.48,
+      "industry": "银行",
+      "industry_match_field": "cache",
+      "industry_raw_class": "银行",
+      "industry_score": 9.78,
+      "sector_confirmation": "强",
+      "industry_change_now": 1.86,
+      "industry_change_3d": 3.11,
+      "industry_net_now": 54.54,
+      "industry_net_3d": 41.13,
+      "pre_news_score": 72.26,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "银行行业资金流出榜：招商银行等5股净流出资金超亿元",
+            "published_at": "2026-10-09T16:58:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610093891309718.html"
+          },
+          {
+            "title": "海外机构调研股名单 汇川技术最受关注",
+            "published_at": "2026-10-09T17:59:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610093891368427.html"
+          },
+          {
+            "title": "118家公司获机构调研（附名单）",
+            "published_at": "2026-10-12T09:05:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610123892192474.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 5
+      },
+      "total_score": 72.26,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "银行强确认"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 2
+    },
+    {
+      "code": "601229",
+      "name": "上海银行",
+      "reference_price": 9.78,
+      "pe": 5.76,
+      "pb": 0.54,
+      "amount": 459010000.0,
+      "coarse_score": 25.31,
+      "kline": {
+        "score": 35.82,
+        "close": 9.77,
+        "ma5": 9.702,
+        "ma10": 9.607,
+        "ma20": 9.62,
+        "ma60": 9.471,
+        "ret5": 2.73,
+        "ret10": 2.2,
+        "ret20": 1.66,
+        "ret60": 9.65,
+        "distance_20d_high": -1.01,
+        "distance_60d_high": -2.01,
+        "volume_ratio_20d": 1.04,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 14.0,
+        "report_period": "20260630",
+        "revenue_yoy": 5.48,
+        "profit_yoy": 0.51,
+        "roe": 5.25,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 62.32,
+      "industry": "银行",
+      "industry_match_field": "cache",
+      "industry_raw_class": "银行",
+      "industry_score": 9.78,
+      "sector_confirmation": "强",
+      "industry_change_now": 1.86,
+      "industry_change_3d": 3.11,
+      "industry_net_now": 54.54,
+      "industry_net_3d": 41.13,
+      "pre_news_score": 72.1,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "银行行业资金流出榜：招商银行等5股净流出资金超亿元",
+            "published_at": "2026-10-09T16:58:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610093891309718.html"
+          },
+          {
+            "title": "A股午后上演反转好戏：三大股指收涨，超3200股飘红",
+            "published_at": "2026-10-09T15:17:00+08:00",
+            "source": "澎湃新闻",
+            "url": "http://finance.eastmoney.com/a/202610093891231910.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 2
+      },
+      "total_score": 72.1,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "银行强确认"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 3
+    },
+    {
+      "code": "603099",
+      "name": "长白山",
+      "reference_price": 41.52,
+      "pe": 85.24,
+      "pb": 7.74,
+      "amount": 365860000.0,
+      "coarse_score": 26.2,
+      "kline": {
+        "score": 37.45,
+        "close": 41.51,
+        "ma5": 41.582,
+        "ma10": 41.301,
+        "ma20": 39.773,
+        "ma60": 38.83,
+        "ret5": 2.24,
+        "ret10": 5.73,
+        "ret20": 7.82,
+        "ret60": 18.46,
+        "distance_20d_high": -6.93,
+        "distance_60d_high": -6.93,
+        "volume_ratio_20d": 0.83,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 18.0,
+        "report_period": "20260630",
+        "revenue_yoy": 17.74,
+        "profit_yoy": 161.84,
+        "roe": 0.08,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 67.95,
+      "industry": "旅游及酒店",
+      "industry_match_field": "cache",
+      "industry_raw_class": "旅游及酒店",
+      "industry_score": 4.03,
+      "sector_confirmation": "中性",
+      "industry_change_now": -1.96,
+      "industry_change_3d": -1.98,
+      "industry_net_now": -2.28,
+      "industry_net_3d": -0.82,
+      "pre_news_score": 71.98,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "券商10月金股出炉：电子、医药和银行增配居前，药明康德最热",
+            "published_at": "2026-10-09T18:11:00+08:00",
+            "source": "澎湃新闻",
+            "url": "http://finance.eastmoney.com/a/202610093891371865.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 1
+      },
+      "total_score": 71.98,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+161.8%"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 4
+    },
+    {
+      "code": "000001",
+      "name": "平安银行",
+      "reference_price": 11.75,
+      "pe": 5.25,
+      "pb": 0.49,
+      "amount": 1078670000.0,
+      "coarse_score": 25.36,
+      "kline": {
+        "score": 35.1,
+        "close": 11.75,
+        "ma5": 11.608,
+        "ma10": 11.493,
+        "ma20": 11.494,
+        "ma60": 11.199,
+        "ret5": 3.98,
+        "ret10": 2.62,
+        "ret20": 0.95,
+        "ret60": 15.2,
+        "distance_20d_high": -1.18,
+        "distance_60d_high": -1.18,
+        "volume_ratio_20d": 1.05,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 14.0,
+        "report_period": "20260630",
+        "revenue_yoy": 1.78,
+        "profit_yoy": 3.3,
+        "roe": 5.22,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 61.6,
+      "industry": "银行",
+      "industry_match_field": "cache",
+      "industry_raw_class": "银行",
+      "industry_score": 9.78,
+      "sector_confirmation": "强",
+      "industry_change_now": 1.86,
+      "industry_change_3d": 3.11,
+      "industry_net_now": 54.54,
+      "industry_net_3d": 41.13,
+      "pre_news_score": 71.38,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "反转行情上演！A股市场放量回升，上证指数翻红收涨，上证指数ETF汇添富(510980近5日“吸金”超2亿元，资金布局意愿强烈",
+            "published_at": "2026-10-09T15:51:20+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202610093891252878.html"
+          },
+          {
+            "title": "银行行业资金流出榜：招商银行等5股净流出资金超亿元",
+            "published_at": "2026-10-09T16:58:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610093891309718.html"
+          },
+          {
+            "title": "券商10月金股出炉：电子、医药和银行增配居前，药明康德最热",
+            "published_at": "2026-10-09T18:11:00+08:00",
+            "source": "澎湃新闻",
+            "url": "http://finance.eastmoney.com/a/202610093891371865.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 4
+      },
+      "total_score": 71.38,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "银行强确认"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 5
+    }
+  ],
+  "top10": [
+    {
+      "code": "002039",
+      "name": "黔源电力",
+      "reference_price": 20.24,
+      "pe": 12.26,
+      "pb": 1.93,
+      "amount": 142740000.0,
+      "coarse_score": 25.37,
+      "kline": {
+        "score": 35.57,
+        "close": 20.25,
+        "ma5": 19.78,
+        "ma10": 19.438,
+        "ma20": 19.387,
+        "ma60": 19.416,
+        "ret5": 4.49,
+        "ret10": 5.41,
+        "ret20": 4.92,
+        "ret60": 8.12,
+        "distance_20d_high": -1.12,
+        "distance_60d_high": -1.22,
+        "volume_ratio_20d": 1.25,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 19.0,
+        "report_period": "20260630",
+        "revenue_yoy": 25.92,
+        "profit_yoy": 83.14,
+        "roe": 5.14,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 67.07,
+      "industry": "电力",
+      "industry_match_field": "cache",
+      "industry_raw_class": "电力",
+      "industry_score": 6.73,
+      "sector_confirmation": "偏强",
+      "industry_change_now": -1.03,
+      "industry_change_3d": 1.01,
+      "industry_net_now": -17.02,
+      "industry_net_3d": 6.64,
+      "pre_news_score": 73.8,
+      "news": {
+        "score": 12.5,
+        "headlines": [],
+        "risk_flags": [],
+        "news_count": 0
+      },
+      "total_score": 73.8,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+83.1%"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 1
+    },
+    {
+      "code": "600919",
+      "name": "江苏银行",
+      "reference_price": 12.55,
+      "pe": 6.37,
+      "pb": 0.85,
+      "amount": 1196140000.0,
+      "coarse_score": 26.33,
+      "kline": {
+        "score": 35.98,
+        "close": 12.55,
+        "ma5": 12.406,
+        "ma10": 12.28,
+        "ma20": 12.3,
+        "ma60": 11.928,
+        "ret5": 2.7,
+        "ret10": 3.12,
+        "ret20": 2.2,
+        "ret60": 13.27,
+        "distance_20d_high": -1.95,
+        "distance_60d_high": -1.95,
+        "volume_ratio_20d": 1.05,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 14.0,
+        "report_period": "20260630",
+        "revenue_yoy": 9.11,
+        "profit_yoy": 8.09,
+        "roe": 7.86,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 62.48,
+      "industry": "银行",
+      "industry_match_field": "cache",
+      "industry_raw_class": "银行",
+      "industry_score": 9.78,
+      "sector_confirmation": "强",
+      "industry_change_now": 1.86,
+      "industry_change_3d": 3.11,
+      "industry_net_now": 54.54,
+      "industry_net_3d": 41.13,
+      "pre_news_score": 72.26,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "银行行业资金流出榜：招商银行等5股净流出资金超亿元",
+            "published_at": "2026-10-09T16:58:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610093891309718.html"
+          },
+          {
+            "title": "海外机构调研股名单 汇川技术最受关注",
+            "published_at": "2026-10-09T17:59:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610093891368427.html"
+          },
+          {
+            "title": "118家公司获机构调研（附名单）",
+            "published_at": "2026-10-12T09:05:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610123892192474.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 5
+      },
+      "total_score": 72.26,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "银行强确认"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 2
+    },
+    {
+      "code": "601229",
+      "name": "上海银行",
+      "reference_price": 9.78,
+      "pe": 5.76,
+      "pb": 0.54,
+      "amount": 459010000.0,
+      "coarse_score": 25.31,
+      "kline": {
+        "score": 35.82,
+        "close": 9.77,
+        "ma5": 9.702,
+        "ma10": 9.607,
+        "ma20": 9.62,
+        "ma60": 9.471,
+        "ret5": 2.73,
+        "ret10": 2.2,
+        "ret20": 1.66,
+        "ret60": 9.65,
+        "distance_20d_high": -1.01,
+        "distance_60d_high": -2.01,
+        "volume_ratio_20d": 1.04,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 14.0,
+        "report_period": "20260630",
+        "revenue_yoy": 5.48,
+        "profit_yoy": 0.51,
+        "roe": 5.25,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 62.32,
+      "industry": "银行",
+      "industry_match_field": "cache",
+      "industry_raw_class": "银行",
+      "industry_score": 9.78,
+      "sector_confirmation": "强",
+      "industry_change_now": 1.86,
+      "industry_change_3d": 3.11,
+      "industry_net_now": 54.54,
+      "industry_net_3d": 41.13,
+      "pre_news_score": 72.1,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "银行行业资金流出榜：招商银行等5股净流出资金超亿元",
+            "published_at": "2026-10-09T16:58:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610093891309718.html"
+          },
+          {
+            "title": "A股午后上演反转好戏：三大股指收涨，超3200股飘红",
+            "published_at": "2026-10-09T15:17:00+08:00",
+            "source": "澎湃新闻",
+            "url": "http://finance.eastmoney.com/a/202610093891231910.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 2
+      },
+      "total_score": 72.1,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "银行强确认"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 3
+    },
+    {
+      "code": "603099",
+      "name": "长白山",
+      "reference_price": 41.52,
+      "pe": 85.24,
+      "pb": 7.74,
+      "amount": 365860000.0,
+      "coarse_score": 26.2,
+      "kline": {
+        "score": 37.45,
+        "close": 41.51,
+        "ma5": 41.582,
+        "ma10": 41.301,
+        "ma20": 39.773,
+        "ma60": 38.83,
+        "ret5": 2.24,
+        "ret10": 5.73,
+        "ret20": 7.82,
+        "ret60": 18.46,
+        "distance_20d_high": -6.93,
+        "distance_60d_high": -6.93,
+        "volume_ratio_20d": 0.83,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 18.0,
+        "report_period": "20260630",
+        "revenue_yoy": 17.74,
+        "profit_yoy": 161.84,
+        "roe": 0.08,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 67.95,
+      "industry": "旅游及酒店",
+      "industry_match_field": "cache",
+      "industry_raw_class": "旅游及酒店",
+      "industry_score": 4.03,
+      "sector_confirmation": "中性",
+      "industry_change_now": -1.96,
+      "industry_change_3d": -1.98,
+      "industry_net_now": -2.28,
+      "industry_net_3d": -0.82,
+      "pre_news_score": 71.98,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "券商10月金股出炉：电子、医药和银行增配居前，药明康德最热",
+            "published_at": "2026-10-09T18:11:00+08:00",
+            "source": "澎湃新闻",
+            "url": "http://finance.eastmoney.com/a/202610093891371865.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 1
+      },
+      "total_score": 71.98,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+161.8%"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 4
+    },
+    {
+      "code": "000001",
+      "name": "平安银行",
+      "reference_price": 11.75,
+      "pe": 5.25,
+      "pb": 0.49,
+      "amount": 1078670000.0,
+      "coarse_score": 25.36,
+      "kline": {
+        "score": 35.1,
+        "close": 11.75,
+        "ma5": 11.608,
+        "ma10": 11.493,
+        "ma20": 11.494,
+        "ma60": 11.199,
+        "ret5": 3.98,
+        "ret10": 2.62,
+        "ret20": 0.95,
+        "ret60": 15.2,
+        "distance_20d_high": -1.18,
+        "distance_60d_high": -1.18,
+        "volume_ratio_20d": 1.05,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 14.0,
+        "report_period": "20260630",
+        "revenue_yoy": 1.78,
+        "profit_yoy": 3.3,
+        "roe": 5.22,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 61.6,
+      "industry": "银行",
+      "industry_match_field": "cache",
+      "industry_raw_class": "银行",
+      "industry_score": 9.78,
+      "sector_confirmation": "强",
+      "industry_change_now": 1.86,
+      "industry_change_3d": 3.11,
+      "industry_net_now": 54.54,
+      "industry_net_3d": 41.13,
+      "pre_news_score": 71.38,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "反转行情上演！A股市场放量回升，上证指数翻红收涨，上证指数ETF汇添富(510980近5日“吸金”超2亿元，资金布局意愿强烈",
+            "published_at": "2026-10-09T15:51:20+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202610093891252878.html"
+          },
+          {
+            "title": "银行行业资金流出榜：招商银行等5股净流出资金超亿元",
+            "published_at": "2026-10-09T16:58:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610093891309718.html"
+          },
+          {
+            "title": "券商10月金股出炉：电子、医药和银行增配居前，药明康德最热",
+            "published_at": "2026-10-09T18:11:00+08:00",
+            "source": "澎湃新闻",
+            "url": "http://finance.eastmoney.com/a/202610093891371865.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 4
+      },
+      "total_score": 71.38,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "银行强确认"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 5
+    },
+    {
+      "code": "600189",
+      "name": "泉阳泉",
+      "reference_price": 8.4,
+      "pe": 198.0,
+      "pb": 4.75,
+      "amount": 214020000.0,
+      "coarse_score": 25.34,
+      "kline": {
+        "score": 35.39,
+        "close": 8.39,
+        "ma5": 8.774,
+        "ma10": 8.6,
+        "ma20": 8.247,
+        "ma60": 7.693,
+        "ret5": 2.44,
+        "ret10": 6.47,
+        "ret20": 5.4,
+        "ret60": 18.5,
+        "distance_20d_high": -7.8,
+        "distance_60d_high": -7.8,
+        "volume_ratio_20d": 1.31,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 17.0,
+        "report_period": "20260630",
+        "revenue_yoy": 13.54,
+        "profit_yoy": 65.03,
+        "roe": 3.11,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 64.89,
+      "industry": "饮料制造",
+      "industry_match_field": "行业次类",
+      "industry_raw_class": "饮料制造",
+      "industry_score": 4.69,
+      "sector_confirmation": "中性",
+      "industry_change_now": -2.87,
+      "industry_change_3d": 1.39,
+      "industry_net_now": -3.48,
+      "industry_net_3d": -0.9,
+      "pre_news_score": 69.58,
+      "news": {
+        "score": 12.5,
+        "headlines": [],
+        "risk_flags": [],
+        "news_count": 0
+      },
+      "total_score": 69.58,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+65.0%"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 6
+    },
+    {
+      "code": "601328",
+      "name": "交通银行",
+      "reference_price": 7.88,
+      "pe": 7.14,
+      "pb": 0.6,
+      "amount": 1298890000.0,
+      "coarse_score": 26.89,
+      "kline": {
+        "score": 32.91,
+        "close": 7.89,
+        "ma5": 7.774,
+        "ma10": 7.664,
+        "ma20": 7.562,
+        "ma60": 7.218,
+        "ret5": 3.95,
+        "ret10": 5.76,
+        "ret20": 6.33,
+        "ret60": 19.36,
+        "distance_20d_high": -0.38,
+        "distance_60d_high": -0.38,
+        "volume_ratio_20d": 0.97,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 13.0,
+        "report_period": "20260630",
+        "revenue_yoy": 6.73,
+        "profit_yoy": 4.04,
+        "roe": 4.04,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 58.41,
+      "industry": "银行",
+      "industry_match_field": "cache",
+      "industry_raw_class": "银行",
+      "industry_score": 9.78,
+      "sector_confirmation": "强",
+      "industry_change_now": 1.86,
+      "industry_change_3d": 3.11,
+      "industry_net_now": 54.54,
+      "industry_net_3d": 41.13,
+      "pre_news_score": 68.19,
+      "news": {
+        "score": 12.95,
+        "headlines": [
+          {
+            "title": "银行行业资金流出榜：招商银行等5股净流出资金超亿元",
+            "published_at": "2026-10-09T16:58:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610093891309718.html"
+          },
+          {
+            "title": "多省农信系村镇银行整合 县域金融服务格局重塑",
+            "published_at": "2026-10-10T02:31:04+08:00",
+            "source": "中国经营网",
+            "url": "http://finance.eastmoney.com/a/202610103891618287.html"
+          },
+          {
+            "title": "金融护航秋收：激活产业发展新动能",
+            "published_at": "2026-10-10T02:19:02+08:00",
+            "source": "中国经营网",
+            "url": "http://finance.eastmoney.com/a/202610103891617491.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 3
+      },
+      "total_score": 68.64,
+      "risk_flags": [],
+      "reasons": [
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "银行强确认"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 7
+    },
+    {
+      "code": "601288",
+      "name": "农业银行",
+      "reference_price": 7.17,
+      "pe": 8.42,
+      "pb": 0.88,
+      "amount": 2551220000.0,
+      "coarse_score": 26.56,
+      "kline": {
+        "score": 32.29,
+        "close": 7.16,
+        "ma5": 7.014,
+        "ma10": 6.942,
+        "ma20": 6.909,
+        "ma60": 6.754,
+        "ret5": 4.37,
+        "ret10": 5.14,
+        "ret20": 2.87,
+        "ret60": 14.93,
+        "distance_20d_high": -0.28,
+        "distance_60d_high": -0.28,
+        "volume_ratio_20d": 1.25,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 14.0,
+        "report_period": "20260630",
+        "revenue_yoy": 11.07,
+        "profit_yoy": 4.93,
+        "roe": 5.07,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 58.79,
+      "industry": "银行",
+      "industry_match_field": "cache",
+      "industry_raw_class": "银行",
+      "industry_score": 9.78,
+      "sector_confirmation": "强",
+      "industry_change_now": 1.86,
+      "industry_change_3d": 3.11,
+      "industry_net_now": 54.54,
+      "industry_net_3d": 41.13,
+      "pre_news_score": 68.57,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "中央汇金公司“打假”！21家企业被点名",
+            "published_at": "2026-10-11T14:27:48+08:00",
+            "source": "证券时报",
+            "url": "http://finance.eastmoney.com/a/202610113892051377.html"
+          },
+          {
+            "title": "银行行业资金流出榜：招商银行等5股净流出资金超亿元",
+            "published_at": "2026-10-09T16:58:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610093891309718.html"
+          },
+          {
+            "title": "多省农信系村镇银行整合 县域金融服务格局重塑",
+            "published_at": "2026-10-10T02:31:04+08:00",
+            "source": "中国经营网",
+            "url": "http://finance.eastmoney.com/a/202610103891618287.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 5
+      },
+      "total_score": 68.57,
+      "risk_flags": [],
+      "reasons": [
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "银行强确认"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 8
+    },
+    {
+      "code": "601939",
+      "name": "建设银行",
+      "reference_price": 11.3,
+      "pe": 8.53,
+      "pb": 0.83,
+      "amount": 1368960000.0,
+      "coarse_score": 27.04,
+      "kline": {
+        "score": 33.02,
+        "close": 11.3,
+        "ma5": 11.104,
+        "ma10": 11.018,
+        "ma20": 10.948,
+        "ma60": 10.609,
+        "ret5": 2.73,
+        "ret10": 4.53,
+        "ret20": 2.91,
+        "ret60": 14.95,
+        "distance_20d_high": -0.18,
+        "distance_60d_high": -0.18,
+        "volume_ratio_20d": 1.25,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 13.0,
+        "report_period": "20260630",
+        "revenue_yoy": 10.72,
+        "profit_yoy": 4.62,
+        "roe": 4.76,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 58.52,
+      "industry": "银行",
+      "industry_match_field": "cache",
+      "industry_raw_class": "银行",
+      "industry_score": 9.78,
+      "sector_confirmation": "强",
+      "industry_change_now": 1.86,
+      "industry_change_3d": 3.11,
+      "industry_net_now": 54.54,
+      "industry_net_3d": 41.13,
+      "pre_news_score": 68.3,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "中央汇金公司“打假”！21家企业被点名",
+            "published_at": "2026-10-11T14:27:48+08:00",
+            "source": "证券时报",
+            "url": "http://finance.eastmoney.com/a/202610113892051377.html"
+          },
+          {
+            "title": "建设银行、中国银行、工商银行、中信银行，股价新高",
+            "published_at": "2026-10-12T12:41:34+08:00",
+            "source": "上海证券报",
+            "url": "http://finance.eastmoney.com/a/202610123892528255.html"
+          },
+          {
+            "title": "银行行业资金流出榜：招商银行等5股净流出资金超亿元",
+            "published_at": "2026-10-09T16:58:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610093891309718.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 6
+      },
+      "total_score": 68.3,
+      "risk_flags": [],
+      "reasons": [
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "银行强确认"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 9
+    },
+    {
+      "code": "001328",
+      "name": "登康口腔",
+      "reference_price": 31.52,
+      "pe": 27.51,
+      "pb": 3.68,
+      "amount": 97010000.0,
+      "coarse_score": 25.38,
+      "kline": {
+        "score": 35.3,
+        "close": 31.51,
+        "ma5": 30.962,
+        "ma10": 30.599,
+        "ma20": 30.238,
+        "ma60": 29.659,
+        "ret5": 3.24,
+        "ret10": 5.1,
+        "ret20": 3.96,
+        "ret60": 19.22,
+        "distance_20d_high": -3.79,
+        "distance_60d_high": -4.69,
+        "volume_ratio_20d": 2.3,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 14.0,
+        "report_period": "20260630",
+        "revenue_yoy": 14.16,
+        "profit_yoy": 19.05,
+        "roe": 6.52,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 61.8,
+      "industry": "美容护理",
+      "industry_match_field": "cache",
+      "industry_raw_class": "美容护理",
+      "industry_score": 6.39,
+      "sector_confirmation": "偏强",
+      "industry_change_now": -1.48,
+      "industry_change_3d": 0.36,
+      "industry_net_now": -2.2,
+      "industry_net_3d": 0.74,
+      "pre_news_score": 68.19,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "10月9日盘后固定价格交易额7.84亿元",
+            "published_at": "2026-10-09T17:59:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610093891371661.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 1
+      },
+      "total_score": 68.19,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "美容护理偏强确认"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 10
+    }
+  ],
+  "execution_note": "盘前榜单解决买什么，不等于开盘立即买；09:25竞价和09:35~09:40 Shadow必须二次确认，避免追高。"
+}
