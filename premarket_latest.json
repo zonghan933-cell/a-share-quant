@@ -1,12 +1,12 @@
 {
   "status": "ok",
   "strategy": "盘前量化 V1.1·日K40+业绩25+新闻25+行业10",
-  "run_time": "2026-10-29T14:19:30.360903+08:00",
-  "target_trade_date": "2026-10-29",
-  "reference_trade_date": "2026-10-28",
+  "run_time": "2026-10-30T14:18:50.072680+08:00",
+  "target_trade_date": "2026-10-30",
+  "reference_trade_date": "2026-10-29",
   "data_source": "腾讯A股实时行情",
   "data_quality": "partial",
-  "universe_count": 2848,
+  "universe_count": 2839,
   "kline_pool_count": 30,
   "valid_kline_count": 30,
   "news_pool_count": 12,
@@ -15,70 +15,76 @@
   ],
   "top5": [
     {
-      "code": "600320",
-      "name": "振华重工",
-      "reference_price": 4.27,
-      "pe": 23.08,
-      "pb": 1.41,
-      "amount": 208850000.0,
-      "coarse_score": 25.26,
+      "code": "600276",
+      "name": "恒瑞医药",
+      "reference_price": 48.63,
+      "pe": 36.33,
+      "pb": 4.83,
+      "amount": 2428170000.0,
+      "coarse_score": 26.7,
       "kline": {
-        "score": 37.0,
-        "close": 4.18,
-        "ma5": 4.144,
-        "ma10": 4.132,
-        "ma20": 4.109,
-        "ma60": 4.13,
-        "ret5": 1.21,
-        "ret10": -0.24,
-        "ret20": 1.95,
-        "ret60": 0.48,
-        "distance_20d_high": -4.13,
-        "distance_60d_high": -4.35,
-        "volume_ratio_20d": 1.19,
+        "score": 34.55,
+        "close": 48.62,
+        "ma5": 47.31,
+        "ma10": 47.009,
+        "ma20": 46.487,
+        "ma60": 47.859,
+        "ret5": 5.7,
+        "ret10": 4.33,
+        "ret20": 6.67,
+        "ret60": -9.78,
+        "distance_20d_high": -1.22,
+        "distance_60d_high": -12.99,
+        "volume_ratio_20d": 1.17,
         "risk_flags": [],
         "source": "腾讯历史日K"
       },
       "fundamental": {
-        "score": 15.0,
+        "score": 17.0,
         "report_period": "20260930",
-        "revenue_yoy": 4.03,
-        "profit_yoy": 46.72,
-        "roe": 4.79,
+        "revenue_yoy": 5.26,
+        "profit_yoy": 20.38,
+        "roe": 12.17,
         "forecast_type": null,
         "forecast_change": null
       },
-      "pre_industry_score": 64.5,
-      "industry": "工程机械",
-      "industry_match_field": "cache",
-      "industry_raw_class": "工程机械",
-      "industry_score": 6.19,
-      "sector_confirmation": "偏强",
-      "industry_change_now": -1.38,
-      "industry_change_3d": -2.56,
-      "industry_net_now": -1.42,
-      "industry_net_3d": -0.93,
-      "pre_news_score": 70.69,
+      "pre_industry_score": 64.05,
+      "industry": null,
+      "industry_score": 5.0,
+      "sector_confirmation": "未知",
+      "pre_news_score": 69.05,
       "news": {
-        "score": 15.0,
+        "score": 16.01,
         "headlines": [
           {
-            "title": "主营业务齐发力、管理提升见实效 振华重工前三季度净利润增长46.72%",
-            "published_at": "2026-10-28T21:28:10+08:00",
-            "source": "经济参考网",
-            "url": "http://finance.eastmoney.com/a/202610283912519856.html"
+            "title": "机构风向标 | 恒瑞医药6002762026年三季度已披露前十大机构持股比例合计下跌1.84个百分点",
+            "published_at": "2026-10-28T11:01:40+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202610283911552012.html"
+          },
+          {
+            "title": "恒瑞医药：注射用瑞康曲妥珠单抗上市申请获受理并纳入优先审评",
+            "published_at": "2026-10-29T16:57:18+08:00",
+            "source": "每日经济新闻",
+            "url": "http://finance.eastmoney.com/a/202610293914246353.html"
+          },
+          {
+            "title": "恒瑞医药：子公司获HRS-2189片临床试验批准通知书",
+            "published_at": "2026-10-28T17:42:57+08:00",
+            "source": "科创板日报",
+            "url": "http://finance.eastmoney.com/a/202610283912108495.html"
           }
         ],
         "risk_flags": [],
-        "news_count": 1
+        "news_count": 9
       },
-      "total_score": 73.19,
+      "total_score": 72.56,
       "risk_flags": [],
       "reasons": [
         "日K未处于明显追高区",
         "收盘价站上20日均线",
         "20日涨幅温和",
-        "净利润同比+46.7%"
+        "净利润同比+20.4%"
       ],
       "recommendation": "候选",
       "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
@@ -86,252 +92,224 @@
       "rank": 1
     },
     {
-      "code": "601398",
-      "name": "工商银行",
-      "reference_price": 8.75,
-      "pe": 8.34,
-      "pb": 0.8,
-      "amount": 2888320000.0,
-      "coarse_score": 27.66,
+      "code": "002956",
+      "name": "西麦食品",
+      "reference_price": 19.1,
+      "pe": 22.42,
+      "pb": 3.46,
+      "amount": 127440000.0,
+      "coarse_score": 25.46,
       "kline": {
-        "score": 37.28,
-        "close": 8.56,
-        "ma5": 8.534,
-        "ma10": 8.468,
-        "ma20": 8.295,
-        "ma60": 7.928,
-        "ret5": 1.3,
-        "ret10": 3.13,
-        "ret20": 7.4,
-        "ret60": 9.46,
-        "distance_20d_high": -1.15,
-        "distance_60d_high": -1.15,
-        "volume_ratio_20d": 1.24,
+        "score": 34.99,
+        "close": 18.41,
+        "ma5": 18.65,
+        "ma10": 18.528,
+        "ma20": 18.091,
+        "ma60": 17.535,
+        "ret5": 2.51,
+        "ret10": 2.45,
+        "ret20": 4.19,
+        "ret60": 0.93,
+        "distance_20d_high": -7.72,
+        "distance_60d_high": -7.72,
+        "volume_ratio_20d": 0.83,
         "risk_flags": [],
         "source": "腾讯历史日K"
       },
       "fundamental": {
-        "score": 10.5,
-        "report_period": null,
-        "revenue_yoy": null,
-        "profit_yoy": null,
-        "roe": null,
-        "forecast_type": null,
-        "forecast_change": null
-      },
-      "pre_industry_score": 60.28,
-      "industry": "银行",
-      "industry_match_field": "cache",
-      "industry_raw_class": "银行",
-      "industry_score": 9.96,
-      "sector_confirmation": "强",
-      "industry_change_now": 1.84,
-      "industry_change_3d": 4.4,
-      "industry_net_now": 39.11,
-      "industry_net_3d": 39.15,
-      "pre_news_score": 70.24,
-      "news": {
-        "score": 13.7,
-        "headlines": [
-          {
-            "title": "逆市走强！601398、601939，新高！",
-            "published_at": "2026-10-29T10:46:31+08:00",
-            "source": "中国基金报",
-            "url": "http://finance.eastmoney.com/a/202610293913612777.html"
-          },
-          {
-            "title": "10月29日A股早盘：科创50指数半日跌超4% 创业板指跌超3% 四大行总市值突破10万亿",
-            "published_at": "2026-10-29T11:59:38+08:00",
-            "source": "央广财经",
-            "url": "http://finance.eastmoney.com/a/202610293913759740.html"
-          },
-          {
-            "title": "3只个股大宗交易超5000万元",
-            "published_at": "2026-10-28T21:59:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610283912687195.html"
-          }
-        ],
-        "risk_flags": [],
-        "news_count": 7
-      },
-      "total_score": 71.44,
-      "risk_flags": [
-        "最新业绩数据缺失/未披露"
-      ],
-      "reasons": [
-        "日K未处于明显追高区",
-        "收盘价站上20日均线",
-        "20日涨幅温和",
-        "银行强确认"
-      ],
-      "recommendation": "观察",
-      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
-      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
-      "rank": 2
-    },
-    {
-      "code": "002265",
-      "name": "建设工业",
-      "reference_price": 20.16,
-      "pe": 63.3,
-      "pb": 5.32,
-      "amount": 595400000.0,
-      "coarse_score": 25.55,
-      "kline": {
-        "score": 32.8,
-        "close": 20.92,
-        "ma5": 19.84,
-        "ma10": 19.752,
-        "ma20": 19.349,
-        "ma60": 19.617,
-        "ret5": 7.89,
-        "ret10": 11.1,
-        "ret20": 5.71,
-        "ret60": 13.51,
-        "distance_20d_high": -1.51,
-        "distance_60d_high": -7.76,
-        "volume_ratio_20d": 2.2,
-        "risk_flags": [],
-        "source": "腾讯历史日K"
-      },
-      "fundamental": {
-        "score": 19.0,
+        "score": 20.0,
         "report_period": "20260930",
-        "revenue_yoy": 35.7,
-        "profit_yoy": 321.78,
-        "roe": 3.22,
+        "revenue_yoy": 21.7,
+        "profit_yoy": 71.56,
+        "roe": 13.42,
         "forecast_type": null,
         "forecast_change": null
       },
-      "pre_industry_score": 64.3,
-      "industry": "汽车零部件",
-      "industry_match_field": "行业次类",
-      "industry_raw_class": "汽车零部件",
-      "industry_score": 3.22,
-      "sector_confirmation": "弱",
-      "industry_change_now": -3.33,
-      "industry_change_3d": -1.59,
-      "industry_net_now": -46.08,
-      "industry_net_3d": -5.54,
-      "pre_news_score": 67.52,
+      "pre_industry_score": 67.49,
+      "industry": null,
+      "industry_score": 5.0,
+      "sector_confirmation": "未知",
+      "pre_news_score": 72.49,
       "news": {
-        "score": 16.28,
+        "score": 12.5,
         "headlines": [
           {
-            "title": "盘中异动！002265，直线拉涨停！",
-            "published_at": "2026-10-28T14:55:51+08:00",
-            "source": "中国基金报",
-            "url": "http://finance.eastmoney.com/a/202610283911791120.html"
+            "title": "海外机构调研股名单 思源电气最受关注",
+            "published_at": "2026-10-29T16:42:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610293914966084.html"
           },
           {
-            "title": "今日盘中突破半年线个股",
-            "published_at": "2026-10-28T12:59:00+08:00",
+            "title": "309家公司获机构调研（附名单）",
+            "published_at": "2026-10-30T09:43:00+08:00",
             "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610283911684429.html"
-          },
-          {
-            "title": "今日突破半年线个股",
-            "published_at": "2026-10-28T16:26:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610283911946250.html"
+            "url": "http://finance.eastmoney.com/a/202610303916011424.html"
           }
         ],
         "risk_flags": [],
-        "news_count": 7
+        "news_count": 2
       },
-      "total_score": 71.3,
-      "risk_flags": [
-        "行业确认偏弱"
-      ],
-      "reasons": [
-        "日K未处于明显追高区",
-        "收盘价站上20日均线",
-        "20日涨幅温和",
-        "净利润同比+321.8%"
-      ],
-      "recommendation": "观察",
-      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
-      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
-      "rank": 3
-    },
-    {
-      "code": "002966",
-      "name": "苏州银行",
-      "reference_price": 9.65,
-      "pe": 7.55,
-      "pb": 0.79,
-      "amount": 473270000.0,
-      "coarse_score": 25.25,
-      "kline": {
-        "score": 35.89,
-        "close": 9.34,
-        "ma5": 9.294,
-        "ma10": 9.225,
-        "ma20": 9.27,
-        "ma60": 8.93,
-        "ret5": 2.86,
-        "ret10": 0.65,
-        "ret20": 2.52,
-        "ret60": 15.02,
-        "distance_20d_high": -2.91,
-        "distance_60d_high": -2.91,
-        "volume_ratio_20d": 1.12,
-        "risk_flags": [],
-        "source": "腾讯历史日K"
-      },
-      "fundamental": {
-        "score": 14.0,
-        "report_period": "20260930",
-        "revenue_yoy": 12.81,
-        "profit_yoy": 8.13,
-        "roe": 8.8,
-        "forecast_type": null,
-        "forecast_change": null
-      },
-      "pre_industry_score": 62.39,
-      "industry": "银行",
-      "industry_match_field": "cache",
-      "industry_raw_class": "银行",
-      "industry_score": 9.96,
-      "sector_confirmation": "强",
-      "industry_change_now": 1.84,
-      "industry_change_3d": 4.4,
-      "industry_net_now": 39.11,
-      "industry_net_3d": 39.15,
-      "pre_news_score": 72.35,
-      "news": {
-        "score": 10.5,
-        "headlines": [
-          {
-            "title": "东吴财险前三季度净亏损0.98亿元，累计净资产收益率-5.07%",
-            "published_at": "2026-10-28T15:13:05+08:00",
-            "source": "蓝鲸财经",
-            "url": "http://finance.eastmoney.com/a/202610283911804647.html"
-          },
-          {
-            "title": "银行行业今日涨1.23%，主力资金净流入3.54亿元",
-            "published_at": "2026-10-27T17:10:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610273909976792.html"
-          },
-          {
-            "title": "银行行业10月26日资金流向日报",
-            "published_at": "2026-10-26T16:47:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610263908041069.html"
-          }
-        ],
-        "risk_flags": [],
-        "news_count": 5
-      },
-      "total_score": 70.35,
+      "total_score": 72.49,
       "risk_flags": [],
       "reasons": [
         "日K未处于明显追高区",
         "收盘价站上20日均线",
         "20日涨幅温和",
-        "银行强确认"
+        "净利润同比+71.6%"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 2
+    },
+    {
+      "code": "000858",
+      "name": "五 粮 液",
+      "reference_price": 74.73,
+      "pe": 23.8,
+      "pb": 2.45,
+      "amount": 3664390000.0,
+      "coarse_score": 26.56,
+      "kline": {
+        "score": 32.75,
+        "close": 72.28,
+        "ma5": 73.91,
+        "ma10": 73.102,
+        "ma20": 71.639,
+        "ma60": 72.211,
+        "ret5": 0.77,
+        "ret10": 1.37,
+        "ret20": 2.76,
+        "ret60": -3.84,
+        "distance_20d_high": -5.27,
+        "distance_60d_high": -8.32,
+        "volume_ratio_20d": 1.41,
+        "risk_flags": [],
+        "source": "腾讯历史日K"
+      },
+      "fundamental": {
+        "score": 16.0,
+        "report_period": "20260930",
+        "revenue_yoy": 7.25,
+        "profit_yoy": 49.98,
+        "roe": 8.09,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 61.25,
+      "industry": null,
+      "industry_score": 5.0,
+      "sector_confirmation": "未知",
+      "pre_news_score": 66.25,
+      "news": {
+        "score": 18.6,
+        "headlines": [
+          {
+            "title": "五粮液：控股股东一致行动人增持触及1%整数倍",
+            "published_at": "2026-10-29T21:08:12+08:00",
+            "source": "财联社",
+            "url": "http://finance.eastmoney.com/a/202610293914812923.html"
+          },
+          {
+            "title": "五粮液：已累计回购2175万股 支付金额16.01亿元",
+            "published_at": "2026-10-28T19:59:11+08:00",
+            "source": "财联社",
+            "url": "http://finance.eastmoney.com/a/202610283912380258.html"
+          },
+          {
+            "title": "五粮液前三季度净利同比增长49.98%",
+            "published_at": "2026-10-27T21:23:07+08:00",
+            "source": "央广财经",
+            "url": "http://finance.eastmoney.com/a/202610273910450571.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 10
+      },
+      "total_score": 72.35,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+50.0%"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 3
+    },
+    {
+      "code": "002832",
+      "name": "比音勒芬",
+      "reference_price": 27.27,
+      "pe": 22.96,
+      "pb": 2.75,
+      "amount": 133110000.0,
+      "coarse_score": 26.04,
+      "kline": {
+        "score": 35.34,
+        "close": 26.93,
+        "ma5": 26.88,
+        "ma10": 26.883,
+        "ma20": 26.547,
+        "ma60": 25.834,
+        "ret5": 0.49,
+        "ret10": 1.7,
+        "ret20": 5.82,
+        "ret60": 10.91,
+        "distance_20d_high": -6.98,
+        "distance_60d_high": -6.98,
+        "volume_ratio_20d": 0.72,
+        "risk_flags": [],
+        "source": "腾讯历史日K"
+      },
+      "fundamental": {
+        "score": 18.0,
+        "report_period": "20260930",
+        "revenue_yoy": 27.36,
+        "profit_yoy": 20.51,
+        "roe": 13.47,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 65.84,
+      "industry": null,
+      "industry_score": 5.0,
+      "sector_confirmation": "未知",
+      "pre_news_score": 70.84,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "基金三季度控盘比例超20%个股（附名单）",
+            "published_at": "2026-10-30T09:44:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610303915764288.html"
+          },
+          {
+            "title": "社保基金长线坚守51只股（附股）",
+            "published_at": "2026-10-30T11:29:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610303916086426.html"
+          },
+          {
+            "title": "基金重仓股揭秘：21只股持股比例超20%",
+            "published_at": "2026-10-29T10:06:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610293913537027.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 6
+      },
+      "total_score": 70.84,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+20.5%"
       ],
       "recommendation": "观察",
       "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
@@ -339,70 +317,76 @@
       "rank": 4
     },
     {
-      "code": "601088",
-      "name": "中国神华",
-      "reference_price": 51.57,
-      "pe": 20.53,
-      "pb": 2.52,
-      "amount": 1666600000.0,
-      "coarse_score": 25.85,
+      "code": "603889",
+      "name": "新澳股份",
+      "reference_price": 6.4,
+      "pe": 10.6,
+      "pb": 1.56,
+      "amount": 98630000.0,
+      "coarse_score": 25.61,
       "kline": {
-        "score": 34.29,
-        "close": 49.65,
-        "ma5": 49.472,
-        "ma10": 49.611,
-        "ma20": 48.517,
-        "ma60": 46.299,
-        "ret5": 2.82,
-        "ret10": 0.16,
-        "ret20": 6.71,
-        "ret60": 11.67,
-        "distance_20d_high": -2.57,
-        "distance_60d_high": -2.57,
-        "volume_ratio_20d": 0.79,
+        "score": 34.5,
+        "close": 6.29,
+        "ma5": 6.218,
+        "ma10": 6.133,
+        "ma20": 6.15,
+        "ma60": 5.986,
+        "ret5": 6.43,
+        "ret10": 0.64,
+        "ret20": 3.97,
+        "ret60": 7.52,
+        "distance_20d_high": -2.48,
+        "distance_60d_high": -2.48,
+        "volume_ratio_20d": 1.06,
         "risk_flags": [],
         "source": "腾讯历史日K"
       },
       "fundamental": {
-        "score": 14.0,
+        "score": 18.0,
         "report_period": "20260930",
-        "revenue_yoy": 8.97,
-        "profit_yoy": 3.8,
-        "roe": 8.81,
+        "revenue_yoy": 19.74,
+        "profit_yoy": 24.69,
+        "roe": 12.34,
         "forecast_type": null,
         "forecast_change": null
       },
-      "pre_industry_score": 60.79,
-      "industry": "煤炭开采加工",
-      "industry_match_field": "cache",
-      "industry_raw_class": "煤炭开采加工",
-      "industry_score": 9.13,
-      "sector_confirmation": "强",
-      "industry_change_now": 0.94,
-      "industry_change_3d": 1.42,
-      "industry_net_now": 5.0,
-      "industry_net_3d": 0.8,
-      "pre_news_score": 69.92,
+      "pre_industry_score": 65.0,
+      "industry": null,
+      "industry_score": 5.0,
+      "sector_confirmation": "未知",
+      "pre_news_score": 70.0,
       "news": {
         "score": 12.5,
         "headlines": [
           {
-            "title": "10月以来超700家次沪市公司释放各类利好",
-            "published_at": "2026-10-27T23:33:14+08:00",
-            "source": "财联社",
-            "url": "http://finance.eastmoney.com/a/202610273910614295.html"
+            "title": "社保基金持仓动向：三季度新进47股",
+            "published_at": "2026-10-27T09:25:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610273909310256.html"
+          },
+          {
+            "title": "社保基金持仓动向：三季度新进75股",
+            "published_at": "2026-10-28T09:48:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610283911311388.html"
+          },
+          {
+            "title": "社保基金持仓动向：三季度新进129股",
+            "published_at": "2026-10-30T09:45:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610303915790135.html"
           }
         ],
         "risk_flags": [],
-        "news_count": 1
+        "news_count": 4
       },
-      "total_score": 69.92,
+      "total_score": 70.0,
       "risk_flags": [],
       "reasons": [
         "日K未处于明显追高区",
         "收盘价站上20日均线",
         "20日涨幅温和",
-        "煤炭开采加工强确认"
+        "净利润同比+24.7%"
       ],
       "recommendation": "观察",
       "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
@@ -412,70 +396,76 @@
   ],
   "top10": [
     {
-      "code": "600320",
-      "name": "振华重工",
-      "reference_price": 4.27,
-      "pe": 23.08,
-      "pb": 1.41,
-      "amount": 208850000.0,
-      "coarse_score": 25.26,
+      "code": "600276",
+      "name": "恒瑞医药",
+      "reference_price": 48.63,
+      "pe": 36.33,
+      "pb": 4.83,
+      "amount": 2428170000.0,
+      "coarse_score": 26.7,
       "kline": {
-        "score": 37.0,
-        "close": 4.18,
-        "ma5": 4.144,
-        "ma10": 4.132,
-        "ma20": 4.109,
-        "ma60": 4.13,
-        "ret5": 1.21,
-        "ret10": -0.24,
-        "ret20": 1.95,
-        "ret60": 0.48,
-        "distance_20d_high": -4.13,
-        "distance_60d_high": -4.35,
-        "volume_ratio_20d": 1.19,
+        "score": 34.55,
+        "close": 48.62,
+        "ma5": 47.31,
+        "ma10": 47.009,
+        "ma20": 46.487,
+        "ma60": 47.859,
+        "ret5": 5.7,
+        "ret10": 4.33,
+        "ret20": 6.67,
+        "ret60": -9.78,
+        "distance_20d_high": -1.22,
+        "distance_60d_high": -12.99,
+        "volume_ratio_20d": 1.17,
         "risk_flags": [],
         "source": "腾讯历史日K"
       },
       "fundamental": {
-        "score": 15.0,
+        "score": 17.0,
         "report_period": "20260930",
-        "revenue_yoy": 4.03,
-        "profit_yoy": 46.72,
-        "roe": 4.79,
+        "revenue_yoy": 5.26,
+        "profit_yoy": 20.38,
+        "roe": 12.17,
         "forecast_type": null,
         "forecast_change": null
       },
-      "pre_industry_score": 64.5,
-      "industry": "工程机械",
-      "industry_match_field": "cache",
-      "industry_raw_class": "工程机械",
-      "industry_score": 6.19,
-      "sector_confirmation": "偏强",
-      "industry_change_now": -1.38,
-      "industry_change_3d": -2.56,
-      "industry_net_now": -1.42,
-      "industry_net_3d": -0.93,
-      "pre_news_score": 70.69,
+      "pre_industry_score": 64.05,
+      "industry": null,
+      "industry_score": 5.0,
+      "sector_confirmation": "未知",
+      "pre_news_score": 69.05,
       "news": {
-        "score": 15.0,
+        "score": 16.01,
         "headlines": [
           {
-            "title": "主营业务齐发力、管理提升见实效 振华重工前三季度净利润增长46.72%",
-            "published_at": "2026-10-28T21:28:10+08:00",
-            "source": "经济参考网",
-            "url": "http://finance.eastmoney.com/a/202610283912519856.html"
+            "title": "机构风向标 | 恒瑞医药6002762026年三季度已披露前十大机构持股比例合计下跌1.84个百分点",
+            "published_at": "2026-10-28T11:01:40+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202610283911552012.html"
+          },
+          {
+            "title": "恒瑞医药：注射用瑞康曲妥珠单抗上市申请获受理并纳入优先审评",
+            "published_at": "2026-10-29T16:57:18+08:00",
+            "source": "每日经济新闻",
+            "url": "http://finance.eastmoney.com/a/202610293914246353.html"
+          },
+          {
+            "title": "恒瑞医药：子公司获HRS-2189片临床试验批准通知书",
+            "published_at": "2026-10-28T17:42:57+08:00",
+            "source": "科创板日报",
+            "url": "http://finance.eastmoney.com/a/202610283912108495.html"
           }
         ],
         "risk_flags": [],
-        "news_count": 1
+        "news_count": 9
       },
-      "total_score": 73.19,
+      "total_score": 72.56,
       "risk_flags": [],
       "reasons": [
         "日K未处于明显追高区",
         "收盘价站上20日均线",
         "20日涨幅温和",
-        "净利润同比+46.7%"
+        "净利润同比+20.4%"
       ],
       "recommendation": "候选",
       "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
@@ -483,252 +473,224 @@
       "rank": 1
     },
     {
-      "code": "601398",
-      "name": "工商银行",
-      "reference_price": 8.75,
-      "pe": 8.34,
-      "pb": 0.8,
-      "amount": 2888320000.0,
-      "coarse_score": 27.66,
+      "code": "002956",
+      "name": "西麦食品",
+      "reference_price": 19.1,
+      "pe": 22.42,
+      "pb": 3.46,
+      "amount": 127440000.0,
+      "coarse_score": 25.46,
       "kline": {
-        "score": 37.28,
-        "close": 8.56,
-        "ma5": 8.534,
-        "ma10": 8.468,
-        "ma20": 8.295,
-        "ma60": 7.928,
-        "ret5": 1.3,
-        "ret10": 3.13,
-        "ret20": 7.4,
-        "ret60": 9.46,
-        "distance_20d_high": -1.15,
-        "distance_60d_high": -1.15,
-        "volume_ratio_20d": 1.24,
+        "score": 34.99,
+        "close": 18.41,
+        "ma5": 18.65,
+        "ma10": 18.528,
+        "ma20": 18.091,
+        "ma60": 17.535,
+        "ret5": 2.51,
+        "ret10": 2.45,
+        "ret20": 4.19,
+        "ret60": 0.93,
+        "distance_20d_high": -7.72,
+        "distance_60d_high": -7.72,
+        "volume_ratio_20d": 0.83,
         "risk_flags": [],
         "source": "腾讯历史日K"
       },
       "fundamental": {
-        "score": 10.5,
-        "report_period": null,
-        "revenue_yoy": null,
-        "profit_yoy": null,
-        "roe": null,
-        "forecast_type": null,
-        "forecast_change": null
-      },
-      "pre_industry_score": 60.28,
-      "industry": "银行",
-      "industry_match_field": "cache",
-      "industry_raw_class": "银行",
-      "industry_score": 9.96,
-      "sector_confirmation": "强",
-      "industry_change_now": 1.84,
-      "industry_change_3d": 4.4,
-      "industry_net_now": 39.11,
-      "industry_net_3d": 39.15,
-      "pre_news_score": 70.24,
-      "news": {
-        "score": 13.7,
-        "headlines": [
-          {
-            "title": "逆市走强！601398、601939，新高！",
-            "published_at": "2026-10-29T10:46:31+08:00",
-            "source": "中国基金报",
-            "url": "http://finance.eastmoney.com/a/202610293913612777.html"
-          },
-          {
-            "title": "10月29日A股早盘：科创50指数半日跌超4% 创业板指跌超3% 四大行总市值突破10万亿",
-            "published_at": "2026-10-29T11:59:38+08:00",
-            "source": "央广财经",
-            "url": "http://finance.eastmoney.com/a/202610293913759740.html"
-          },
-          {
-            "title": "3只个股大宗交易超5000万元",
-            "published_at": "2026-10-28T21:59:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610283912687195.html"
-          }
-        ],
-        "risk_flags": [],
-        "news_count": 7
-      },
-      "total_score": 71.44,
-      "risk_flags": [
-        "最新业绩数据缺失/未披露"
-      ],
-      "reasons": [
-        "日K未处于明显追高区",
-        "收盘价站上20日均线",
-        "20日涨幅温和",
-        "银行强确认"
-      ],
-      "recommendation": "观察",
-      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
-      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
-      "rank": 2
-    },
-    {
-      "code": "002265",
-      "name": "建设工业",
-      "reference_price": 20.16,
-      "pe": 63.3,
-      "pb": 5.32,
-      "amount": 595400000.0,
-      "coarse_score": 25.55,
-      "kline": {
-        "score": 32.8,
-        "close": 20.92,
-        "ma5": 19.84,
-        "ma10": 19.752,
-        "ma20": 19.349,
-        "ma60": 19.617,
-        "ret5": 7.89,
-        "ret10": 11.1,
-        "ret20": 5.71,
-        "ret60": 13.51,
-        "distance_20d_high": -1.51,
-        "distance_60d_high": -7.76,
-        "volume_ratio_20d": 2.2,
-        "risk_flags": [],
-        "source": "腾讯历史日K"
-      },
-      "fundamental": {
-        "score": 19.0,
+        "score": 20.0,
         "report_period": "20260930",
-        "revenue_yoy": 35.7,
-        "profit_yoy": 321.78,
-        "roe": 3.22,
+        "revenue_yoy": 21.7,
+        "profit_yoy": 71.56,
+        "roe": 13.42,
         "forecast_type": null,
         "forecast_change": null
       },
-      "pre_industry_score": 64.3,
-      "industry": "汽车零部件",
-      "industry_match_field": "行业次类",
-      "industry_raw_class": "汽车零部件",
-      "industry_score": 3.22,
-      "sector_confirmation": "弱",
-      "industry_change_now": -3.33,
-      "industry_change_3d": -1.59,
-      "industry_net_now": -46.08,
-      "industry_net_3d": -5.54,
-      "pre_news_score": 67.52,
+      "pre_industry_score": 67.49,
+      "industry": null,
+      "industry_score": 5.0,
+      "sector_confirmation": "未知",
+      "pre_news_score": 72.49,
       "news": {
-        "score": 16.28,
+        "score": 12.5,
         "headlines": [
           {
-            "title": "盘中异动！002265，直线拉涨停！",
-            "published_at": "2026-10-28T14:55:51+08:00",
-            "source": "中国基金报",
-            "url": "http://finance.eastmoney.com/a/202610283911791120.html"
+            "title": "海外机构调研股名单 思源电气最受关注",
+            "published_at": "2026-10-29T16:42:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610293914966084.html"
           },
           {
-            "title": "今日盘中突破半年线个股",
-            "published_at": "2026-10-28T12:59:00+08:00",
+            "title": "309家公司获机构调研（附名单）",
+            "published_at": "2026-10-30T09:43:00+08:00",
             "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610283911684429.html"
-          },
-          {
-            "title": "今日突破半年线个股",
-            "published_at": "2026-10-28T16:26:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610283911946250.html"
+            "url": "http://finance.eastmoney.com/a/202610303916011424.html"
           }
         ],
         "risk_flags": [],
-        "news_count": 7
+        "news_count": 2
       },
-      "total_score": 71.3,
-      "risk_flags": [
-        "行业确认偏弱"
-      ],
-      "reasons": [
-        "日K未处于明显追高区",
-        "收盘价站上20日均线",
-        "20日涨幅温和",
-        "净利润同比+321.8%"
-      ],
-      "recommendation": "观察",
-      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
-      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
-      "rank": 3
-    },
-    {
-      "code": "002966",
-      "name": "苏州银行",
-      "reference_price": 9.65,
-      "pe": 7.55,
-      "pb": 0.79,
-      "amount": 473270000.0,
-      "coarse_score": 25.25,
-      "kline": {
-        "score": 35.89,
-        "close": 9.34,
-        "ma5": 9.294,
-        "ma10": 9.225,
-        "ma20": 9.27,
-        "ma60": 8.93,
-        "ret5": 2.86,
-        "ret10": 0.65,
-        "ret20": 2.52,
-        "ret60": 15.02,
-        "distance_20d_high": -2.91,
-        "distance_60d_high": -2.91,
-        "volume_ratio_20d": 1.12,
-        "risk_flags": [],
-        "source": "腾讯历史日K"
-      },
-      "fundamental": {
-        "score": 14.0,
-        "report_period": "20260930",
-        "revenue_yoy": 12.81,
-        "profit_yoy": 8.13,
-        "roe": 8.8,
-        "forecast_type": null,
-        "forecast_change": null
-      },
-      "pre_industry_score": 62.39,
-      "industry": "银行",
-      "industry_match_field": "cache",
-      "industry_raw_class": "银行",
-      "industry_score": 9.96,
-      "sector_confirmation": "强",
-      "industry_change_now": 1.84,
-      "industry_change_3d": 4.4,
-      "industry_net_now": 39.11,
-      "industry_net_3d": 39.15,
-      "pre_news_score": 72.35,
-      "news": {
-        "score": 10.5,
-        "headlines": [
-          {
-            "title": "东吴财险前三季度净亏损0.98亿元，累计净资产收益率-5.07%",
-            "published_at": "2026-10-28T15:13:05+08:00",
-            "source": "蓝鲸财经",
-            "url": "http://finance.eastmoney.com/a/202610283911804647.html"
-          },
-          {
-            "title": "银行行业今日涨1.23%，主力资金净流入3.54亿元",
-            "published_at": "2026-10-27T17:10:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610273909976792.html"
-          },
-          {
-            "title": "银行行业10月26日资金流向日报",
-            "published_at": "2026-10-26T16:47:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610263908041069.html"
-          }
-        ],
-        "risk_flags": [],
-        "news_count": 5
-      },
-      "total_score": 70.35,
+      "total_score": 72.49,
       "risk_flags": [],
       "reasons": [
         "日K未处于明显追高区",
         "收盘价站上20日均线",
         "20日涨幅温和",
-        "银行强确认"
+        "净利润同比+71.6%"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 2
+    },
+    {
+      "code": "000858",
+      "name": "五 粮 液",
+      "reference_price": 74.73,
+      "pe": 23.8,
+      "pb": 2.45,
+      "amount": 3664390000.0,
+      "coarse_score": 26.56,
+      "kline": {
+        "score": 32.75,
+        "close": 72.28,
+        "ma5": 73.91,
+        "ma10": 73.102,
+        "ma20": 71.639,
+        "ma60": 72.211,
+        "ret5": 0.77,
+        "ret10": 1.37,
+        "ret20": 2.76,
+        "ret60": -3.84,
+        "distance_20d_high": -5.27,
+        "distance_60d_high": -8.32,
+        "volume_ratio_20d": 1.41,
+        "risk_flags": [],
+        "source": "腾讯历史日K"
+      },
+      "fundamental": {
+        "score": 16.0,
+        "report_period": "20260930",
+        "revenue_yoy": 7.25,
+        "profit_yoy": 49.98,
+        "roe": 8.09,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 61.25,
+      "industry": null,
+      "industry_score": 5.0,
+      "sector_confirmation": "未知",
+      "pre_news_score": 66.25,
+      "news": {
+        "score": 18.6,
+        "headlines": [
+          {
+            "title": "五粮液：控股股东一致行动人增持触及1%整数倍",
+            "published_at": "2026-10-29T21:08:12+08:00",
+            "source": "财联社",
+            "url": "http://finance.eastmoney.com/a/202610293914812923.html"
+          },
+          {
+            "title": "五粮液：已累计回购2175万股 支付金额16.01亿元",
+            "published_at": "2026-10-28T19:59:11+08:00",
+            "source": "财联社",
+            "url": "http://finance.eastmoney.com/a/202610283912380258.html"
+          },
+          {
+            "title": "五粮液前三季度净利同比增长49.98%",
+            "published_at": "2026-10-27T21:23:07+08:00",
+            "source": "央广财经",
+            "url": "http://finance.eastmoney.com/a/202610273910450571.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 10
+      },
+      "total_score": 72.35,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+50.0%"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 3
+    },
+    {
+      "code": "002832",
+      "name": "比音勒芬",
+      "reference_price": 27.27,
+      "pe": 22.96,
+      "pb": 2.75,
+      "amount": 133110000.0,
+      "coarse_score": 26.04,
+      "kline": {
+        "score": 35.34,
+        "close": 26.93,
+        "ma5": 26.88,
+        "ma10": 26.883,
+        "ma20": 26.547,
+        "ma60": 25.834,
+        "ret5": 0.49,
+        "ret10": 1.7,
+        "ret20": 5.82,
+        "ret60": 10.91,
+        "distance_20d_high": -6.98,
+        "distance_60d_high": -6.98,
+        "volume_ratio_20d": 0.72,
+        "risk_flags": [],
+        "source": "腾讯历史日K"
+      },
+      "fundamental": {
+        "score": 18.0,
+        "report_period": "20260930",
+        "revenue_yoy": 27.36,
+        "profit_yoy": 20.51,
+        "roe": 13.47,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 65.84,
+      "industry": null,
+      "industry_score": 5.0,
+      "sector_confirmation": "未知",
+      "pre_news_score": 70.84,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "基金三季度控盘比例超20%个股（附名单）",
+            "published_at": "2026-10-30T09:44:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610303915764288.html"
+          },
+          {
+            "title": "社保基金长线坚守51只股（附股）",
+            "published_at": "2026-10-30T11:29:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610303916086426.html"
+          },
+          {
+            "title": "基金重仓股揭秘：21只股持股比例超20%",
+            "published_at": "2026-10-29T10:06:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610293913537027.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 6
+      },
+      "total_score": 70.84,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+20.5%"
       ],
       "recommendation": "观察",
       "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
@@ -736,70 +698,76 @@
       "rank": 4
     },
     {
-      "code": "601088",
-      "name": "中国神华",
-      "reference_price": 51.57,
-      "pe": 20.53,
-      "pb": 2.52,
-      "amount": 1666600000.0,
-      "coarse_score": 25.85,
+      "code": "603889",
+      "name": "新澳股份",
+      "reference_price": 6.4,
+      "pe": 10.6,
+      "pb": 1.56,
+      "amount": 98630000.0,
+      "coarse_score": 25.61,
       "kline": {
-        "score": 34.29,
-        "close": 49.65,
-        "ma5": 49.472,
-        "ma10": 49.611,
-        "ma20": 48.517,
-        "ma60": 46.299,
-        "ret5": 2.82,
-        "ret10": 0.16,
-        "ret20": 6.71,
-        "ret60": 11.67,
-        "distance_20d_high": -2.57,
-        "distance_60d_high": -2.57,
-        "volume_ratio_20d": 0.79,
+        "score": 34.5,
+        "close": 6.29,
+        "ma5": 6.218,
+        "ma10": 6.133,
+        "ma20": 6.15,
+        "ma60": 5.986,
+        "ret5": 6.43,
+        "ret10": 0.64,
+        "ret20": 3.97,
+        "ret60": 7.52,
+        "distance_20d_high": -2.48,
+        "distance_60d_high": -2.48,
+        "volume_ratio_20d": 1.06,
         "risk_flags": [],
         "source": "腾讯历史日K"
       },
       "fundamental": {
-        "score": 14.0,
+        "score": 18.0,
         "report_period": "20260930",
-        "revenue_yoy": 8.97,
-        "profit_yoy": 3.8,
-        "roe": 8.81,
+        "revenue_yoy": 19.74,
+        "profit_yoy": 24.69,
+        "roe": 12.34,
         "forecast_type": null,
         "forecast_change": null
       },
-      "pre_industry_score": 60.79,
-      "industry": "煤炭开采加工",
-      "industry_match_field": "cache",
-      "industry_raw_class": "煤炭开采加工",
-      "industry_score": 9.13,
-      "sector_confirmation": "强",
-      "industry_change_now": 0.94,
-      "industry_change_3d": 1.42,
-      "industry_net_now": 5.0,
-      "industry_net_3d": 0.8,
-      "pre_news_score": 69.92,
+      "pre_industry_score": 65.0,
+      "industry": null,
+      "industry_score": 5.0,
+      "sector_confirmation": "未知",
+      "pre_news_score": 70.0,
       "news": {
         "score": 12.5,
         "headlines": [
           {
-            "title": "10月以来超700家次沪市公司释放各类利好",
-            "published_at": "2026-10-27T23:33:14+08:00",
-            "source": "财联社",
-            "url": "http://finance.eastmoney.com/a/202610273910614295.html"
+            "title": "社保基金持仓动向：三季度新进47股",
+            "published_at": "2026-10-27T09:25:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610273909310256.html"
+          },
+          {
+            "title": "社保基金持仓动向：三季度新进75股",
+            "published_at": "2026-10-28T09:48:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610283911311388.html"
+          },
+          {
+            "title": "社保基金持仓动向：三季度新进129股",
+            "published_at": "2026-10-30T09:45:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610303915790135.html"
           }
         ],
         "risk_flags": [],
-        "news_count": 1
+        "news_count": 4
       },
-      "total_score": 69.92,
+      "total_score": 70.0,
       "risk_flags": [],
       "reasons": [
         "日K未处于明显追高区",
         "收盘价站上20日均线",
         "20日涨幅温和",
-        "煤炭开采加工强确认"
+        "净利润同比+24.7%"
       ],
       "recommendation": "观察",
       "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
@@ -807,84 +775,76 @@
       "rank": 5
     },
     {
-      "code": "603366",
-      "name": "日出东方",
-      "reference_price": 7.73,
-      "pe": 28.19,
-      "pb": 1.44,
-      "amount": 399210000.0,
-      "coarse_score": 26.14,
+      "code": "002415",
+      "name": "海康威视",
+      "reference_price": 34.6,
+      "pe": 17.83,
+      "pb": 3.76,
+      "amount": 1324450000.0,
+      "coarse_score": 26.09,
       "kline": {
-        "score": 33.55,
-        "close": 7.68,
-        "ma5": 7.376,
-        "ma10": 7.462,
-        "ma20": 7.394,
-        "ma60": 7.295,
-        "ret5": -2.41,
-        "ret10": 6.22,
-        "ret20": 3.78,
-        "ret60": 16.19,
-        "distance_20d_high": -10.18,
-        "distance_60d_high": -10.9,
-        "volume_ratio_20d": 1.91,
+        "score": 33.93,
+        "close": 34.79,
+        "ma5": 34.392,
+        "ma10": 33.639,
+        "ma20": 33.325,
+        "ma60": 34.298,
+        "ret5": 7.31,
+        "ret10": 2.75,
+        "ret20": 5.07,
+        "ret60": -1.14,
+        "distance_20d_high": -1.22,
+        "distance_60d_high": -9.94,
+        "volume_ratio_20d": 1.2,
         "risk_flags": [],
         "source": "腾讯历史日K"
       },
       "fundamental": {
-        "score": 18.0,
+        "score": 17.0,
         "report_period": "20260930",
-        "revenue_yoy": 17.81,
-        "profit_yoy": 131.51,
-        "roe": 1.95,
+        "revenue_yoy": 12.6,
+        "profit_yoy": 38.55,
+        "roe": 14.99,
         "forecast_type": null,
         "forecast_change": null
       },
-      "pre_industry_score": 64.05,
-      "industry": "厨卫电器",
-      "industry_match_field": "cache",
-      "industry_raw_class": "厨卫电器",
-      "industry_score": 3.74,
-      "sector_confirmation": "弱",
-      "industry_change_now": -2.69,
-      "industry_change_3d": -5.46,
-      "industry_net_now": -0.44,
-      "industry_net_3d": 0.13,
-      "pre_news_score": 67.79,
+      "pre_industry_score": 63.43,
+      "industry": null,
+      "industry_score": 5.0,
+      "sector_confirmation": "未知",
+      "pre_news_score": 68.43,
       "news": {
-        "score": 14.04,
+        "score": 12.5,
         "headlines": [
           {
-            "title": "机构风向标 | 日出东方6033662026年三季度已披露持仓机构仅8家",
-            "published_at": "2026-10-28T11:50:57+08:00",
-            "source": "界面新闻",
-            "url": "http://finance.eastmoney.com/a/202610283911645833.html"
+            "title": "计算机行业10月27日资金流向日报",
+            "published_at": "2026-10-27T17:09:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610273909981817.html"
           },
           {
-            "title": "日出东方：前三季度净利润同比增长131.51%",
-            "published_at": "2026-10-27T15:42:49+08:00",
-            "source": "财联社",
-            "url": "http://finance.eastmoney.com/a/202610273909782860.html"
+            "title": "近日海外机构调研股名单",
+            "published_at": "2026-10-27T17:09:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610273909975773.html"
           },
           {
-            "title": "日出东方：前三季度归母净利润8493万元 同比上升131.5%",
-            "published_at": "2026-10-27T15:52:00+08:00",
-            "source": "财中社",
-            "url": "http://finance.eastmoney.com/a/202610273909795645.html"
+            "title": "海外机构调研股名单 思源电气最受关注",
+            "published_at": "2026-10-28T16:27:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202610283911948270.html"
           }
         ],
         "risk_flags": [],
         "news_count": 5
       },
-      "total_score": 69.33,
-      "risk_flags": [
-        "行业确认偏弱"
-      ],
+      "total_score": 68.43,
+      "risk_flags": [],
       "reasons": [
         "日K未处于明显追高区",
         "收盘价站上20日均线",
         "20日涨幅温和",
-        "净利润同比+131.5%"
+        "净利润同比+38.5%"
       ],
       "recommendation": "观察",
       "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
@@ -892,84 +852,74 @@
       "rank": 6
     },
     {
-      "code": "601328",
-      "name": "交通银行",
-      "reference_price": 8.54,
-      "pe": 7.74,
-      "pb": 0.65,
-      "amount": 2046940000.0,
-      "coarse_score": 26.44,
+      "code": "000333",
+      "name": "美的集团",
+      "reference_price": 89.14,
+      "pe": 14.33,
+      "pb": 3.06,
+      "amount": 2593750000.0,
+      "coarse_score": 27.23,
       "kline": {
-        "score": 36.32,
-        "close": 8.26,
-        "ma5": 8.222,
-        "ma10": 8.205,
-        "ma20": 7.979,
-        "ma60": 7.471,
-        "ret5": 0.12,
-        "ret10": 3.25,
-        "ret20": 9.4,
-        "ret60": 16.17,
-        "distance_20d_high": -1.08,
-        "distance_60d_high": -1.08,
-        "volume_ratio_20d": 1.02,
+        "score": 32.29,
+        "close": 87.48,
+        "ma5": 85.904,
+        "ma10": 85.509,
+        "ma20": 84.02,
+        "ma60": 84.969,
+        "ret5": 2.57,
+        "ret10": 3.27,
+        "ret20": 6.07,
+        "ret60": 0.54,
+        "distance_20d_high": -0.11,
+        "distance_60d_high": -2.26,
+        "volume_ratio_20d": 0.98,
         "risk_flags": [],
         "source": "腾讯历史日K"
       },
       "fundamental": {
-        "score": 10.5,
-        "report_period": null,
-        "revenue_yoy": null,
-        "profit_yoy": null,
-        "roe": null,
+        "score": 15.0,
+        "report_period": "20260930",
+        "revenue_yoy": 1.2,
+        "profit_yoy": 9.27,
+        "roe": 18.06,
         "forecast_type": null,
         "forecast_change": null
       },
-      "pre_industry_score": 59.32,
-      "industry": "银行",
-      "industry_match_field": "cache",
-      "industry_raw_class": "银行",
-      "industry_score": 9.96,
-      "sector_confirmation": "强",
-      "industry_change_now": 1.84,
-      "industry_change_3d": 4.4,
-      "industry_net_now": 39.11,
-      "industry_net_3d": 39.15,
-      "pre_news_score": 69.28,
+      "pre_industry_score": 59.79,
+      "industry": null,
+      "industry_score": 5.0,
+      "sector_confirmation": "未知",
+      "pre_news_score": 64.79,
       "news": {
-        "score": 12.5,
+        "score": 13.8,
         "headlines": [
           {
-            "title": "6只股收盘价创历史新高",
-            "published_at": "2026-10-27T20:48:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610273910398938.html"
+            "title": "机构风向标 | 美的集团0003332026年三季度已披露前十大机构累计持仓占比50.38%",
+            "published_at": "2026-10-30T10:24:22+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202610303915991451.html"
           },
           {
-            "title": "银行行业今日涨1.23%，主力资金净流入3.54亿元",
-            "published_at": "2026-10-27T17:10:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610273909976792.html"
+            "title": "美的集团第三季度归母净利润同比增长25.93%",
+            "published_at": "2026-10-29T21:56:05+08:00",
+            "source": "央广财经",
+            "url": "http://finance.eastmoney.com/a/202610293914908325.html"
           },
           {
-            "title": "银行行业10月26日资金流向日报",
-            "published_at": "2026-10-26T16:47:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610263908041069.html"
+            "title": "DeepSeek千亿融资细节曝光：长鑫存储、腾讯等近30家机构参投 国资占比27%",
+            "published_at": "2026-10-30T14:15:44+08:00",
+            "source": "财闻",
+            "url": "http://finance.eastmoney.com/a/202610303916254885.html"
           }
         ],
         "risk_flags": [],
-        "news_count": 4
+        "news_count": 5
       },
-      "total_score": 69.28,
-      "risk_flags": [
-        "最新业绩数据缺失/未披露"
-      ],
+      "total_score": 66.09,
+      "risk_flags": [],
       "reasons": [
-        "日K未处于明显追高区",
         "收盘价站上20日均线",
-        "20日涨幅温和",
-        "银行强确认"
+        "20日涨幅温和"
       ],
       "recommendation": "观察",
       "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
@@ -977,82 +927,75 @@
       "rank": 7
     },
     {
-      "code": "601225",
-      "name": "陕西煤业",
-      "reference_price": 27.59,
-      "pe": 12.67,
-      "pb": 2.5,
-      "amount": 679670000.0,
-      "coarse_score": 25.93,
+      "code": "000001",
+      "name": "平安银行",
+      "reference_price": 11.64,
+      "pe": 5.2,
+      "pb": 0.47,
+      "amount": 1709640000.0,
+      "coarse_score": 25.43,
       "kline": {
-        "score": 30.0,
-        "close": 26.89,
-        "ma5": 26.694,
-        "ma10": 27.331,
-        "ma20": 26.912,
-        "ma60": 26.056,
-        "ret5": -2.68,
-        "ret10": -4.03,
-        "ret20": 3.54,
-        "ret60": 10.48,
-        "distance_20d_high": -5.78,
-        "distance_60d_high": -5.78,
-        "volume_ratio_20d": 0.91,
+        "score": 33.54,
+        "close": 11.54,
+        "ma5": 11.364,
+        "ma10": 11.412,
+        "ma20": 11.461,
+        "ma60": 11.359,
+        "ret5": 2.12,
+        "ret10": 1.14,
+        "ret20": 1.67,
+        "ret60": 4.62,
+        "distance_20d_high": -2.94,
+        "distance_60d_high": -2.94,
+        "volume_ratio_20d": 1.72,
         "risk_flags": [],
         "source": "腾讯历史日K"
       },
       "fundamental": {
-        "score": 17.0,
+        "score": 14.0,
         "report_period": "20260930",
-        "revenue_yoy": 3.97,
-        "profit_yoy": 34.23,
-        "roe": 16.7,
+        "revenue_yoy": 2.42,
+        "profit_yoy": 2.2,
+        "roe": 8.07,
         "forecast_type": null,
         "forecast_change": null
       },
-      "pre_industry_score": 59.5,
-      "industry": "煤炭开采加工",
-      "industry_match_field": "cache",
-      "industry_raw_class": "煤炭开采加工",
-      "industry_score": 9.13,
-      "sector_confirmation": "强",
-      "industry_change_now": 0.94,
-      "industry_change_3d": 1.42,
-      "industry_net_now": 5.0,
-      "industry_net_3d": 0.8,
-      "pre_news_score": 68.63,
+      "pre_industry_score": 60.04,
+      "industry": null,
+      "industry_score": 5.0,
+      "sector_confirmation": "未知",
+      "pre_news_score": 65.04,
       "news": {
-        "score": 13.06,
+        "score": 12.5,
         "headlines": [
           {
-            "title": "陕西煤业：前三季度净利润同比增长34.23%",
-            "published_at": "2026-10-27T15:48:27+08:00",
-            "source": "财联社",
-            "url": "http://finance.eastmoney.com/a/202610273909781769.html"
+            "title": "长鑫科技被纳入上证指数，成第一大权重股！",
+            "published_at": "2026-10-28T16:56:00+08:00",
+            "source": "证券时报",
+            "url": "http://finance.eastmoney.com/a/202610283912017433.html"
           },
           {
-            "title": "陕西煤业：前三季度归母净利170.65亿元 量价齐升 驱动业绩高质量增长",
-            "published_at": "2026-10-29T09:50:34+08:00",
+            "title": "宽基ETF大幅吸金，上证指数ETF汇添富（510980）标的指数涨近1%",
+            "published_at": "2026-10-28T13:02:10+08:00",
+            "source": "21世纪经济报道",
+            "url": "http://finance.eastmoney.com/a/202610283911696372.html"
+          },
+          {
+            "title": "18股获融资客大手笔净买入",
+            "published_at": "2026-10-29T09:32:00+08:00",
             "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610293913429413.html"
-          },
-          {
-            "title": "陕西煤业三季报出炉：煤炭销量下滑，但毛利大增，公司前三季归母净利润超170亿元",
-            "published_at": "2026-10-27T19:38:25+08:00",
-            "source": "每日经济新闻",
-            "url": "http://finance.eastmoney.com/a/202610273910277958.html"
+            "url": "http://finance.eastmoney.com/a/202610293913321814.html"
           }
         ],
         "risk_flags": [],
-        "news_count": 5
+        "news_count": 4
       },
-      "total_score": 69.19,
+      "total_score": 65.04,
       "risk_flags": [],
       "reasons": [
         "日K未处于明显追高区",
-        "20日涨幅温和",
-        "净利润同比+34.2%",
-        "煤炭开采加工强确认"
+        "收盘价站上20日均线",
+        "20日涨幅温和"
       ],
       "recommendation": "观察",
       "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
@@ -1060,78 +1003,69 @@
       "rank": 8
     },
     {
-      "code": "600887",
-      "name": "伊利股份",
-      "reference_price": 29.43,
-      "pe": 18.39,
-      "pb": 3.47,
-      "amount": 1550930000.0,
-      "coarse_score": 26.47,
+      "code": "600351",
+      "name": "亚宝药业",
+      "reference_price": 7.19,
+      "pe": 13.76,
+      "pb": 1.8,
+      "amount": 221680000.0,
+      "coarse_score": 26.75,
       "kline": {
-        "score": 37.14,
-        "close": 28.69,
-        "ma5": 28.434,
-        "ma10": 28.19,
-        "ma20": 27.807,
-        "ma60": 26.826,
-        "ret5": 3.95,
-        "ret10": 1.99,
-        "ret20": 7.17,
-        "ret60": 7.94,
-        "distance_20d_high": -1.44,
-        "distance_60d_high": -1.44,
-        "volume_ratio_20d": 1.23,
+        "score": 34.1,
+        "close": 7.1,
+        "ma5": 6.918,
+        "ma10": 6.877,
+        "ma20": 6.863,
+        "ma60": 6.784,
+        "ret5": 7.25,
+        "ret10": 3.05,
+        "ret20": 5.5,
+        "ret60": 12.34,
+        "distance_20d_high": -2.61,
+        "distance_60d_high": -2.61,
+        "volume_ratio_20d": 1.86,
         "risk_flags": [],
         "source": "腾讯历史日K"
       },
       "fundamental": {
-        "score": 10.5,
-        "report_period": null,
-        "revenue_yoy": null,
-        "profit_yoy": null,
-        "roe": null,
+        "score": 12.0,
+        "report_period": "20260930",
+        "revenue_yoy": -2.67,
+        "profit_yoy": 19.29,
+        "roe": 9.07,
         "forecast_type": null,
         "forecast_change": null
       },
-      "pre_industry_score": 60.14,
-      "industry": "食品加工制造",
-      "industry_match_field": "cache",
-      "industry_raw_class": "食品加工制造",
-      "industry_score": 8.66,
-      "sector_confirmation": "强",
-      "industry_change_now": 0.11,
-      "industry_change_3d": 0.02,
-      "industry_net_now": -0.3,
-      "industry_net_3d": 1.46,
-      "pre_news_score": 68.8,
+      "pre_industry_score": 58.6,
+      "industry": null,
+      "industry_score": 5.0,
+      "sector_confirmation": "未知",
+      "pre_news_score": 63.6,
       "news": {
-        "score": 12.5,
+        "score": 12.95,
         "headlines": [
           {
-            "title": "食品饮料行业10月28日资金流向日报",
-            "published_at": "2026-10-28T17:40:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610283912125722.html"
+            "title": "机构风向标 | 亚宝药业6003512026年三季度已披露持仓机构仅8家",
+            "published_at": "2026-10-28T11:00:57+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202610283911551926.html"
           },
           {
-            "title": "乳业概念涨2.13%，主力资金净流入17股",
-            "published_at": "2026-10-26T16:48:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610263908061787.html"
+            "title": "亚宝药业第三季度归母净利润7900万元，同比增长94.1%",
+            "published_at": "2026-10-27T16:28:00+08:00",
+            "source": "财中社",
+            "url": "http://finance.eastmoney.com/a/202610273909885372.html"
           }
         ],
         "risk_flags": [],
         "news_count": 2
       },
-      "total_score": 68.8,
-      "risk_flags": [
-        "最新业绩数据缺失/未披露"
-      ],
+      "total_score": 64.05,
+      "risk_flags": [],
       "reasons": [
         "日K未处于明显追高区",
         "收盘价站上20日均线",
-        "20日涨幅温和",
-        "食品加工制造强确认"
+        "20日涨幅温和"
       ],
       "recommendation": "观察",
       "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
@@ -1139,78 +1073,56 @@
       "rank": 9
     },
     {
-      "code": "601077",
-      "name": "渝农商行",
-      "reference_price": 7.27,
-      "pe": 6.55,
-      "pb": 0.59,
-      "amount": 276970000.0,
-      "coarse_score": 26.21,
+      "code": "002941",
+      "name": "新疆交建",
+      "reference_price": 10.79,
+      "pe": 17.99,
+      "pb": 1.59,
+      "amount": 146410000.0,
+      "coarse_score": 25.24,
       "kline": {
-        "score": 35.54,
-        "close": 7.15,
-        "ma5": 7.162,
-        "ma10": 7.091,
-        "ma20": 6.923,
-        "ma60": 6.773,
-        "ret5": 2.44,
-        "ret10": 1.13,
-        "ret20": 8.66,
-        "ret60": 8.99,
-        "distance_20d_high": -2.32,
-        "distance_60d_high": -2.32,
-        "volume_ratio_20d": 1.02,
+        "score": 35.02,
+        "close": 10.79,
+        "ma5": 10.752,
+        "ma10": 10.556,
+        "ma20": 10.476,
+        "ma60": 10.637,
+        "ret5": 4.86,
+        "ret10": 7.26,
+        "ret20": 3.85,
+        "ret60": 3.95,
+        "distance_20d_high": -2.88,
+        "distance_60d_high": -4.6,
+        "volume_ratio_20d": 1.37,
         "risk_flags": [],
         "source": "腾讯历史日K"
       },
       "fundamental": {
-        "score": 10.5,
-        "report_period": null,
-        "revenue_yoy": null,
-        "profit_yoy": null,
-        "roe": null,
+        "score": 11.0,
+        "report_period": "20260930",
+        "revenue_yoy": 17.63,
+        "profit_yoy": -7.76,
+        "roe": 8.56,
         "forecast_type": null,
         "forecast_change": null
       },
-      "pre_industry_score": 58.54,
-      "industry": "银行",
-      "industry_match_field": "cache",
-      "industry_raw_class": "银行",
-      "industry_score": 9.96,
-      "sector_confirmation": "强",
-      "industry_change_now": 1.84,
-      "industry_change_3d": 4.4,
-      "industry_net_now": 39.11,
-      "industry_net_3d": 39.15,
-      "pre_news_score": 68.5,
+      "pre_industry_score": 58.52,
+      "industry": null,
+      "industry_score": 5.0,
+      "sector_confirmation": "未知",
+      "pre_news_score": 63.52,
       "news": {
         "score": 12.5,
-        "headlines": [
-          {
-            "title": "银行行业今日涨1.23%，主力资金净流入3.54亿元",
-            "published_at": "2026-10-27T17:10:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610273909976792.html"
-          },
-          {
-            "title": "银行行业10月26日资金流向日报",
-            "published_at": "2026-10-26T16:47:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610263908041069.html"
-          }
-        ],
+        "headlines": [],
         "risk_flags": [],
-        "news_count": 2
+        "news_count": 0
       },
-      "total_score": 68.5,
-      "risk_flags": [
-        "最新业绩数据缺失/未披露"
-      ],
+      "total_score": 63.52,
+      "risk_flags": [],
       "reasons": [
         "日K未处于明显追高区",
         "收盘价站上20日均线",
-        "20日涨幅温和",
-        "银行强确认"
+        "20日涨幅温和"
       ],
       "recommendation": "观察",
       "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
