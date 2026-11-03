@@ -1,41 +1,205 @@
 {
   "status": "ok",
   "strategy": "盘前量化 V1.0·日K40+业绩25+新闻25+行业10",
-  "run_time": "2026-11-02T14:39:05.661631+08:00",
-  "target_trade_date": "2026-11-02",
-  "reference_trade_date": "2026-10-30",
+  "run_time": "2026-11-03T15:08:13.902360+08:00",
+  "target_trade_date": "2026-11-03",
+  "reference_trade_date": "2026-11-02",
   "data_source": "腾讯A股实时行情",
   "data_quality": "partial",
-  "universe_count": 2836,
+  "universe_count": 2842,
   "kline_pool_count": 50,
-  "valid_kline_count": 8,
-  "news_pool_count": 8,
+  "valid_kline_count": 50,
+  "news_pool_count": 15,
   "fundamental_periods": [
     "20260930"
   ],
   "top5": [
     {
+      "code": "600000",
+      "name": "浦发银行",
+      "reference_price": 10.09,
+      "pe": 6.49,
+      "pb": 0.44,
+      "amount": 978660000.0,
+      "coarse_score": 26.61,
+      "kline": {
+        "score": 37.04,
+        "close": 10.09,
+        "ma5": 10.002,
+        "ma10": 9.826,
+        "ma20": 9.74,
+        "ma60": 9.363,
+        "ret5": 2.75,
+        "ret10": 3.38,
+        "ret20": 9.91,
+        "ret60": 4.78,
+        "distance_20d_high": -1.27,
+        "distance_60d_high": -1.27,
+        "volume_ratio_20d": 1.24,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 14.0,
+        "report_period": "20260930",
+        "revenue_yoy": 4.42,
+        "profit_yoy": 4.52,
+        "roe": 5.2,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 63.54,
+      "industry": "银行",
+      "industry_match_field": "cache",
+      "industry_raw_class": "银行",
+      "industry_score": 7.57,
+      "sector_confirmation": "偏强",
+      "industry_change_now": -0.44,
+      "industry_change_3d": 1.45,
+      "industry_net_now": 7.28,
+      "industry_net_3d": 41.26,
+      "pre_news_score": 71.11,
+      "news": {
+        "score": 16.1,
+        "headlines": [
+          {
+            "title": "中工国际：10月30日公司首次回购股份600000股",
+            "published_at": "2026-11-01T18:40:00+08:00",
+            "source": "证券日报",
+            "url": "http://finance.eastmoney.com/a/202611013917743510.html"
+          },
+          {
+            "title": "浦发银行第三季度归母净利润同比增长5.93%",
+            "published_at": "2026-10-31T15:52:07+08:00",
+            "source": "央广财经",
+            "url": "http://finance.eastmoney.com/a/202610313917602881.html"
+          },
+          {
+            "title": "16.94亿元资金今日流出银行股",
+            "published_at": "2026-11-02T17:06:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611023918791713.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 4
+      },
+      "total_score": 74.71,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "银行偏强确认"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 1
+    },
+    {
+      "code": "601288",
+      "name": "农业银行",
+      "reference_price": 7.5,
+      "pe": 8.56,
+      "pb": 0.91,
+      "amount": 3265420000.0,
+      "coarse_score": 26.99,
+      "kline": {
+        "score": 36.87,
+        "close": 7.5,
+        "ma5": 7.488,
+        "ma10": 7.405,
+        "ma20": 7.237,
+        "ma60": 6.842,
+        "ret5": 1.35,
+        "ret10": 3.02,
+        "ret20": 10.13,
+        "ret60": 10.95,
+        "distance_20d_high": -1.83,
+        "distance_60d_high": -1.83,
+        "volume_ratio_20d": 1.2,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 14.0,
+        "report_period": "20260930",
+        "revenue_yoy": 12.33,
+        "profit_yoy": 7.1,
+        "roe": 8.01,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 63.37,
+      "industry": "银行",
+      "industry_match_field": "cache",
+      "industry_raw_class": "银行",
+      "industry_score": 7.57,
+      "sector_confirmation": "偏强",
+      "industry_change_now": -0.44,
+      "industry_change_3d": 1.45,
+      "industry_net_now": 7.28,
+      "industry_net_3d": 41.26,
+      "pre_news_score": 70.94,
+      "news": {
+        "score": 15.5,
+        "headlines": [
+          {
+            "title": "建行、工行、农行子公司入股中芯国际旗下中芯东方",
+            "published_at": "2026-11-02T10:31:31+08:00",
+            "source": "财联社",
+            "url": "http://finance.eastmoney.com/a/202611023918239126.html"
+          },
+          {
+            "title": "国有大型银行概念盘中走弱，央行等三部门联合优化股票回购增持再贷款政策|异动情报",
+            "published_at": "2026-11-03T10:28:08+08:00",
+            "source": "21世纪经济报道",
+            "url": "http://finance.eastmoney.com/a/202611033919933451.html"
+          },
+          {
+            "title": "16.94亿元资金今日流出银行股",
+            "published_at": "2026-11-02T17:06:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611023918791713.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 4
+      },
+      "total_score": 73.94,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "银行偏强确认"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 2
+    },
+    {
       "code": "601225",
       "name": "陕西煤业",
-      "reference_price": 27.27,
-      "pe": 12.52,
-      "pb": 2.47,
-      "amount": 1230910000.0,
-      "coarse_score": 25.51,
+      "reference_price": 27.45,
+      "pe": 12.6,
+      "pb": 2.49,
+      "amount": 1012150000.0,
+      "coarse_score": 25.8,
       "kline": {
-        "score": 36.59,
-        "close": 27.28,
-        "ma5": 27.326,
-        "ma10": 27.178,
-        "ma20": 27.195,
-        "ma60": 26.204,
-        "ret5": 2.75,
-        "ret10": -3.02,
-        "ret20": 5.78,
-        "ret60": 10.27,
-        "distance_20d_high": -4.41,
-        "distance_60d_high": -4.41,
-        "volume_ratio_20d": 1.23,
+        "score": 36.71,
+        "close": 27.45,
+        "ma5": 27.432,
+        "ma10": 27.137,
+        "ma20": 27.286,
+        "ma60": 26.259,
+        "ret5": 2.12,
+        "ret10": -1.33,
+        "ret20": 7.23,
+        "ret60": 13.81,
+        "distance_20d_high": -3.82,
+        "distance_60d_high": -3.82,
+        "volume_ratio_20d": 0.99,
         "risk_flags": []
       },
       "fundamental": {
@@ -47,37 +211,43 @@
         "forecast_type": null,
         "forecast_change": null
       },
-      "pre_industry_score": 66.09,
-      "industry": null,
-      "industry_score": 5.0,
-      "sector_confirmation": "未知",
-      "pre_news_score": 71.09,
+      "pre_industry_score": 66.21,
+      "industry": "煤炭开采加工",
+      "industry_match_field": "cache",
+      "industry_raw_class": "煤炭开采加工",
+      "industry_score": 6.14,
+      "sector_confirmation": "偏强",
+      "industry_change_now": -0.43,
+      "industry_change_3d": -1.05,
+      "industry_net_now": -1.79,
+      "industry_net_3d": 4.41,
+      "pre_news_score": 72.35,
       "news": {
-        "score": 12.5,
+        "score": 14.0,
         "headlines": [
           {
-            "title": "10月A股交易收官：双创指数月跌幅均超23% 多只红利股逆市创出历史新高",
-            "published_at": "2026-10-30T15:19:10+08:00",
-            "source": "央广财经",
-            "url": "http://finance.eastmoney.com/a/202610303917277329.html"
+            "title": "净利润增长34.23%，延伸煤炭产业链，陕西煤业交出高质量三季报",
+            "published_at": "2026-11-03T12:53:01+08:00",
+            "source": "每日经济新闻",
+            "url": "http://finance.eastmoney.com/a/202611033920005511.html"
           },
           {
-            "title": "36股本月股价创新高 6股获机构净买入",
-            "published_at": "2026-10-30T21:19:00+08:00",
+            "title": "4.53亿元主力资金今日撤离煤炭板块",
+            "published_at": "2026-11-02T17:06:00+08:00",
             "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610303917036370.html"
+            "url": "http://finance.eastmoney.com/a/202611023918791532.html"
           },
           {
-            "title": "百亿私募三季报重仓路径曝光 高毅、景林、重阳、睿郡买了哪些股？",
-            "published_at": "2026-10-31T00:32:47+08:00",
+            "title": "A股高开高走，涨幅震荡扩大：文化传媒股批量涨停",
+            "published_at": "2026-11-02T15:28:59+08:00",
             "source": "澎湃新闻",
-            "url": "http://finance.eastmoney.com/a/202610303917239368.html"
+            "url": "http://finance.eastmoney.com/a/202611023918699154.html"
           }
         ],
         "risk_flags": [],
         "news_count": 3
       },
-      "total_score": 71.09,
+      "total_score": 73.85,
       "risk_flags": [],
       "reasons": [
         "日K未处于明显追高区",
@@ -85,299 +255,154 @@
         "20日涨幅温和",
         "净利润同比+34.2%"
       ],
-      "recommendation": "观察",
-      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
-      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
-      "rank": 1
-    },
-    {
-      "code": "600036",
-      "name": "招商银行",
-      "reference_price": 42.78,
-      "pe": 7.06,
-      "pb": 0.91,
-      "amount": 5059660000.0,
-      "coarse_score": 25.52,
-      "kline": {
-        "score": 34.74,
-        "close": 42.81,
-        "ma5": 42.884,
-        "ma10": 42.531,
-        "ma20": 42.33,
-        "ma60": 40.788,
-        "ret5": 0.73,
-        "ret10": -0.56,
-        "ret20": 5.34,
-        "ret60": 8.05,
-        "distance_20d_high": -2.73,
-        "distance_60d_high": -2.73,
-        "volume_ratio_20d": 1.39,
-        "risk_flags": []
-      },
-      "fundamental": {
-        "score": 15.0,
-        "report_period": "20260930",
-        "revenue_yoy": 5.34,
-        "profit_yoy": 2.38,
-        "roe": 10.12,
-        "forecast_type": null,
-        "forecast_change": null
-      },
-      "pre_industry_score": 62.24,
-      "industry": null,
-      "industry_score": 5.0,
-      "sector_confirmation": "未知",
-      "pre_news_score": 67.24,
-      "news": {
-        "score": 14.3,
-        "headlines": [
-          {
-            "title": "招商银行：拟在西藏林芝市设立一级分行",
-            "published_at": "2026-10-30T19:12:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610303916835532.html"
-          },
-          {
-            "title": "招商银行：第三季度净利同比增长3.06%",
-            "published_at": "2026-10-30T19:55:22+08:00",
-            "source": "国际金融报",
-            "url": "http://finance.eastmoney.com/a/202610303917644817.html"
-          },
-          {
-            "title": "招商银行：2026年前三季度净利润同比增长2.38%",
-            "published_at": "2026-10-30T17:56:10+08:00",
-            "source": "财联社",
-            "url": "http://finance.eastmoney.com/a/202610303916664351.html"
-          }
-        ],
-        "risk_flags": [],
-        "news_count": 7
-      },
-      "total_score": 69.04,
-      "risk_flags": [],
-      "reasons": [
-        "日K未处于明显追高区",
-        "收盘价站上20日均线",
-        "20日涨幅温和"
-      ],
-      "recommendation": "观察",
-      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
-      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
-      "rank": 2
-    },
-    {
-      "code": "603697",
-      "name": "有友食品",
-      "reference_price": 9.91,
-      "pe": 21.44,
-      "pb": 2.44,
-      "amount": 150390000.0,
-      "coarse_score": 25.49,
-      "kline": {
-        "score": 30.96,
-        "close": 9.91,
-        "ma5": 9.578,
-        "ma10": 9.472,
-        "ma20": 9.509,
-        "ma60": 9.433,
-        "ret5": 3.99,
-        "ret10": 6.22,
-        "ret20": 4.54,
-        "ret60": 2.38,
-        "distance_20d_high": -6.07,
-        "distance_60d_high": -6.07,
-        "volume_ratio_20d": 3.59,
-        "risk_flags": [
-          "成交量异常放大"
-        ]
-      },
-      "fundamental": {
-        "score": 17.0,
-        "report_period": "20260930",
-        "revenue_yoy": 36.41,
-        "profit_yoy": 6.96,
-        "roe": 10.19,
-        "forecast_type": null,
-        "forecast_change": null
-      },
-      "pre_industry_score": 60.46,
-      "industry": null,
-      "industry_score": 5.0,
-      "sector_confirmation": "未知",
-      "pre_news_score": 65.46,
-      "news": {
-        "score": 12.67,
-        "headlines": [
-          {
-            "title": "机构风向标 | 有友食品6036972026年三季度已披露持仓机构仅9家",
-            "published_at": "2026-10-31T10:23:38+08:00",
-            "source": "界面新闻",
-            "url": "http://finance.eastmoney.com/a/202610313917547193.html"
-          },
-          {
-            "title": "有友食品2026年第三季度归母净利润同比下滑5.45%至6176.86万元",
-            "published_at": "2026-10-31T15:52:15+08:00",
-            "source": "央广财经",
-            "url": "http://finance.eastmoney.com/a/202610313917603121.html"
-          },
-          {
-            "title": "111只股中线走稳 站上半年线",
-            "published_at": "2026-11-02T11:02:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202611023918338247.html"
-          }
-        ],
-        "risk_flags": [],
-        "news_count": 5
-      },
-      "total_score": 65.63,
-      "risk_flags": [
-        "成交量异常放大"
-      ],
-      "reasons": [
-        "日K未处于明显追高区",
-        "收盘价站上20日均线",
-        "20日涨幅温和"
-      ],
-      "recommendation": "观察",
+      "recommendation": "候选",
       "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
       "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
       "rank": 3
     },
     {
-      "code": "601598",
-      "name": "中国外运",
-      "reference_price": 7.13,
-      "pe": 12.73,
-      "pb": 1.24,
-      "amount": 234800000.0,
-      "coarse_score": 25.62,
+      "code": "601328",
+      "name": "交通银行",
+      "reference_price": 8.39,
+      "pe": 7.42,
+      "pb": 0.62,
+      "amount": 3395240000.0,
+      "coarse_score": 26.59,
       "kline": {
-        "score": 36.38,
-        "close": 7.13,
-        "ma5": 7.082,
-        "ma10": 6.861,
-        "ma20": 6.735,
-        "ma60": 6.521,
-        "ret5": 4.7,
-        "ret10": 5.63,
-        "ret20": 10.37,
-        "ret60": 11.41,
-        "distance_20d_high": -2.86,
-        "distance_60d_high": -2.86,
-        "volume_ratio_20d": 1.71,
+        "score": 36.43,
+        "close": 8.39,
+        "ma5": 8.482,
+        "ma10": 8.351,
+        "ma20": 8.171,
+        "ma60": 7.559,
+        "ret5": 0.6,
+        "ret10": 1.94,
+        "ret20": 10.1,
+        "ret60": 15.72,
+        "distance_20d_high": -4.33,
+        "distance_60d_high": -4.33,
+        "volume_ratio_20d": 1.6,
         "risk_flags": []
       },
       "fundamental": {
-        "score": 8.0,
+        "score": 14.0,
         "report_period": "20260930",
-        "revenue_yoy": -4.07,
-        "profit_yoy": -0.12,
-        "roe": 6.44,
+        "revenue_yoy": 8.02,
+        "profit_yoy": 6.1,
+        "roe": 6.08,
         "forecast_type": null,
         "forecast_change": null
       },
-      "pre_industry_score": 56.88,
-      "industry": null,
-      "industry_score": 5.0,
-      "sector_confirmation": "未知",
-      "pre_news_score": 61.88,
+      "pre_industry_score": 62.93,
+      "industry": "银行",
+      "industry_match_field": "cache",
+      "industry_raw_class": "银行",
+      "industry_score": 7.57,
+      "sector_confirmation": "偏强",
+      "industry_change_now": -0.44,
+      "industry_change_3d": 1.45,
+      "industry_net_now": 7.28,
+      "industry_net_3d": 41.26,
+      "pre_news_score": 70.5,
       "news": {
-        "score": 12.5,
+        "score": 15.5,
         "headlines": [
           {
-            "title": "17.32亿主力资金净流入，高股息精选概念涨0.16%",
-            "published_at": "2026-10-30T17:17:00+08:00",
+            "title": "国有大型银行概念盘中走弱，央行等三部门联合优化股票回购增持再贷款政策|异动情报",
+            "published_at": "2026-11-03T10:28:08+08:00",
+            "source": "21世纪经济报道",
+            "url": "http://finance.eastmoney.com/a/202611033919933451.html"
+          },
+          {
+            "title": "4只个股大宗交易超5000万元",
+            "published_at": "2026-11-02T21:32:00+08:00",
             "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610303916835898.html"
+            "url": "http://finance.eastmoney.com/a/202611023919049883.html"
+          },
+          {
+            "title": "10股获融资客逆市净买入超5000万元",
+            "published_at": "2026-11-02T09:28:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611023917894370.html"
           }
         ],
         "risk_flags": [],
-        "news_count": 1
+        "news_count": 5
       },
-      "total_score": 61.88,
+      "total_score": 73.5,
       "risk_flags": [],
       "reasons": [
         "日K未处于明显追高区",
         "收盘价站上20日均线",
-        "20日涨幅温和"
+        "20日涨幅温和",
+        "银行偏强确认"
       ],
-      "recommendation": "观察",
+      "recommendation": "候选",
       "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
       "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
       "rank": 4
     },
     {
-      "code": "600803",
-      "name": "新奥股份",
-      "reference_price": 20.46,
-      "pe": 15.34,
-      "pb": 2.79,
-      "amount": 267650000.0,
-      "coarse_score": 25.48,
+      "code": "002812",
+      "name": "恩捷股份",
+      "reference_price": 48.73,
+      "pe": 23.63,
+      "pb": 1.84,
+      "amount": 2063250000.0,
+      "coarse_score": 27.59,
       "kline": {
-        "score": 35.29,
-        "close": 20.46,
-        "ma5": 20.514,
-        "ma10": 20.2,
-        "ma20": 19.854,
-        "ma60": 18.748,
-        "ret5": 2.1,
-        "ret10": 1.74,
-        "ret20": 9.18,
-        "ret60": 14.94,
-        "distance_20d_high": -3.67,
-        "distance_60d_high": -3.67,
-        "volume_ratio_20d": 1.53,
+        "score": 34.79,
+        "close": 48.73,
+        "ma5": 47.292,
+        "ma10": 46.517,
+        "ma20": 46.258,
+        "ma60": 49.617,
+        "ret5": 2.76,
+        "ret10": 4.68,
+        "ret20": 7.86,
+        "ret60": -9.15,
+        "distance_20d_high": -1.87,
+        "distance_60d_high": -17.0,
+        "volume_ratio_20d": 1.38,
         "risk_flags": []
       },
       "fundamental": {
-        "score": 9.0,
+        "score": 24.0,
         "report_period": "20260930",
-        "revenue_yoy": -0.39,
-        "profit_yoy": -16.15,
-        "roe": 11.89,
-        "forecast_type": null,
-        "forecast_change": null
+        "revenue_yoy": 49.07,
+        "profit_yoy": 2178.8,
+        "roe": 6.86,
+        "forecast_type": "扭亏",
+        "forecast_change": 2257.29
       },
-      "pre_industry_score": 56.79,
-      "industry": null,
-      "industry_score": 5.0,
-      "sector_confirmation": "未知",
-      "pre_news_score": 61.79,
+      "pre_industry_score": 71.29,
+      "industry": "塑料制品",
+      "industry_match_field": "cache",
+      "industry_raw_class": "塑料制品",
+      "industry_score": 1.32,
+      "sector_confirmation": "弱",
+      "industry_change_now": -2.38,
+      "industry_change_3d": -8.19,
+      "industry_net_now": -11.47,
+      "industry_net_3d": -11.69,
+      "pre_news_score": 72.61,
       "news": {
         "score": 12.5,
-        "headlines": [
-          {
-            "title": "机构风向标 | 新奥股份6008032026年三季度已披露前十大机构累计持仓占比84.79%",
-            "published_at": "2026-10-31T10:07:20+08:00",
-            "source": "界面新闻",
-            "url": "http://finance.eastmoney.com/a/202610313917536963.html"
-          },
-          {
-            "title": "社保基金长期重仓股名单曝光（附股）",
-            "published_at": "2026-11-02T11:42:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202611023918483350.html"
-          },
-          {
-            "title": "17.32亿主力资金净流入，高股息精选概念涨0.16%",
-            "published_at": "2026-10-30T17:17:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610303916835898.html"
-          }
-        ],
+        "headlines": [],
         "risk_flags": [],
-        "news_count": 3
+        "news_count": 0
       },
-      "total_score": 61.79,
-      "risk_flags": [],
+      "total_score": 72.61,
+      "risk_flags": [
+        "行业确认偏弱"
+      ],
       "reasons": [
         "日K未处于明显追高区",
         "收盘价站上20日均线",
-        "20日涨幅温和"
+        "20日涨幅温和",
+        "净利润同比+2178.8%"
       ],
-      "recommendation": "观察",
+      "recommendation": "候选",
       "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
       "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
       "rank": 5
@@ -385,27 +410,191 @@
   ],
   "top10": [
     {
+      "code": "600000",
+      "name": "浦发银行",
+      "reference_price": 10.09,
+      "pe": 6.49,
+      "pb": 0.44,
+      "amount": 978660000.0,
+      "coarse_score": 26.61,
+      "kline": {
+        "score": 37.04,
+        "close": 10.09,
+        "ma5": 10.002,
+        "ma10": 9.826,
+        "ma20": 9.74,
+        "ma60": 9.363,
+        "ret5": 2.75,
+        "ret10": 3.38,
+        "ret20": 9.91,
+        "ret60": 4.78,
+        "distance_20d_high": -1.27,
+        "distance_60d_high": -1.27,
+        "volume_ratio_20d": 1.24,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 14.0,
+        "report_period": "20260930",
+        "revenue_yoy": 4.42,
+        "profit_yoy": 4.52,
+        "roe": 5.2,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 63.54,
+      "industry": "银行",
+      "industry_match_field": "cache",
+      "industry_raw_class": "银行",
+      "industry_score": 7.57,
+      "sector_confirmation": "偏强",
+      "industry_change_now": -0.44,
+      "industry_change_3d": 1.45,
+      "industry_net_now": 7.28,
+      "industry_net_3d": 41.26,
+      "pre_news_score": 71.11,
+      "news": {
+        "score": 16.1,
+        "headlines": [
+          {
+            "title": "中工国际：10月30日公司首次回购股份600000股",
+            "published_at": "2026-11-01T18:40:00+08:00",
+            "source": "证券日报",
+            "url": "http://finance.eastmoney.com/a/202611013917743510.html"
+          },
+          {
+            "title": "浦发银行第三季度归母净利润同比增长5.93%",
+            "published_at": "2026-10-31T15:52:07+08:00",
+            "source": "央广财经",
+            "url": "http://finance.eastmoney.com/a/202610313917602881.html"
+          },
+          {
+            "title": "16.94亿元资金今日流出银行股",
+            "published_at": "2026-11-02T17:06:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611023918791713.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 4
+      },
+      "total_score": 74.71,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "银行偏强确认"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 1
+    },
+    {
+      "code": "601288",
+      "name": "农业银行",
+      "reference_price": 7.5,
+      "pe": 8.56,
+      "pb": 0.91,
+      "amount": 3265420000.0,
+      "coarse_score": 26.99,
+      "kline": {
+        "score": 36.87,
+        "close": 7.5,
+        "ma5": 7.488,
+        "ma10": 7.405,
+        "ma20": 7.237,
+        "ma60": 6.842,
+        "ret5": 1.35,
+        "ret10": 3.02,
+        "ret20": 10.13,
+        "ret60": 10.95,
+        "distance_20d_high": -1.83,
+        "distance_60d_high": -1.83,
+        "volume_ratio_20d": 1.2,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 14.0,
+        "report_period": "20260930",
+        "revenue_yoy": 12.33,
+        "profit_yoy": 7.1,
+        "roe": 8.01,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 63.37,
+      "industry": "银行",
+      "industry_match_field": "cache",
+      "industry_raw_class": "银行",
+      "industry_score": 7.57,
+      "sector_confirmation": "偏强",
+      "industry_change_now": -0.44,
+      "industry_change_3d": 1.45,
+      "industry_net_now": 7.28,
+      "industry_net_3d": 41.26,
+      "pre_news_score": 70.94,
+      "news": {
+        "score": 15.5,
+        "headlines": [
+          {
+            "title": "建行、工行、农行子公司入股中芯国际旗下中芯东方",
+            "published_at": "2026-11-02T10:31:31+08:00",
+            "source": "财联社",
+            "url": "http://finance.eastmoney.com/a/202611023918239126.html"
+          },
+          {
+            "title": "国有大型银行概念盘中走弱，央行等三部门联合优化股票回购增持再贷款政策|异动情报",
+            "published_at": "2026-11-03T10:28:08+08:00",
+            "source": "21世纪经济报道",
+            "url": "http://finance.eastmoney.com/a/202611033919933451.html"
+          },
+          {
+            "title": "16.94亿元资金今日流出银行股",
+            "published_at": "2026-11-02T17:06:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611023918791713.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 4
+      },
+      "total_score": 73.94,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "银行偏强确认"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 2
+    },
+    {
       "code": "601225",
       "name": "陕西煤业",
-      "reference_price": 27.27,
-      "pe": 12.52,
-      "pb": 2.47,
-      "amount": 1230910000.0,
-      "coarse_score": 25.51,
+      "reference_price": 27.45,
+      "pe": 12.6,
+      "pb": 2.49,
+      "amount": 1012150000.0,
+      "coarse_score": 25.8,
       "kline": {
-        "score": 36.59,
-        "close": 27.28,
-        "ma5": 27.326,
-        "ma10": 27.178,
-        "ma20": 27.195,
-        "ma60": 26.204,
-        "ret5": 2.75,
-        "ret10": -3.02,
-        "ret20": 5.78,
-        "ret60": 10.27,
-        "distance_20d_high": -4.41,
-        "distance_60d_high": -4.41,
-        "volume_ratio_20d": 1.23,
+        "score": 36.71,
+        "close": 27.45,
+        "ma5": 27.432,
+        "ma10": 27.137,
+        "ma20": 27.286,
+        "ma60": 26.259,
+        "ret5": 2.12,
+        "ret10": -1.33,
+        "ret20": 7.23,
+        "ret60": 13.81,
+        "distance_20d_high": -3.82,
+        "distance_60d_high": -3.82,
+        "volume_ratio_20d": 0.99,
         "risk_flags": []
       },
       "fundamental": {
@@ -417,37 +606,43 @@
         "forecast_type": null,
         "forecast_change": null
       },
-      "pre_industry_score": 66.09,
-      "industry": null,
-      "industry_score": 5.0,
-      "sector_confirmation": "未知",
-      "pre_news_score": 71.09,
+      "pre_industry_score": 66.21,
+      "industry": "煤炭开采加工",
+      "industry_match_field": "cache",
+      "industry_raw_class": "煤炭开采加工",
+      "industry_score": 6.14,
+      "sector_confirmation": "偏强",
+      "industry_change_now": -0.43,
+      "industry_change_3d": -1.05,
+      "industry_net_now": -1.79,
+      "industry_net_3d": 4.41,
+      "pre_news_score": 72.35,
       "news": {
-        "score": 12.5,
+        "score": 14.0,
         "headlines": [
           {
-            "title": "10月A股交易收官：双创指数月跌幅均超23% 多只红利股逆市创出历史新高",
-            "published_at": "2026-10-30T15:19:10+08:00",
-            "source": "央广财经",
-            "url": "http://finance.eastmoney.com/a/202610303917277329.html"
+            "title": "净利润增长34.23%，延伸煤炭产业链，陕西煤业交出高质量三季报",
+            "published_at": "2026-11-03T12:53:01+08:00",
+            "source": "每日经济新闻",
+            "url": "http://finance.eastmoney.com/a/202611033920005511.html"
           },
           {
-            "title": "36股本月股价创新高 6股获机构净买入",
-            "published_at": "2026-10-30T21:19:00+08:00",
+            "title": "4.53亿元主力资金今日撤离煤炭板块",
+            "published_at": "2026-11-02T17:06:00+08:00",
             "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610303917036370.html"
+            "url": "http://finance.eastmoney.com/a/202611023918791532.html"
           },
           {
-            "title": "百亿私募三季报重仓路径曝光 高毅、景林、重阳、睿郡买了哪些股？",
-            "published_at": "2026-10-31T00:32:47+08:00",
+            "title": "A股高开高走，涨幅震荡扩大：文化传媒股批量涨停",
+            "published_at": "2026-11-02T15:28:59+08:00",
             "source": "澎湃新闻",
-            "url": "http://finance.eastmoney.com/a/202610303917239368.html"
+            "url": "http://finance.eastmoney.com/a/202611023918699154.html"
           }
         ],
         "risk_flags": [],
         "news_count": 3
       },
-      "total_score": 71.09,
+      "total_score": 73.85,
       "risk_flags": [],
       "reasons": [
         "日K未处于明显追高区",
@@ -455,500 +650,537 @@
         "20日涨幅温和",
         "净利润同比+34.2%"
       ],
-      "recommendation": "观察",
-      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
-      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
-      "rank": 1
-    },
-    {
-      "code": "600036",
-      "name": "招商银行",
-      "reference_price": 42.78,
-      "pe": 7.06,
-      "pb": 0.91,
-      "amount": 5059660000.0,
-      "coarse_score": 25.52,
-      "kline": {
-        "score": 34.74,
-        "close": 42.81,
-        "ma5": 42.884,
-        "ma10": 42.531,
-        "ma20": 42.33,
-        "ma60": 40.788,
-        "ret5": 0.73,
-        "ret10": -0.56,
-        "ret20": 5.34,
-        "ret60": 8.05,
-        "distance_20d_high": -2.73,
-        "distance_60d_high": -2.73,
-        "volume_ratio_20d": 1.39,
-        "risk_flags": []
-      },
-      "fundamental": {
-        "score": 15.0,
-        "report_period": "20260930",
-        "revenue_yoy": 5.34,
-        "profit_yoy": 2.38,
-        "roe": 10.12,
-        "forecast_type": null,
-        "forecast_change": null
-      },
-      "pre_industry_score": 62.24,
-      "industry": null,
-      "industry_score": 5.0,
-      "sector_confirmation": "未知",
-      "pre_news_score": 67.24,
-      "news": {
-        "score": 14.3,
-        "headlines": [
-          {
-            "title": "招商银行：拟在西藏林芝市设立一级分行",
-            "published_at": "2026-10-30T19:12:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610303916835532.html"
-          },
-          {
-            "title": "招商银行：第三季度净利同比增长3.06%",
-            "published_at": "2026-10-30T19:55:22+08:00",
-            "source": "国际金融报",
-            "url": "http://finance.eastmoney.com/a/202610303917644817.html"
-          },
-          {
-            "title": "招商银行：2026年前三季度净利润同比增长2.38%",
-            "published_at": "2026-10-30T17:56:10+08:00",
-            "source": "财联社",
-            "url": "http://finance.eastmoney.com/a/202610303916664351.html"
-          }
-        ],
-        "risk_flags": [],
-        "news_count": 7
-      },
-      "total_score": 69.04,
-      "risk_flags": [],
-      "reasons": [
-        "日K未处于明显追高区",
-        "收盘价站上20日均线",
-        "20日涨幅温和"
-      ],
-      "recommendation": "观察",
-      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
-      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
-      "rank": 2
-    },
-    {
-      "code": "603697",
-      "name": "有友食品",
-      "reference_price": 9.91,
-      "pe": 21.44,
-      "pb": 2.44,
-      "amount": 150390000.0,
-      "coarse_score": 25.49,
-      "kline": {
-        "score": 30.96,
-        "close": 9.91,
-        "ma5": 9.578,
-        "ma10": 9.472,
-        "ma20": 9.509,
-        "ma60": 9.433,
-        "ret5": 3.99,
-        "ret10": 6.22,
-        "ret20": 4.54,
-        "ret60": 2.38,
-        "distance_20d_high": -6.07,
-        "distance_60d_high": -6.07,
-        "volume_ratio_20d": 3.59,
-        "risk_flags": [
-          "成交量异常放大"
-        ]
-      },
-      "fundamental": {
-        "score": 17.0,
-        "report_period": "20260930",
-        "revenue_yoy": 36.41,
-        "profit_yoy": 6.96,
-        "roe": 10.19,
-        "forecast_type": null,
-        "forecast_change": null
-      },
-      "pre_industry_score": 60.46,
-      "industry": null,
-      "industry_score": 5.0,
-      "sector_confirmation": "未知",
-      "pre_news_score": 65.46,
-      "news": {
-        "score": 12.67,
-        "headlines": [
-          {
-            "title": "机构风向标 | 有友食品6036972026年三季度已披露持仓机构仅9家",
-            "published_at": "2026-10-31T10:23:38+08:00",
-            "source": "界面新闻",
-            "url": "http://finance.eastmoney.com/a/202610313917547193.html"
-          },
-          {
-            "title": "有友食品2026年第三季度归母净利润同比下滑5.45%至6176.86万元",
-            "published_at": "2026-10-31T15:52:15+08:00",
-            "source": "央广财经",
-            "url": "http://finance.eastmoney.com/a/202610313917603121.html"
-          },
-          {
-            "title": "111只股中线走稳 站上半年线",
-            "published_at": "2026-11-02T11:02:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202611023918338247.html"
-          }
-        ],
-        "risk_flags": [],
-        "news_count": 5
-      },
-      "total_score": 65.63,
-      "risk_flags": [
-        "成交量异常放大"
-      ],
-      "reasons": [
-        "日K未处于明显追高区",
-        "收盘价站上20日均线",
-        "20日涨幅温和"
-      ],
-      "recommendation": "观察",
+      "recommendation": "候选",
       "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
       "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
       "rank": 3
     },
     {
-      "code": "601598",
-      "name": "中国外运",
-      "reference_price": 7.13,
-      "pe": 12.73,
-      "pb": 1.24,
-      "amount": 234800000.0,
-      "coarse_score": 25.62,
+      "code": "601328",
+      "name": "交通银行",
+      "reference_price": 8.39,
+      "pe": 7.42,
+      "pb": 0.62,
+      "amount": 3395240000.0,
+      "coarse_score": 26.59,
       "kline": {
-        "score": 36.38,
-        "close": 7.13,
-        "ma5": 7.082,
-        "ma10": 6.861,
-        "ma20": 6.735,
-        "ma60": 6.521,
-        "ret5": 4.7,
-        "ret10": 5.63,
-        "ret20": 10.37,
-        "ret60": 11.41,
-        "distance_20d_high": -2.86,
-        "distance_60d_high": -2.86,
-        "volume_ratio_20d": 1.71,
+        "score": 36.43,
+        "close": 8.39,
+        "ma5": 8.482,
+        "ma10": 8.351,
+        "ma20": 8.171,
+        "ma60": 7.559,
+        "ret5": 0.6,
+        "ret10": 1.94,
+        "ret20": 10.1,
+        "ret60": 15.72,
+        "distance_20d_high": -4.33,
+        "distance_60d_high": -4.33,
+        "volume_ratio_20d": 1.6,
         "risk_flags": []
       },
       "fundamental": {
-        "score": 8.0,
+        "score": 14.0,
         "report_period": "20260930",
-        "revenue_yoy": -4.07,
-        "profit_yoy": -0.12,
-        "roe": 6.44,
+        "revenue_yoy": 8.02,
+        "profit_yoy": 6.1,
+        "roe": 6.08,
         "forecast_type": null,
         "forecast_change": null
       },
-      "pre_industry_score": 56.88,
-      "industry": null,
-      "industry_score": 5.0,
-      "sector_confirmation": "未知",
-      "pre_news_score": 61.88,
+      "pre_industry_score": 62.93,
+      "industry": "银行",
+      "industry_match_field": "cache",
+      "industry_raw_class": "银行",
+      "industry_score": 7.57,
+      "sector_confirmation": "偏强",
+      "industry_change_now": -0.44,
+      "industry_change_3d": 1.45,
+      "industry_net_now": 7.28,
+      "industry_net_3d": 41.26,
+      "pre_news_score": 70.5,
       "news": {
-        "score": 12.5,
+        "score": 15.5,
         "headlines": [
           {
-            "title": "17.32亿主力资金净流入，高股息精选概念涨0.16%",
-            "published_at": "2026-10-30T17:17:00+08:00",
+            "title": "国有大型银行概念盘中走弱，央行等三部门联合优化股票回购增持再贷款政策|异动情报",
+            "published_at": "2026-11-03T10:28:08+08:00",
+            "source": "21世纪经济报道",
+            "url": "http://finance.eastmoney.com/a/202611033919933451.html"
+          },
+          {
+            "title": "4只个股大宗交易超5000万元",
+            "published_at": "2026-11-02T21:32:00+08:00",
             "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610303916835898.html"
+            "url": "http://finance.eastmoney.com/a/202611023919049883.html"
+          },
+          {
+            "title": "10股获融资客逆市净买入超5000万元",
+            "published_at": "2026-11-02T09:28:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611023917894370.html"
           }
         ],
         "risk_flags": [],
-        "news_count": 1
+        "news_count": 5
       },
-      "total_score": 61.88,
+      "total_score": 73.5,
       "risk_flags": [],
       "reasons": [
         "日K未处于明显追高区",
         "收盘价站上20日均线",
-        "20日涨幅温和"
+        "20日涨幅温和",
+        "银行偏强确认"
       ],
-      "recommendation": "观察",
+      "recommendation": "候选",
       "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
       "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
       "rank": 4
     },
     {
-      "code": "600803",
-      "name": "新奥股份",
-      "reference_price": 20.46,
-      "pe": 15.34,
-      "pb": 2.79,
-      "amount": 267650000.0,
-      "coarse_score": 25.48,
+      "code": "002812",
+      "name": "恩捷股份",
+      "reference_price": 48.73,
+      "pe": 23.63,
+      "pb": 1.84,
+      "amount": 2063250000.0,
+      "coarse_score": 27.59,
       "kline": {
-        "score": 35.29,
-        "close": 20.46,
-        "ma5": 20.514,
-        "ma10": 20.2,
-        "ma20": 19.854,
-        "ma60": 18.748,
-        "ret5": 2.1,
-        "ret10": 1.74,
-        "ret20": 9.18,
-        "ret60": 14.94,
-        "distance_20d_high": -3.67,
-        "distance_60d_high": -3.67,
-        "volume_ratio_20d": 1.53,
+        "score": 34.79,
+        "close": 48.73,
+        "ma5": 47.292,
+        "ma10": 46.517,
+        "ma20": 46.258,
+        "ma60": 49.617,
+        "ret5": 2.76,
+        "ret10": 4.68,
+        "ret20": 7.86,
+        "ret60": -9.15,
+        "distance_20d_high": -1.87,
+        "distance_60d_high": -17.0,
+        "volume_ratio_20d": 1.38,
         "risk_flags": []
       },
       "fundamental": {
-        "score": 9.0,
+        "score": 24.0,
         "report_period": "20260930",
-        "revenue_yoy": -0.39,
-        "profit_yoy": -16.15,
-        "roe": 11.89,
-        "forecast_type": null,
-        "forecast_change": null
+        "revenue_yoy": 49.07,
+        "profit_yoy": 2178.8,
+        "roe": 6.86,
+        "forecast_type": "扭亏",
+        "forecast_change": 2257.29
       },
-      "pre_industry_score": 56.79,
-      "industry": null,
-      "industry_score": 5.0,
-      "sector_confirmation": "未知",
-      "pre_news_score": 61.79,
-      "news": {
-        "score": 12.5,
-        "headlines": [
-          {
-            "title": "机构风向标 | 新奥股份6008032026年三季度已披露前十大机构累计持仓占比84.79%",
-            "published_at": "2026-10-31T10:07:20+08:00",
-            "source": "界面新闻",
-            "url": "http://finance.eastmoney.com/a/202610313917536963.html"
-          },
-          {
-            "title": "社保基金长期重仓股名单曝光（附股）",
-            "published_at": "2026-11-02T11:42:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202611023918483350.html"
-          },
-          {
-            "title": "17.32亿主力资金净流入，高股息精选概念涨0.16%",
-            "published_at": "2026-10-30T17:17:00+08:00",
-            "source": "证券时报网",
-            "url": "http://finance.eastmoney.com/a/202610303916835898.html"
-          }
-        ],
-        "risk_flags": [],
-        "news_count": 3
-      },
-      "total_score": 61.79,
-      "risk_flags": [],
-      "reasons": [
-        "日K未处于明显追高区",
-        "收盘价站上20日均线",
-        "20日涨幅温和"
-      ],
-      "recommendation": "观察",
-      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
-      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
-      "rank": 5
-    },
-    {
-      "code": "600511",
-      "name": "国药股份",
-      "reference_price": 28.36,
-      "pe": 10.8,
-      "pb": 1.1,
-      "amount": 235100000.0,
-      "coarse_score": 25.62,
-      "kline": {
-        "score": 32.94,
-        "close": 28.37,
-        "ma5": 27.936,
-        "ma10": 27.659,
-        "ma20": 27.198,
-        "ma60": 26.941,
-        "ret5": 2.42,
-        "ret10": 3.88,
-        "ret20": 9.75,
-        "ret60": 0.25,
-        "distance_20d_high": -0.42,
-        "distance_60d_high": -0.91,
-        "volume_ratio_20d": 1.75,
-        "risk_flags": []
-      },
-      "fundamental": {
-        "score": 10.0,
-        "report_period": "20260930",
-        "revenue_yoy": 3.11,
-        "profit_yoy": -1.07,
-        "roe": 7.79,
-        "forecast_type": null,
-        "forecast_change": null
-      },
-      "pre_industry_score": 55.44,
-      "industry": null,
-      "industry_score": 5.0,
-      "sector_confirmation": "未知",
-      "pre_news_score": 60.44,
+      "pre_industry_score": 71.29,
+      "industry": "塑料制品",
+      "industry_match_field": "cache",
+      "industry_raw_class": "塑料制品",
+      "industry_score": 1.32,
+      "sector_confirmation": "弱",
+      "industry_change_now": -2.38,
+      "industry_change_3d": -8.19,
+      "industry_net_now": -11.47,
+      "industry_net_3d": -11.69,
+      "pre_news_score": 72.61,
       "news": {
         "score": 12.5,
         "headlines": [],
         "risk_flags": [],
         "news_count": 0
       },
-      "total_score": 60.44,
+      "total_score": 72.61,
+      "risk_flags": [
+        "行业确认偏弱"
+      ],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+2178.8%"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 5
+    },
+    {
+      "code": "600177",
+      "name": "雅戈尔",
+      "reference_price": 8.55,
+      "pe": 12.43,
+      "pb": 0.92,
+      "amount": 310380000.0,
+      "coarse_score": 25.51,
+      "kline": {
+        "score": 35.94,
+        "close": 8.55,
+        "ma5": 8.308,
+        "ma10": 8.258,
+        "ma20": 8.357,
+        "ma60": 8.039,
+        "ret5": 3.01,
+        "ret10": 2.15,
+        "ret20": 2.64,
+        "ret60": 12.8,
+        "distance_20d_high": -1.72,
+        "distance_60d_high": -1.72,
+        "volume_ratio_20d": 1.34,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 16.0,
+        "report_period": "20260930",
+        "revenue_yoy": 5.62,
+        "profit_yoy": 31.17,
+        "roe": 7.18,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 64.44,
+      "industry": "房地产",
+      "industry_match_field": "cache",
+      "industry_raw_class": "房地产",
+      "industry_score": 6.05,
+      "sector_confirmation": "偏强",
+      "industry_change_now": 0.46,
+      "industry_change_3d": -3.11,
+      "industry_net_now": 1.71,
+      "industry_net_3d": -12.93,
+      "pre_news_score": 70.49,
+      "news": {
+        "score": 14.5,
+        "headlines": [
+          {
+            "title": "机构风向标 | 雅戈尔6001772026年三季度已披露前十大机构累计持仓占比62.22%",
+            "published_at": "2026-10-31T10:27:01+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202610313917550758.html"
+          },
+          {
+            "title": "4只个股大宗交易超5000万元",
+            "published_at": "2026-11-02T21:32:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611023919049883.html"
+          },
+          {
+            "title": "雅戈尔前三季度净利润增三成，投资业务利润是业绩增长主因",
+            "published_at": "2026-11-02T11:58:00+08:00",
+            "source": "深圳商报·读创",
+            "url": "http://finance.eastmoney.com/a/202611023918486480.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 5
+      },
+      "total_score": 72.49,
       "risk_flags": [],
       "reasons": [
+        "日K未处于明显追高区",
         "收盘价站上20日均线",
-        "20日涨幅温和"
+        "20日涨幅温和",
+        "净利润同比+31.2%"
       ],
-      "recommendation": "观察",
+      "recommendation": "候选",
       "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
       "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
       "rank": 6
     },
     {
-      "code": "601601",
-      "name": "中国太保",
-      "reference_price": 30.8,
-      "pe": 6.7,
-      "pb": 0.9,
-      "amount": 1084430000.0,
-      "coarse_score": 25.86,
+      "code": "600028",
+      "name": "中国石化",
+      "reference_price": 5.8,
+      "pe": 17.15,
+      "pb": 0.83,
+      "amount": 1693570000.0,
+      "coarse_score": 26.09,
       "kline": {
-        "score": 33.23,
-        "close": 30.82,
-        "ma5": 30.278,
-        "ma10": 29.511,
-        "ma20": 29.69,
-        "ma60": 30.834,
-        "ret5": 3.08,
-        "ret10": 5.04,
-        "ret20": 2.46,
-        "ret60": -3.51,
-        "distance_20d_high": -2.0,
-        "distance_60d_high": -10.67,
-        "volume_ratio_20d": 0.87,
-        "risk_flags": []
-      },
-      "fundamental": {
-        "score": 9.0,
-        "report_period": "20260930",
-        "revenue_yoy": -15.47,
-        "profit_yoy": -20.3,
-        "roe": 11.4,
-        "forecast_type": null,
-        "forecast_change": null
-      },
-      "pre_industry_score": 54.73,
-      "industry": null,
-      "industry_score": 5.0,
-      "sector_confirmation": "未知",
-      "pre_news_score": 59.73,
-      "news": {
-        "score": 12.5,
-        "headlines": [
-          {
-            "title": "五大上市险企三季报收官，如何看待利润回撤？",
-            "published_at": "2026-10-31T19:01:57+08:00",
-            "source": "界面新闻",
-            "url": "http://finance.eastmoney.com/a/202610313917628592.html"
-          },
-          {
-            "title": "单季浮亏超3500亿 险资难当剩余两月反攻主力",
-            "published_at": "2026-11-02T08:49:04+08:00",
-            "source": "第一财经",
-            "url": "http://finance.eastmoney.com/a/202611013917770056.html"
-          }
-        ],
-        "risk_flags": [],
-        "news_count": 2
-      },
-      "total_score": 59.73,
-      "risk_flags": [],
-      "reasons": [
-        "日K未处于明显追高区",
-        "收盘价站上20日均线",
-        "20日涨幅温和"
-      ],
-      "recommendation": "观察",
-      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
-      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
-      "rank": 7
-    },
-    {
-      "code": "601668",
-      "name": "中国建筑",
-      "reference_price": 4.63,
-      "pe": 6.46,
-      "pb": 0.38,
-      "amount": 1600050000.0,
-      "coarse_score": 25.52,
-      "kline": {
-        "score": 32.34,
-        "close": 4.64,
-        "ma5": 4.612,
-        "ma10": 4.568,
-        "ma20": 4.495,
-        "ma60": 4.433,
-        "ret5": 1.31,
-        "ret10": 2.2,
-        "ret20": 9.95,
-        "ret60": -1.28,
-        "distance_20d_high": -0.64,
+        "score": 35.87,
+        "close": 5.8,
+        "ma5": 5.74,
+        "ma10": 5.592,
+        "ma20": 5.524,
+        "ma60": 5.289,
+        "ret5": 5.26,
+        "ret10": 6.42,
+        "ret20": 11.97,
+        "ret60": 11.97,
+        "distance_20d_high": -2.52,
         "distance_60d_high": -2.52,
-        "volume_ratio_20d": 1.38,
+        "volume_ratio_20d": 1.1,
         "risk_flags": []
       },
       "fundamental": {
-        "score": 8.0,
+        "score": 15.0,
         "report_period": "20260930",
-        "revenue_yoy": -14.29,
-        "profit_yoy": -24.8,
-        "roe": 5.79,
+        "revenue_yoy": 4.39,
+        "profit_yoy": 30.0,
+        "roe": 4.67,
         "forecast_type": null,
         "forecast_change": null
       },
-      "pre_industry_score": 52.84,
-      "industry": null,
-      "industry_score": 5.0,
-      "sector_confirmation": "未知",
-      "pre_news_score": 57.84,
+      "pre_industry_score": 63.37,
+      "industry": "综合",
+      "industry_match_field": "cache",
+      "industry_raw_class": "综合",
+      "industry_score": 6.36,
+      "sector_confirmation": "偏强",
+      "industry_change_now": 0.21,
+      "industry_change_3d": -2.85,
+      "industry_net_now": 1.33,
+      "industry_net_3d": -1.52,
+      "pre_news_score": 69.73,
       "news": {
-        "score": 12.5,
+        "score": 15.15,
         "headlines": [
           {
-            "title": "中国建筑前三季度归母净利润同比下降24.8%",
-            "published_at": "2026-10-31T15:52:15+08:00",
-            "source": "央广财经",
-            "url": "http://finance.eastmoney.com/a/202610313917602763.html"
+            "title": "10股获融资客逆市净买入超5000万元",
+            "published_at": "2026-11-02T09:28:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611023917894370.html"
           },
           {
-            "title": "中国建筑：前三季度净利润同比下降24.8%",
-            "published_at": "2026-10-30T19:26:42+08:00",
-            "source": "财联社",
-            "url": "http://finance.eastmoney.com/a/202610303916851729.html"
-          },
-          {
-            "title": "A股三季报全景：银行撑总量、AI贡献增量，热门赛道环比表现引关注",
-            "published_at": "2026-11-01T20:04:37+08:00",
+            "title": "国际油价创近三个月最大跌幅，“三桶油”股价走弱",
+            "published_at": "2026-11-03T13:00:57+08:00",
             "source": "第一财经",
-            "url": "http://finance.eastmoney.com/a/202611013917752881.html"
+            "url": "http://finance.eastmoney.com/a/202611033920008352.html"
+          },
+          {
+            "title": "回购增持贷款转为长期制度安排，国新、诚通两大平台有望加仓哪些方向？",
+            "published_at": "2026-11-02T21:54:40+08:00",
+            "source": "第一财经",
+            "url": "http://finance.eastmoney.com/a/202611023919068666.html"
           }
         ],
         "risk_flags": [],
         "news_count": 4
       },
-      "total_score": 57.84,
+      "total_score": 72.38,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+30.0%"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 7
+    },
+    {
+      "code": "000858",
+      "name": "五 粮 液",
+      "reference_price": 75.55,
+      "pe": 24.06,
+      "pb": 2.48,
+      "amount": 2587870000.0,
+      "coarse_score": 25.71,
+      "kline": {
+        "score": 31.79,
+        "close": 75.55,
+        "ma5": 73.836,
+        "ma10": 73.778,
+        "ma20": 72.496,
+        "ma60": 72.043,
+        "ret5": 0.23,
+        "ret10": 3.71,
+        "ret20": 9.86,
+        "ret60": -3.22,
+        "distance_20d_high": -0.98,
+        "distance_60d_high": -3.27,
+        "volume_ratio_20d": 1.14,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 16.0,
+        "report_period": "20260930",
+        "revenue_yoy": 7.25,
+        "profit_yoy": 49.98,
+        "roe": 8.09,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 60.29,
+      "industry": "白酒",
+      "industry_match_field": "cache",
+      "industry_raw_class": "白酒",
+      "industry_score": 9.77,
+      "sector_confirmation": "强",
+      "industry_change_now": 1.57,
+      "industry_change_3d": 12.26,
+      "industry_net_now": 31.89,
+      "industry_net_3d": 14.25,
+      "pre_news_score": 70.06,
+      "news": {
+        "score": 13.55,
+        "headlines": [
+          {
+            "title": "31股特大单净流入资金超2亿元",
+            "published_at": "2026-11-02T17:04:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611023918790554.html"
+          },
+          {
+            "title": "39家公司重要股东开启增持模式 累计增持42.69亿元（附股）",
+            "published_at": "2026-11-02T09:28:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611023917894652.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 2
+      },
+      "total_score": 71.11,
       "risk_flags": [],
       "reasons": [
         "收盘价站上20日均线",
-        "20日涨幅温和"
+        "20日涨幅温和",
+        "净利润同比+50.0%",
+        "白酒强确认"
       ],
       "recommendation": "观察",
       "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
       "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
       "rank": 8
+    },
+    {
+      "code": "601838",
+      "name": "成都银行",
+      "reference_price": 19.83,
+      "pe": 6.13,
+      "pb": 0.9,
+      "amount": 590080000.0,
+      "coarse_score": 26.42,
+      "kline": {
+        "score": 35.98,
+        "close": 19.83,
+        "ma5": 19.652,
+        "ma10": 19.185,
+        "ma20": 19.242,
+        "ma60": 18.764,
+        "ret5": 3.82,
+        "ret10": 3.99,
+        "ret20": 5.03,
+        "ret60": 10.29,
+        "distance_20d_high": -2.17,
+        "distance_60d_high": -2.17,
+        "volume_ratio_20d": 1.06,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 15.0,
+        "report_period": "20260930",
+        "revenue_yoy": 9.84,
+        "profit_yoy": 4.48,
+        "roe": 10.48,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 63.48,
+      "industry": "银行",
+      "industry_match_field": "cache",
+      "industry_raw_class": "银行",
+      "industry_score": 7.57,
+      "sector_confirmation": "偏强",
+      "industry_change_now": -0.44,
+      "industry_change_3d": 1.45,
+      "industry_net_now": 7.28,
+      "industry_net_3d": 41.26,
+      "pre_news_score": 71.05,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "16.94亿元资金今日流出银行股",
+            "published_at": "2026-11-02T17:06:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611023918791713.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 1
+      },
+      "total_score": 71.05,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "银行偏强确认"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 9
+    },
+    {
+      "code": "002807",
+      "name": "江阴银行",
+      "reference_price": 4.3,
+      "pe": 5.55,
+      "pb": 0.56,
+      "amount": 205300000.0,
+      "coarse_score": 25.85,
+      "kline": {
+        "score": 36.76,
+        "close": 4.3,
+        "ma5": 4.294,
+        "ma10": 4.175,
+        "ma20": 4.139,
+        "ma60": 4.041,
+        "ret5": 4.12,
+        "ret10": 5.13,
+        "ret20": 5.91,
+        "ret60": 4.62,
+        "distance_20d_high": -2.71,
+        "distance_60d_high": -2.71,
+        "volume_ratio_20d": 0.86,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 14.0,
+        "report_period": "20260930",
+        "revenue_yoy": 5.53,
+        "profit_yoy": 3.72,
+        "roe": 6.55,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 63.26,
+      "industry": "银行",
+      "industry_match_field": "cache",
+      "industry_raw_class": "银行",
+      "industry_score": 7.57,
+      "sector_confirmation": "偏强",
+      "industry_change_now": -0.44,
+      "industry_change_3d": 1.45,
+      "industry_net_now": 7.28,
+      "industry_net_3d": 41.26,
+      "pre_news_score": 70.83,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "16.94亿元资金今日流出银行股",
+            "published_at": "2026-11-02T17:06:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611023918791713.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 1
+      },
+      "total_score": 70.83,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "银行偏强确认"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 10
     }
   ],
   "execution_note": "盘前榜单解决买什么，不等于开盘立即买；09:25竞价和09:35~09:40 Shadow必须二次确认，避免追高。"
