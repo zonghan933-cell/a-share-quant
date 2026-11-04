@@ -1,0 +1,1158 @@
+{
+  "status": "ok",
+  "strategy": "盘前量化 V1.0·日K40+业绩25+新闻25+行业10",
+  "run_time": "2026-11-04T14:54:00.217475+08:00",
+  "target_trade_date": "2026-11-04",
+  "reference_trade_date": "2026-11-03",
+  "data_source": "腾讯A股实时行情",
+  "data_quality": "partial",
+  "universe_count": 2843,
+  "kline_pool_count": 50,
+  "valid_kline_count": 50,
+  "news_pool_count": 15,
+  "fundamental_periods": [
+    "20260930"
+  ],
+  "top5": [
+    {
+      "code": "601600",
+      "name": "中国铝业",
+      "reference_price": 8.79,
+      "pe": 7.65,
+      "pb": 1.76,
+      "amount": 1651230000.0,
+      "coarse_score": 25.65,
+      "kline": {
+        "score": 33.04,
+        "close": 8.8,
+        "ma5": 8.604,
+        "ma10": 8.602,
+        "ma20": 8.611,
+        "ma60": 8.987,
+        "ret5": 3.17,
+        "ret10": 2.92,
+        "ret20": 1.73,
+        "ret60": -3.93,
+        "distance_20d_high": -1.12,
+        "distance_60d_high": -11.82,
+        "volume_ratio_20d": 1.36,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 23.0,
+        "report_period": "20260930",
+        "revenue_yoy": 5.69,
+        "profit_yoy": 64.83,
+        "roe": 22.29,
+        "forecast_type": "预增",
+        "forecast_change": 65.5
+      },
+      "pre_industry_score": 68.54,
+      "industry": "工业金属",
+      "industry_match_field": "cache",
+      "industry_raw_class": "工业金属",
+      "industry_score": 7.22,
+      "sector_confirmation": "偏强",
+      "industry_change_now": 3.27,
+      "industry_change_3d": 2.19,
+      "industry_net_now": 13.07,
+      "industry_net_3d": -1.43,
+      "pre_news_score": 75.76,
+      "news": {
+        "score": 17.23,
+        "headlines": [
+          {
+            "title": "10月沪市回购增持加码：新增计划上限165亿元，已实施375亿元",
+            "published_at": "2026-11-01T18:48:28+08:00",
+            "source": "第一财经",
+            "url": "http://finance.eastmoney.com/a/202611013917737812.html"
+          },
+          {
+            "title": "3.30亿元主力资金今日撤离有色金属板块",
+            "published_at": "2026-11-02T17:06:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611023918794711.html"
+          },
+          {
+            "title": "39家公司重要股东开启增持模式 累计增持42.69亿元（附股）",
+            "published_at": "2026-11-02T09:28:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611023917894652.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 5
+      },
+      "total_score": 80.49,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+64.8%"
+      ],
+      "recommendation": "重点候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 1
+    },
+    {
+      "code": "000858",
+      "name": "五 粮 液",
+      "reference_price": 74.99,
+      "pe": 23.88,
+      "pb": 2.46,
+      "amount": 2837480000.0,
+      "coarse_score": 27.26,
+      "kline": {
+        "score": 36.87,
+        "close": 74.99,
+        "ma5": 74.354,
+        "ma10": 74.077,
+        "ma20": 72.743,
+        "ma60": 72.011,
+        "ret5": 3.58,
+        "ret10": 4.15,
+        "ret20": 7.04,
+        "ret60": -2.46,
+        "distance_20d_high": -1.87,
+        "distance_60d_high": -2.56,
+        "volume_ratio_20d": 1.19,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 18.0,
+        "report_period": "20260930",
+        "revenue_yoy": 7.25,
+        "profit_yoy": 49.98,
+        "roe": 8.09,
+        "forecast_type": "预增",
+        "forecast_change": null
+      },
+      "pre_industry_score": 67.37,
+      "industry": "白酒",
+      "industry_match_field": "cache",
+      "industry_raw_class": "白酒",
+      "industry_score": 4.85,
+      "sector_confirmation": "中性",
+      "industry_change_now": -1.97,
+      "industry_change_3d": 10.02,
+      "industry_net_now": -2.2,
+      "industry_net_3d": 27.57,
+      "pre_news_score": 72.22,
+      "news": {
+        "score": 18.5,
+        "headlines": [
+          {
+            "title": "回购、注销，利好！000333已花超117亿元，000858已耗资18亿元",
+            "published_at": "2026-11-03T19:21:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611033920417497.html"
+          },
+          {
+            "title": "五粮液：已耗资18.01亿元累计回购股份2453.74万股",
+            "published_at": "2026-11-03T16:26:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611033920275054.html"
+          },
+          {
+            "title": "五粮液：已累计回购2453.74万股 支付金额18.01亿元",
+            "published_at": "2026-11-03T16:12:26+08:00",
+            "source": "财联社",
+            "url": "http://finance.eastmoney.com/a/202611033920252713.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 6
+      },
+      "total_score": 78.22,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+50.0%"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 2
+    },
+    {
+      "code": "600312",
+      "name": "平高电气",
+      "reference_price": 21.51,
+      "pe": 21.32,
+      "pb": 2.44,
+      "amount": 421230000.0,
+      "coarse_score": 26.54,
+      "kline": {
+        "score": 35.1,
+        "close": 21.51,
+        "ma5": 21.068,
+        "ma10": 21.184,
+        "ma20": 20.841,
+        "ma60": 19.951,
+        "ret5": 3.51,
+        "ret10": 4.06,
+        "ret20": 7.28,
+        "ret60": 3.02,
+        "distance_20d_high": -2.58,
+        "distance_60d_high": -2.58,
+        "volume_ratio_20d": 0.84,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 15.0,
+        "report_period": "20260930",
+        "revenue_yoy": -3.36,
+        "profit_yoy": 25.34,
+        "roe": 10.44,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 62.6,
+      "industry": "电网设备",
+      "industry_match_field": "cache",
+      "industry_raw_class": "电网设备",
+      "industry_score": 5.47,
+      "sector_confirmation": "中性",
+      "industry_change_now": 2.15,
+      "industry_change_3d": 0.64,
+      "industry_net_now": 8.63,
+      "industry_net_3d": -3.84,
+      "pre_news_score": 68.07,
+      "news": {
+        "score": 22.5,
+        "headlines": [
+          {
+            "title": "平高电气600312.SH)：公司及子公司中标国家电网变电设备招标项目，合计金额约9.98亿元",
+            "published_at": "2026-11-03T16:24:50+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202611033920271178.html"
+          },
+          {
+            "title": "平高电气：中标国家电网项目合计约9.98亿元",
+            "published_at": "2026-11-03T15:33:46+08:00",
+            "source": "财联社",
+            "url": "http://finance.eastmoney.com/a/202611033920222947.html"
+          },
+          {
+            "title": "平高电气：公司及子公司等合计中标9.98亿元国家电网项目",
+            "published_at": "2026-11-03T16:22:00+08:00",
+            "source": "人民财讯",
+            "url": "http://finance.eastmoney.com/a/202611033920273834.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 5
+      },
+      "total_score": 78.07,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+25.3%"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 3
+    },
+    {
+      "code": "600276",
+      "name": "恒瑞医药",
+      "reference_price": 49.02,
+      "pe": 36.63,
+      "pb": 4.87,
+      "amount": 3275060000.0,
+      "coarse_score": 25.55,
+      "kline": {
+        "score": 35.02,
+        "close": 49.02,
+        "ma5": 48.82,
+        "ma10": 47.803,
+        "ma20": 47.154,
+        "ma60": 47.531,
+        "ret5": 1.36,
+        "ret10": 3.46,
+        "ret20": 3.86,
+        "ret60": -8.24,
+        "distance_20d_high": -1.23,
+        "distance_60d_high": -12.28,
+        "volume_ratio_20d": 1.03,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 17.0,
+        "report_period": "20260930",
+        "revenue_yoy": 5.26,
+        "profit_yoy": 20.38,
+        "roe": 12.17,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 64.52,
+      "industry": "化学制药",
+      "industry_match_field": "cache",
+      "industry_raw_class": "化学制药",
+      "industry_score": 7.8,
+      "sector_confirmation": "偏强",
+      "industry_change_now": 2.66,
+      "industry_change_3d": 2.55,
+      "industry_net_now": 17.79,
+      "industry_net_3d": 2.35,
+      "pre_news_score": 72.32,
+      "news": {
+        "score": 12.5,
+        "headlines": [],
+        "risk_flags": [],
+        "news_count": 0
+      },
+      "total_score": 72.32,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+20.4%"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 4
+    },
+    {
+      "code": "002430",
+      "name": "杭氧股份",
+      "reference_price": 26.33,
+      "pe": 21.84,
+      "pb": 2.49,
+      "amount": 360800000.0,
+      "coarse_score": 26.26,
+      "kline": {
+        "score": 36.5,
+        "close": 26.34,
+        "ma5": 25.936,
+        "ma10": 25.003,
+        "ma20": 25.08,
+        "ma60": 24.951,
+        "ret5": 3.99,
+        "ret10": 6.47,
+        "ret20": 5.19,
+        "ret60": 12.18,
+        "distance_20d_high": -4.29,
+        "distance_60d_high": -6.56,
+        "volume_ratio_20d": 0.62,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 17.0,
+        "report_period": "20260930",
+        "revenue_yoy": 17.82,
+        "profit_yoy": 30.43,
+        "roe": 9.7,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 66.0,
+      "industry": "化学原料",
+      "industry_match_field": "cache",
+      "industry_raw_class": "化学原料",
+      "industry_score": 5.14,
+      "sector_confirmation": "中性",
+      "industry_change_now": 1.31,
+      "industry_change_3d": 0.79,
+      "industry_net_now": 1.98,
+      "industry_net_3d": 0.43,
+      "pre_news_score": 71.14,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "社保基金长期重仓股名单曝光（附股）",
+            "published_at": "2026-11-04T13:28:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611043921534314.html"
+          },
+          {
+            "title": "社保基金长线坚守63只股（附股）",
+            "published_at": "2026-11-03T11:42:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611033919982110.html"
+          },
+          {
+            "title": "社保基金长期重仓股名单曝光（附股）",
+            "published_at": "2026-11-02T11:42:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611023918483350.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 5
+      },
+      "total_score": 71.14,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+30.4%"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 5
+    }
+  ],
+  "top10": [
+    {
+      "code": "601600",
+      "name": "中国铝业",
+      "reference_price": 8.79,
+      "pe": 7.65,
+      "pb": 1.76,
+      "amount": 1651230000.0,
+      "coarse_score": 25.65,
+      "kline": {
+        "score": 33.04,
+        "close": 8.8,
+        "ma5": 8.604,
+        "ma10": 8.602,
+        "ma20": 8.611,
+        "ma60": 8.987,
+        "ret5": 3.17,
+        "ret10": 2.92,
+        "ret20": 1.73,
+        "ret60": -3.93,
+        "distance_20d_high": -1.12,
+        "distance_60d_high": -11.82,
+        "volume_ratio_20d": 1.36,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 23.0,
+        "report_period": "20260930",
+        "revenue_yoy": 5.69,
+        "profit_yoy": 64.83,
+        "roe": 22.29,
+        "forecast_type": "预增",
+        "forecast_change": 65.5
+      },
+      "pre_industry_score": 68.54,
+      "industry": "工业金属",
+      "industry_match_field": "cache",
+      "industry_raw_class": "工业金属",
+      "industry_score": 7.22,
+      "sector_confirmation": "偏强",
+      "industry_change_now": 3.27,
+      "industry_change_3d": 2.19,
+      "industry_net_now": 13.07,
+      "industry_net_3d": -1.43,
+      "pre_news_score": 75.76,
+      "news": {
+        "score": 17.23,
+        "headlines": [
+          {
+            "title": "10月沪市回购增持加码：新增计划上限165亿元，已实施375亿元",
+            "published_at": "2026-11-01T18:48:28+08:00",
+            "source": "第一财经",
+            "url": "http://finance.eastmoney.com/a/202611013917737812.html"
+          },
+          {
+            "title": "3.30亿元主力资金今日撤离有色金属板块",
+            "published_at": "2026-11-02T17:06:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611023918794711.html"
+          },
+          {
+            "title": "39家公司重要股东开启增持模式 累计增持42.69亿元（附股）",
+            "published_at": "2026-11-02T09:28:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611023917894652.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 5
+      },
+      "total_score": 80.49,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+64.8%"
+      ],
+      "recommendation": "重点候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 1
+    },
+    {
+      "code": "000858",
+      "name": "五 粮 液",
+      "reference_price": 74.99,
+      "pe": 23.88,
+      "pb": 2.46,
+      "amount": 2837480000.0,
+      "coarse_score": 27.26,
+      "kline": {
+        "score": 36.87,
+        "close": 74.99,
+        "ma5": 74.354,
+        "ma10": 74.077,
+        "ma20": 72.743,
+        "ma60": 72.011,
+        "ret5": 3.58,
+        "ret10": 4.15,
+        "ret20": 7.04,
+        "ret60": -2.46,
+        "distance_20d_high": -1.87,
+        "distance_60d_high": -2.56,
+        "volume_ratio_20d": 1.19,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 18.0,
+        "report_period": "20260930",
+        "revenue_yoy": 7.25,
+        "profit_yoy": 49.98,
+        "roe": 8.09,
+        "forecast_type": "预增",
+        "forecast_change": null
+      },
+      "pre_industry_score": 67.37,
+      "industry": "白酒",
+      "industry_match_field": "cache",
+      "industry_raw_class": "白酒",
+      "industry_score": 4.85,
+      "sector_confirmation": "中性",
+      "industry_change_now": -1.97,
+      "industry_change_3d": 10.02,
+      "industry_net_now": -2.2,
+      "industry_net_3d": 27.57,
+      "pre_news_score": 72.22,
+      "news": {
+        "score": 18.5,
+        "headlines": [
+          {
+            "title": "回购、注销，利好！000333已花超117亿元，000858已耗资18亿元",
+            "published_at": "2026-11-03T19:21:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611033920417497.html"
+          },
+          {
+            "title": "五粮液：已耗资18.01亿元累计回购股份2453.74万股",
+            "published_at": "2026-11-03T16:26:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611033920275054.html"
+          },
+          {
+            "title": "五粮液：已累计回购2453.74万股 支付金额18.01亿元",
+            "published_at": "2026-11-03T16:12:26+08:00",
+            "source": "财联社",
+            "url": "http://finance.eastmoney.com/a/202611033920252713.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 6
+      },
+      "total_score": 78.22,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+50.0%"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 2
+    },
+    {
+      "code": "600312",
+      "name": "平高电气",
+      "reference_price": 21.51,
+      "pe": 21.32,
+      "pb": 2.44,
+      "amount": 421230000.0,
+      "coarse_score": 26.54,
+      "kline": {
+        "score": 35.1,
+        "close": 21.51,
+        "ma5": 21.068,
+        "ma10": 21.184,
+        "ma20": 20.841,
+        "ma60": 19.951,
+        "ret5": 3.51,
+        "ret10": 4.06,
+        "ret20": 7.28,
+        "ret60": 3.02,
+        "distance_20d_high": -2.58,
+        "distance_60d_high": -2.58,
+        "volume_ratio_20d": 0.84,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 15.0,
+        "report_period": "20260930",
+        "revenue_yoy": -3.36,
+        "profit_yoy": 25.34,
+        "roe": 10.44,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 62.6,
+      "industry": "电网设备",
+      "industry_match_field": "cache",
+      "industry_raw_class": "电网设备",
+      "industry_score": 5.47,
+      "sector_confirmation": "中性",
+      "industry_change_now": 2.15,
+      "industry_change_3d": 0.64,
+      "industry_net_now": 8.63,
+      "industry_net_3d": -3.84,
+      "pre_news_score": 68.07,
+      "news": {
+        "score": 22.5,
+        "headlines": [
+          {
+            "title": "平高电气600312.SH)：公司及子公司中标国家电网变电设备招标项目，合计金额约9.98亿元",
+            "published_at": "2026-11-03T16:24:50+08:00",
+            "source": "界面新闻",
+            "url": "http://finance.eastmoney.com/a/202611033920271178.html"
+          },
+          {
+            "title": "平高电气：中标国家电网项目合计约9.98亿元",
+            "published_at": "2026-11-03T15:33:46+08:00",
+            "source": "财联社",
+            "url": "http://finance.eastmoney.com/a/202611033920222947.html"
+          },
+          {
+            "title": "平高电气：公司及子公司等合计中标9.98亿元国家电网项目",
+            "published_at": "2026-11-03T16:22:00+08:00",
+            "source": "人民财讯",
+            "url": "http://finance.eastmoney.com/a/202611033920273834.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 5
+      },
+      "total_score": 78.07,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+25.3%"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 3
+    },
+    {
+      "code": "600276",
+      "name": "恒瑞医药",
+      "reference_price": 49.02,
+      "pe": 36.63,
+      "pb": 4.87,
+      "amount": 3275060000.0,
+      "coarse_score": 25.55,
+      "kline": {
+        "score": 35.02,
+        "close": 49.02,
+        "ma5": 48.82,
+        "ma10": 47.803,
+        "ma20": 47.154,
+        "ma60": 47.531,
+        "ret5": 1.36,
+        "ret10": 3.46,
+        "ret20": 3.86,
+        "ret60": -8.24,
+        "distance_20d_high": -1.23,
+        "distance_60d_high": -12.28,
+        "volume_ratio_20d": 1.03,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 17.0,
+        "report_period": "20260930",
+        "revenue_yoy": 5.26,
+        "profit_yoy": 20.38,
+        "roe": 12.17,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 64.52,
+      "industry": "化学制药",
+      "industry_match_field": "cache",
+      "industry_raw_class": "化学制药",
+      "industry_score": 7.8,
+      "sector_confirmation": "偏强",
+      "industry_change_now": 2.66,
+      "industry_change_3d": 2.55,
+      "industry_net_now": 17.79,
+      "industry_net_3d": 2.35,
+      "pre_news_score": 72.32,
+      "news": {
+        "score": 12.5,
+        "headlines": [],
+        "risk_flags": [],
+        "news_count": 0
+      },
+      "total_score": 72.32,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+20.4%"
+      ],
+      "recommendation": "候选",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 4
+    },
+    {
+      "code": "002430",
+      "name": "杭氧股份",
+      "reference_price": 26.33,
+      "pe": 21.84,
+      "pb": 2.49,
+      "amount": 360800000.0,
+      "coarse_score": 26.26,
+      "kline": {
+        "score": 36.5,
+        "close": 26.34,
+        "ma5": 25.936,
+        "ma10": 25.003,
+        "ma20": 25.08,
+        "ma60": 24.951,
+        "ret5": 3.99,
+        "ret10": 6.47,
+        "ret20": 5.19,
+        "ret60": 12.18,
+        "distance_20d_high": -4.29,
+        "distance_60d_high": -6.56,
+        "volume_ratio_20d": 0.62,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 17.0,
+        "report_period": "20260930",
+        "revenue_yoy": 17.82,
+        "profit_yoy": 30.43,
+        "roe": 9.7,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 66.0,
+      "industry": "化学原料",
+      "industry_match_field": "cache",
+      "industry_raw_class": "化学原料",
+      "industry_score": 5.14,
+      "sector_confirmation": "中性",
+      "industry_change_now": 1.31,
+      "industry_change_3d": 0.79,
+      "industry_net_now": 1.98,
+      "industry_net_3d": 0.43,
+      "pre_news_score": 71.14,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "社保基金长期重仓股名单曝光（附股）",
+            "published_at": "2026-11-04T13:28:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611043921534314.html"
+          },
+          {
+            "title": "社保基金长线坚守63只股（附股）",
+            "published_at": "2026-11-03T11:42:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611033919982110.html"
+          },
+          {
+            "title": "社保基金长期重仓股名单曝光（附股）",
+            "published_at": "2026-11-02T11:42:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611023918483350.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 5
+      },
+      "total_score": 71.14,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+30.4%"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 5
+    },
+    {
+      "code": "600018",
+      "name": "上港集团",
+      "reference_price": 5.67,
+      "pe": 8.58,
+      "pb": 0.88,
+      "amount": 369650000.0,
+      "coarse_score": 25.53,
+      "kline": {
+        "score": 36.67,
+        "close": 5.68,
+        "ma5": 5.678,
+        "ma10": 5.552,
+        "ma20": 5.517,
+        "ma60": 5.349,
+        "ret5": 4.6,
+        "ret10": 3.65,
+        "ret20": 5.19,
+        "ret60": 10.51,
+        "distance_20d_high": -2.91,
+        "distance_60d_high": -2.91,
+        "volume_ratio_20d": 1.12,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 16.0,
+        "report_period": "20260930",
+        "revenue_yoy": 9.64,
+        "profit_yoy": 16.08,
+        "roe": 8.95,
+        "forecast_type": "略增",
+        "forecast_change": 5.31
+      },
+      "pre_industry_score": 65.17,
+      "industry": "港口航运",
+      "industry_match_field": "cache",
+      "industry_raw_class": "港口航运",
+      "industry_score": 5.74,
+      "sector_confirmation": "中性",
+      "industry_change_now": 0.28,
+      "industry_change_3d": 2.6,
+      "industry_net_now": 2.9,
+      "industry_net_3d": 7.39,
+      "pre_news_score": 70.91,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "F5G概念下跌4.88%，主力资金净流出30股",
+            "published_at": "2026-11-03T16:58:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611033920317444.html"
+          },
+          {
+            "title": "交通运输行业资金流出榜：中远海控、顺丰控股等净流出资金居前",
+            "published_at": "2026-11-02T17:06:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611023918790750.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 2
+      },
+      "total_score": 70.91,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "业绩预告略增"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 6
+    },
+    {
+      "code": "603366",
+      "name": "日出东方",
+      "reference_price": 7.89,
+      "pe": 28.77,
+      "pb": 1.47,
+      "amount": 401200000.0,
+      "coarse_score": 26.3,
+      "kline": {
+        "score": 37.52,
+        "close": 7.89,
+        "ma5": 7.97,
+        "ma10": 7.673,
+        "ma20": 7.564,
+        "ma60": 7.388,
+        "ret5": 2.73,
+        "ret10": 0.25,
+        "ret20": 8.53,
+        "ret60": 14.18,
+        "distance_20d_high": -7.72,
+        "distance_60d_high": -8.47,
+        "volume_ratio_20d": 1.03,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 18.0,
+        "report_period": "20260930",
+        "revenue_yoy": 17.81,
+        "profit_yoy": 131.51,
+        "roe": 1.95,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 68.02,
+      "industry": "厨卫电器",
+      "industry_match_field": "cache",
+      "industry_raw_class": "厨卫电器",
+      "industry_score": 2.36,
+      "sector_confirmation": "弱",
+      "industry_change_now": -0.42,
+      "industry_change_3d": -1.04,
+      "industry_net_now": -0.47,
+      "industry_net_3d": 0.01,
+      "pre_news_score": 70.38,
+      "news": {
+        "score": 12.5,
+        "headlines": [],
+        "risk_flags": [],
+        "news_count": 0
+      },
+      "total_score": 70.38,
+      "risk_flags": [
+        "行业确认偏弱"
+      ],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+131.5%"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 7
+    },
+    {
+      "code": "000538",
+      "name": "云南白药",
+      "reference_price": 54.77,
+      "pe": 18.8,
+      "pb": 2.43,
+      "amount": 730040000.0,
+      "coarse_score": 27.12,
+      "kline": {
+        "score": 37.21,
+        "close": 54.74,
+        "ma5": 54.224,
+        "ma10": 53.632,
+        "ma20": 53.084,
+        "ma60": 50.726,
+        "ret5": 3.26,
+        "ret10": 3.67,
+        "ret20": 8.52,
+        "ret60": 8.05,
+        "distance_20d_high": -2.01,
+        "distance_60d_high": -2.01,
+        "volume_ratio_20d": 1.21,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 15.0,
+        "report_period": "20260930",
+        "revenue_yoy": 5.23,
+        "profit_yoy": 0.95,
+        "roe": 11.79,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 64.71,
+      "industry": "中药",
+      "industry_match_field": "cache",
+      "industry_raw_class": "中药",
+      "industry_score": 4.99,
+      "sector_confirmation": "中性",
+      "industry_change_now": 0.7,
+      "industry_change_3d": 3.1,
+      "industry_net_now": -2.62,
+      "industry_net_3d": 1.94,
+      "pre_news_score": 69.7,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "基金11月2日参与22家公司的调研活动",
+            "published_at": "2026-11-03T11:42:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611033919982591.html"
+          },
+          {
+            "title": "超级品牌概念涨1.74%，主力资金净流入23股",
+            "published_at": "2026-11-03T16:58:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611033920318975.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 2
+      },
+      "total_score": 69.7,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 8
+    },
+    {
+      "code": "002985",
+      "name": "北摩高科",
+      "reference_price": 28.25,
+      "pe": 39.29,
+      "pb": 3.37,
+      "amount": 160700000.0,
+      "coarse_score": 26.26,
+      "kline": {
+        "score": 33.39,
+        "close": 28.24,
+        "ma5": 27.698,
+        "ma10": 27.433,
+        "ma20": 27.107,
+        "ma60": 27.014,
+        "ret5": 1.91,
+        "ret10": 4.21,
+        "ret20": 7.99,
+        "ret60": 8.24,
+        "distance_20d_high": -0.77,
+        "distance_60d_high": -5.36,
+        "volume_ratio_20d": 1.14,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 16.0,
+        "report_period": "20260930",
+        "revenue_yoy": 5.86,
+        "profit_yoy": 30.26,
+        "roe": 5.99,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 61.89,
+      "industry": "工业金属",
+      "industry_match_field": "cache",
+      "industry_raw_class": "工业金属",
+      "industry_score": 7.22,
+      "sector_confirmation": "偏强",
+      "industry_change_now": 3.27,
+      "industry_change_3d": 2.19,
+      "industry_net_now": 13.07,
+      "industry_net_3d": -1.43,
+      "pre_news_score": 69.11,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "405家公司获机构调研（附名单）",
+            "published_at": "2026-11-02T09:40:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611023918031637.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 1
+      },
+      "total_score": 69.11,
+      "risk_flags": [],
+      "reasons": [
+        "收盘价站上20日均线",
+        "20日涨幅温和",
+        "净利润同比+30.3%",
+        "工业金属偏强确认"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 9
+    },
+    {
+      "code": "600993",
+      "name": "马应龙",
+      "reference_price": 24.84,
+      "pe": 18.0,
+      "pb": 2.33,
+      "amount": 204790000.0,
+      "coarse_score": 26.04,
+      "kline": {
+        "score": 36.59,
+        "close": 24.84,
+        "ma5": 24.588,
+        "ma10": 24.309,
+        "ma20": 24.131,
+        "ma60": 23.342,
+        "ret5": 3.5,
+        "ret10": 4.68,
+        "ret20": 10.3,
+        "ret60": 3.76,
+        "distance_20d_high": -2.89,
+        "distance_60d_high": -2.89,
+        "volume_ratio_20d": 1.13,
+        "risk_flags": []
+      },
+      "fundamental": {
+        "score": 15.0,
+        "report_period": "20260930",
+        "revenue_yoy": 4.36,
+        "profit_yoy": 2.66,
+        "roe": 11.34,
+        "forecast_type": null,
+        "forecast_change": null
+      },
+      "pre_industry_score": 64.09,
+      "industry": "中药",
+      "industry_match_field": "cache",
+      "industry_raw_class": "中药",
+      "industry_score": 4.99,
+      "sector_confirmation": "中性",
+      "industry_change_now": 0.7,
+      "industry_change_3d": 3.1,
+      "industry_net_now": -2.62,
+      "industry_net_3d": 1.94,
+      "pre_news_score": 69.08,
+      "news": {
+        "score": 12.5,
+        "headlines": [
+          {
+            "title": "今日60只股长线走稳 站上年线",
+            "published_at": "2026-11-03T16:08:00+08:00",
+            "source": "证券时报网",
+            "url": "http://finance.eastmoney.com/a/202611033920253769.html"
+          }
+        ],
+        "risk_flags": [],
+        "news_count": 1
+      },
+      "total_score": 69.08,
+      "risk_flags": [],
+      "reasons": [
+        "日K未处于明显追高区",
+        "收盘价站上20日均线",
+        "20日涨幅温和"
+      ],
+      "recommendation": "观察",
+      "auction_rule": "09:25竞价涨幅建议-1.5%~+2.5%；>+3%默认不追，<-2.5%需重新确认",
+      "shadow_rule": "09:35~09:40再用盘中Shadow确认；行业/个股明显转弱则取消",
+      "rank": 10
+    }
+  ],
+  "execution_note": "盘前榜单解决买什么，不等于开盘立即买；09:25竞价和09:35~09:40 Shadow必须二次确认，避免追高。"
+}
